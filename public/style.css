@@ -1754,6 +1754,9 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 }
 @media (max-width: 640px) {
     .theme-swatches { grid-template-columns: 1fr 1fr; }
-    .hero-actions { gap: 10px; }
+    /* Stack the hero CTAs and make both buttons full-width so they read as a
+       matched pair (otherwise each sizes to its own label and they differ). */
+    .hero-actions { gap: 10px; flex-direction: column; align-items: stretch; }
+    .hero-actions .btn-lg { width: 100%; min-width: 0; }
     .btn-download { font-size: 19px; padding: 14px 26px; }
 }
