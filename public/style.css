@@ -423,6 +423,11 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     box-shadow: var(--shadow-lift);
     overflow: hidden;
 }
+/* The mock clips content wider than its frame (overflow:hidden), which cut off
+   the "% fresh" label at desktop widths. Let every inner box shrink below its
+   content (overrides the inline min-width on the venue select) so the toolbar
+   fits the frame at all widths instead of being clipped. */
+.app-mock, .app-mock * { min-width: 0 !important; }
 .app-mock-header {
     background: var(--powder-soft);
     padding: 14px 22px;
@@ -834,9 +839,9 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     .faq-grid { grid-template-columns: 1fr; }
     .phase-bullets { grid-template-columns: 1fr; }
     .app-mock-body { grid-template-columns: 1fr; }
-    /* Let the detailed app mock reflow to fit rather than dictate page width:
-       allow every inner box to shrink, and let the few nowrap labels wrap. */
-    .app-mock, .app-mock * { min-width: 0 !important; }
+    /* Let the detailed app mock reflow to fit rather than dictate page width.
+       (Inner boxes already shrink via the general rule above; on mobile also
+       let the few nowrap labels wrap.) */
     .app-mock [style*="nowrap"] { white-space: normal !important; }
     .app-mock-header { flex-wrap: wrap; gap: 10px; }
     /* Feature rows: let the visual column shrink and cap media/mocks to it. */
