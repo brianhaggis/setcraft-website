@@ -1,0 +1,5 @@
+# Cloudflare Pages project config.
+# Deploy with:  npx wrangler pages deploy
+# (run `npx wrangler login` once first, or set CLOUDFLARE_API_TOKEN)
+name = "setcraft-website"
+pages_build_output_dir = "public"

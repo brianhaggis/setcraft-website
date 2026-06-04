@@ -1,0 +1,11 @@
+# Cloudflare Pages redirects — https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Canonicalize www -> apex (getsetcraft.com is the canonical host).
+https://www.getsetcraft.com/*  https://getsetcraft.com/:splat  301
+
+# Single source of truth for the app download. The "Download Free" buttons all
+# point at /download; this forwards to the signed DMG hosted as a GitHub Release
+# asset on the public setcraft-website repo. The /latest/ path is stable: ship a
+# new release with an asset named Setcraft.dmg and this URL follows it
+# automatically, no edit here needed.
+/download  https://github.com/brianhaggis/setcraft-website/releases/latest/download/Setcraft.dmg  302

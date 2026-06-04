@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Setcraft — Synthwave">
+  <rect width="256" height="256" rx="56" fill="#08001a"></rect>
+  <rect x="46" y="70" width="8" height="116" rx="3" fill="#ff2d78" opacity="0.85"></rect>
+  <rect x="62" y="74" width="148" height="28" rx="4" fill="#ff2d78"></rect>
+  <rect x="62" y="114" width="56" height="28" rx="4" fill="#00f5c4"></rect>
+  <rect x="62" y="154" width="96" height="28" rx="4" fill="#b080d0"></rect>
+</svg>
