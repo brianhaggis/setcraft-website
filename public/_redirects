@@ -1,12 +1,10 @@
 # Cloudflare Pages redirects — https://developers.cloudflare.com/pages/configuration/redirects/
 
-# Canonical host is the getsetcraft.com apex. Everything else 301s to it:
-# the www variant, and both the apex and www of the .net brand-protection domain.
-# All four hostnames must be added as custom domains on the Pages project for
-# these host-matched rules to fire.
-https://www.getsetcraft.com/*  https://getsetcraft.com/:splat  301
-https://getsetcraft.net/*      https://getsetcraft.com/:splat  301
-https://www.getsetcraft.net/*  https://getsetcraft.com/:splat  301
+# NOTE: apex/www/cross-domain canonicalization (getsetcraft.com apex and the
+# getsetcraft.net pair -> the canonical host) is NOT done here. Pages _redirects
+# only reliably matches on PATH, not hostname, so host rules placed here do not
+# fire. Canonicalize those with a Cloudflare Redirect Rule at the zone level
+# (dashboard > the zone > Rules > Redirect Rules). Path redirects below work.
 
 # Single source of truth for the app download. The "Download Free" buttons all
 # point at /download; this forwards to the signed DMG hosted as a GitHub Release
