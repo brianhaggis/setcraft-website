@@ -48,11 +48,32 @@ domains on the Pages project (Cloudflare dashboard > the project > Custom domain
 Since the domain is already on Cloudflare, DNS records are created automatically.
 The `_redirects` file then canonicalizes www to the apex.
 
+## Releasing a new app build
+
+The download is wired and live: the "Download Free" button points at `/download`,
+which `public/_redirects` forwards to the GitHub Release asset
+`releases/latest/download/Setcraft.dmg`. The `/latest/` path is stable, so shipping
+a new version needs **no website change** — just publish a new release whose asset
+is named exactly `Setcraft.dmg`:
+
+```bash
+gh release create vX.Y.Z ~/Downloads/Setcraft.dmg \
+  --repo brianhaggis/setcraft-website \
+  --title "Setcraft X.Y.Z" --notes "..."
+```
+
+The DMG lives on GitHub Releases, not in this repo — that keeps the large signed
+binary out of Cloudflare Pages (which caps files at 25 MB) and out of git history.
+
+## Working across machines
+
+This site is developed from more than one Mac. To stay in sync, `git pull` when you
+sit down and `git push` before you stop — only committed-and-pushed work travels.
+`git config --global pull.rebase true` keeps history linear if you forget to push.
+The DMG is unaffected: it lives on GitHub Releases, so it's the same on every machine.
+
 ## Still to wire before launch
 
-- **Download links.** The "Download Free" buttons point at `/download`. Host the
-  signed DMG (GitHub Release asset or R2), then uncomment and fill the `/download`
-  line in `public/_redirects`. It updates every button at once.
 - **Walkthrough video.** The "What is Setcraft?" section is a non-functional poster
   mock. Drop in the real video/embed when ready, or hide the `#video` section.
 - **Legal copy.** `privacy.html` and `terms.html` carry draft text flagged in-page.
