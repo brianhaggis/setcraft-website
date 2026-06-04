@@ -821,6 +821,12 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
    ============================================================ */
 @media (max-width: 960px) {
     .hero { grid-template-columns: 1fr; gap: 40px; }
+    /* Grid/flex items default to min-width:auto and refuse to shrink below their
+       content's intrinsic width. That let the app mock force the whole page wider
+       than the viewport (horizontal overflow). Let the hero column and its visual
+       shrink to the available width. */
+    .hero > *, .hero-visual { min-width: 0; }
+    .mac-window { max-width: 100%; }
     .why-grid { grid-template-columns: 1fr; }
     .feature-strip { grid-template-columns: 1fr 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
@@ -828,8 +834,20 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     .faq-grid { grid-template-columns: 1fr; }
     .phase-bullets { grid-template-columns: 1fr; }
     .app-mock-body { grid-template-columns: 1fr; }
+    /* Let the detailed app mock reflow to fit rather than dictate page width:
+       allow every inner box to shrink, and let the few nowrap labels wrap. */
+    .app-mock, .app-mock * { min-width: 0 !important; }
+    .app-mock [style*="nowrap"] { white-space: normal !important; }
+    .app-mock-header { flex-wrap: wrap; gap: 10px; }
+    /* Feature rows: let the visual column shrink and cap media/mocks to it. */
+    .feature-row > * { min-width: 0; }
+    .feature-visual img, .feature-visual video,
+    .builder-mini, .print-sheet { max-width: 100%; }
+    /* The Themes section uses an inline two-column grid; collapse it here. */
+    #themes > div { grid-template-columns: 1fr !important; gap: 32px !important; }
     .nav-inner { padding: 14px 20px; }
-    .nav-links { display: none; }  /* skip mobile menu wiring */
+    /* Keep the Download CTA reachable on mobile; hide only the in-page text links. */
+    .nav-links .nav-link { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -838,6 +856,9 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     .brand-mark { width: 28px; }
     .feature-strip { grid-template-columns: 1fr; }
     .footer-inner { grid-template-columns: 1fr; }
+    /* The hero strong is nowrap by inline style; let it wrap on tiny phones so
+       "Get Setcraft." can't push the page wider than the viewport. */
+    .hero .h1 strong { white-space: normal !important; }
 }
 
 
