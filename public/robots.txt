@@ -1,0 +1,4 @@
+# Pre-launch: keep the whole site out of search indexes.
+# Remove this block (or replace with an allow + sitemap) on public launch.
+User-agent: *
+Disallow: /
