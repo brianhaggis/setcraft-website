@@ -20,6 +20,12 @@
 /media/*
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML should always revalidate so copy/price edits go live immediately.
+# HTML/CSS/JS should always revalidate so edits go live immediately. (CSS/JS
+# carry no content hash in their filename, so without this a browser can hold a
+# stale copy under the same ?v= query until it expires.)
 /*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+/*.js
   Cache-Control: public, max-age=0, must-revalidate
