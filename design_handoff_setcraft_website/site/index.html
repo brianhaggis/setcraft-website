@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setcraft · Get Ready. Get Setcraft.</title>
+    <meta name="description" content="Setcraft keeps your songs on your Mac, builds tonight's set with a few drags, and prints a sheet the whole band can read from the stage. One-time license, $19.99. No subscription.">
+    <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
+    <link rel="stylesheet" href="style.css?v=25">
+    <script src="theme-switcher.js"></script>
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+    <script type="text/babel" src="tweaks-panel.jsx"></script>
+</head>
+<body>
+
+    <!-- ============================================================ NAV -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                <span class="brand-text">Setcraft</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#themes" class="nav-link">Themes</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#download" class="nav-cta">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================ HERO -->
+    <section class="container hero" data-screen-label="Hero">
+        <div>
+            <div class="eyebrow">macOS desktop app · Apple Silicon</div>
+            <h1 class="h1" id="hero-h1">Get Ready. <strong style="white-space: nowrap;">Get Setcraft.</strong></h1>
+            <p class="hero-tag" id="hero-tag">Your whole repertoire lives in a detailed catalog on your Mac. Drag tonight's set into shape, print it big enough to read from the back of the stage, and walk onstage confidently.</p>
+
+            <div class="hero-actions">
+                <a href="#download" class="btn-lg btn-download" id="hero-cta"><span class="btn-main">Download Free</span><span class="btn-desc">Up to 15 songs · prints carry a small watermark</span></a>
+                <a href="https://setcraft.lemonsqueezy.com/checkout/buy/f88e5bc5-1dc2-4eec-bb64-9fab53324932" class="btn-lg btn-buy"><span class="btn-main">Buy · $19.99</span><span class="btn-desc">Unlocks every feature, for good</span></a>
+            </div>
+            <p class="req-line"><strong>Apple Silicon Mac</strong>, M1 or later, on macOS 12 Monterey or newer. No Intel Macs, no Windows.</p>
+        </div>
+
+        <div class="hero-visual">
+            <div class="mac-window">
+                <div class="mac-titlebar">
+                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                    <span class="mac-name">Setcraft</span>
+                </div>
+                <div class="app-mock">
+                    <div class="app-mock-header">
+                        <span class="brand-text">Setcraft</span>
+                        <div class="nav-stub">
+                            <span>Songs</span>
+                            <span class="active">Build a Set</span>
+                            <span>Shows</span>
+                            <span>Upload Photo</span>
+                        </div>
+                        <div style="margin-left: auto; display: flex; gap: 8px; align-items: center;">
+                            <div style="background: var(--stripe-red); color: #fff; padding: 3px 10px; border-radius: 4px; font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.03em; line-height: 1.4; text-align: center;">
+                                The Gravel Swimmers
+                                <div style="font-size: 9px; font-weight: 400; opacity: 0.85; text-transform: none; letter-spacing: 0;">switch artist ▾</div>
+                            </div>
+                            <div style="border: 1px solid rgba(26,58,82,0.3); padding: 3px 8px; border-radius: 4px; font-size: 13px; color: var(--powder-deep);" title="Change theme">◑</div>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--paper); border-bottom: 1px solid var(--hairline); padding: 9px 22px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                        <div style="font-size: 12px; color: var(--ink); background: var(--paper-2); border: 1px solid var(--hairline); border-radius: 4px; padding: 4px 10px; display: flex; justify-content: space-between; align-items: center; min-width: 210px;">
+                            <span>The Ark · Ann Arbor, MI</span>
+                            <span style="color: var(--ink-soft); font-size: 10px; margin-left: 8px;">▾</span>
+                        </div>
+                        <div style="font-family: var(--font-display); font-weight: 700; font-size: 12px; color: var(--ink);">What did we play the last time we were here?</div>
+                        <div style="margin-left: auto; display: flex; align-items: center; gap: 10px;">
+                            <div style="display: flex; border: 1px solid var(--hairline); border-radius: 5px; overflow: hidden; font-size: 11px; font-weight: 600;">
+                                <span style="padding: 4px 10px; background: var(--powder); color: #fff;">Venue</span>
+                                <span style="padding: 4px 10px; background: var(--paper); color: var(--ink-soft); border-left: 1px solid var(--hairline);">City</span>
+                                <span style="padding: 4px 10px; background: var(--paper); color: var(--ink-soft); border-left: 1px solid var(--hairline);">Off</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 7px;">
+                                <div style="width: 56px; height: 6px; background: var(--hairline); border-radius: 3px; overflow: hidden;"><div style="width: 64%; height: 100%; background: color-mix(in srgb, #2c5f2d 64%, #f39c12);"></div></div>
+                                <span style="font-size: 11px; color: var(--ink-soft); white-space: nowrap;">64% fresh</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-mock-body">
+                        <div class="mock-panel">
+                            <h5>Song Library</h5>
+                            <div style="background: var(--paper); border: 1px solid var(--hairline); border-radius: 5px; padding: 5px 10px; font-size: 11px; color: var(--ink-soft); margin-bottom: 8px;">Search songs...</div>
+                            <div class="mock-song overlap">
+                                <span class="energy e5">5</span>
+                                <span class="title">Salt Lick</span>
+                                <span class="tag">E</span>
+                                <span class="add">+</span>
+                            </div>
+                            <div class="mock-song">
+                                <span class="energy e3">3</span>
+                                <span class="title">Almanac</span>
+                                <span class="tag">C</span>
+                                <span class="add">+</span>
+                            </div>
+                            <div class="mock-song overlap">
+                                <span class="energy e4">4</span>
+                                <span class="title">Copper Wire Heart</span>
+                                <span class="tag">E</span>
+                                <span class="add">+</span>
+                            </div>
+                            <div class="mock-song overlap">
+                                <span class="energy e2">2</span>
+                                <span class="title">Paper Compass</span>
+                                <span class="tag">D</span>
+                                <span class="add">+</span>
+                            </div>
+                            <div class="mock-song">
+                                <span class="energy e3">3</span>
+                                <span class="title">Heirloom Tomato</span>
+                                <span class="tag">A</span>
+                                <span class="tag">Capo 3</span>
+                                <span class="add">+</span>
+                            </div>
+                        </div>
+
+                        <div class="mock-panel">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h5 style="margin: 0;">Setlist</h5>
+                                <span style="background: var(--stripe-red); color: #fff; border-radius: 4px; padding: 4px 10px; font-size: 10px; font-weight: 600; font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.04em;">Save Changes</span>
+                            </div>
+                            <div style="display: flex; align-items: center; border-bottom: 1px solid var(--hairline); margin-bottom: 10px;">
+                                <span style="padding: 4px 14px; font-family: var(--font-display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--stripe-red); border-bottom: 2px solid var(--stripe-red); margin-bottom: -1px;">Set 1 (5 songs)</span>
+                                <span style="padding: 4px 8px; font-size: 13px; color: var(--ink-soft); margin-bottom: -1px;">+</span>
+                            </div>
+                            <div class="mock-song"><span class="spos">1</span><span class="title">Salt Lick</span><span class="energy e5">5</span><span class="tag">E</span><span class="rm">×</span></div>
+                            <div class="mock-song"><span class="spos">2</span><span class="title">Copper Wire Heart</span><span class="energy e4">4</span><span class="tag">E</span><span class="rm">×</span></div>
+                            <div style="font-size: 11px; color: var(--ink); font-style: italic; padding: 5px 12px; background: var(--paper-2); border-radius: 6px; margin-bottom: 6px; border: 1px dashed var(--hairline);">Tune to drop D · Danny grabs water</div>
+                            <div class="mock-song"><span class="spos">3</span><span class="title">Almanac</span><span class="energy e3">3</span><span class="tag">C</span><span class="rm">×</span></div>
+                            <div class="mock-song"><span class="spos">4</span><span class="title">Kerosene Summer</span><span class="energy e4">4</span><span class="tag">Bm</span><span class="rm">×</span></div>
+                            <div class="mock-song"><span class="spos">5</span><span class="title">Match Head</span><span class="energy e5">5</span><span class="tag">B♭</span><span class="rm">×</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ VIDEO -->
+    <section class="container section" id="video" data-screen-label="Walkthrough video" style="padding-top: 8px;">
+        <div style="text-align: center; margin-bottom: 28px;">
+            <div class="eyebrow">Watch the walkthrough</div>
+            <h2 class="h2">What is Setcraft?</h2>
+        </div>
+        <div class="video-hero" role="img" aria-label="Setcraft walkthrough video. Poster frame; press play to watch.">
+            <button class="play" aria-label="Play walkthrough">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="6,3 22,12 6,21" fill="#b31b2e"></polygon></svg>
+            </button>
+            <div class="video-caption"><span>Walkthrough · 2 min</span><span>Captions available</span></div>
+        </div>
+    </section>
+
+    <!-- ============================================================ WHAT IT IS -->
+    <section class="container section" data-screen-label="What it is">
+        <div style="max-width: 64ch; margin: 0 auto; text-align: center;">
+            <div class="eyebrow">Your secret weapon</div>
+            <h2 class="h2" style="margin-bottom: 22px;">A setlist tool, <span class="accent">and so much more.</span></h2>
+            <p style="font-size: 20px; color: var(--ink-soft); line-height: 1.6;">Snap a photo of an old setlist to add it to your database. Glance at the freshness meter to see how many songs you're repeating from the last time you were in town. Quickly print off a lyric book, or tech cue sheets for FOH and the lighting designer. Expedite setlist submission with your PRO. And do it all in style, with your choice of 17 distinct themes to match your mood.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================ MAKER NOTE -->
+    <section class="container section" data-screen-label="Maker note">
+        <div class="maker-note">
+            <div class="eyebrow">Why I built it</div>
+            <h2 class="h2">I made this for myself.</h2>
+            <p>I'm not a developer. I'm a lifelong touring musician, and I've written thousands of setlists at venues all over the world. Sitting backstage with no table, bad lighting, and dried out markers, I've experienced the stress of getting sets finalized and copied out more times than I can count. I've wished an app like this existed for 25 years, and nothing on the market quite did the job I needed done: Easy to read, beautifully formatted setlists with notes, keys, and capo positions. I also wanted to keep track of what we'd played and where, and to keep our whole catalog in one place, tagged and sorted, so I wasn't holding it all in my head every night. 
+
+
+So I built Setcraft. 
+
+
+I've used it at dozens of my own shows, and it's been magical. Stress, forgotten. All my songs and setlist data right at my fingertips. I can't imagine touring without it, and I'm so excited to share it with you.</p>
+        </div>
+    </section>
+
+    <div class="container"><div class="tri-stripe"><span></span><span></span><span></span></div></div>
+
+    <!-- ============================================================ FEATURES -->
+    <div id="features"></div>
+
+    <!-- Setlist builder -->
+    <section class="container">
+        <div class="feature-row">
+            <div class="feature-copy">
+                <div class="eyebrow">Setlist builder</div>
+                <h3>Drag tonight&rsquo;s set into shape.</h3>
+                <p>Building a set is as easy as dragging songs out of your library and pushing them around until the order feels right. Add a second, third, or fourth set with a single click. Make a mess of it and click undo to walk back fifty steps.</p>
+                <p>Between songs, leave yourself a note: drop to D for this one, talk up the new record, bring the guest out. Notes you use every set can be saved as defaults to drag into the set where you need them.</p>
+            </div>
+            <div class="feature-visual">
+                <video class="media-clip" autoplay muted loop playsinline aria-label="Screen recording of the Setcraft setlist builder: dragging songs, reordering, and dropping a note">
+                    <source src="media/builder.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- What did we play last time + freshness -->
+    <section class="container">
+        <div class="feature-row flip">
+            <div class="feature-copy">
+                <div class="eyebrow">Venue memory</div>
+                <h3>What did we play here last time?</h3>
+                <p>Pick the show and Setcraft pulls up the last set you played in that room or city. Those songs light up in your library while you build, so a repeat shows itself before you commit to it.</p>
+                <p>A freshness meter reads how much of tonight is new against that history. Switch the highlight between <strong>Venue</strong>, <strong>City</strong>, and <strong>Off</strong> as you go.</p>
+            </div>
+            <div class="feature-visual">
+                <div class="builder-mini" aria-label="Setlist builder venue-history panel with highlighted library">
+                    <div class="history-bar">
+                        <span class="hq">What did we play the last time we were here?<small>highlight overlapping songs</small></span>
+                        <div class="fresh-mini">
+                            <div class="track"><div class="fill" style="width: 64%; background: color-mix(in srgb, #2c5f2d 64%, #f39c12);"></div></div>
+                            <span class="lbl">64% fresh</span>
+                        </div>
+                    </div>
+                    <div class="history-bar" style="border-bottom: none; padding-top: 8px; padding-bottom: 12px;">
+                        <div class="toggle-group">
+                            <span class="opt active">Venue</span>
+                            <span class="opt">City</span>
+                            <span class="opt">Off</span>
+                        </div>
+                        <span style="font-size: 12px; color: var(--ink-soft);">Last at The Ark · 120 days ago</span>
+                    </div>
+                    <div class="lib-head">Song Library</div>
+                    <div class="mock-song overlap"><span class="energy e5">5</span><span class="title">Salt Lick</span><span class="tag">E</span><span class="played-flag">played here</span></div>
+                    <div class="mock-song"><span class="energy e3">3</span><span class="title">Almanac</span><span class="tag">C</span><span class="add">+</span></div>
+                    <div class="mock-song overlap"><span class="energy e4">4</span><span class="title">Copper Wire Heart</span><span class="tag">E</span><span class="played-flag">played here</span></div>
+                    <div class="mock-song overlap"><span class="energy e2">2</span><span class="title">Paper Compass</span><span class="tag">D</span><span class="played-flag">played here</span></div>
+                    <div class="mock-song"><span class="energy e3">3</span><span class="title">Heirloom Tomato</span><span class="tag">A</span><span class="tag">Capo 3</span><span class="add">+</span></div>
+                    <div class="mock-song overlap"><span class="energy e4">4</span><span class="title">Kerosene Summer</span><span class="tag">Bm</span><span class="played-flag">played here</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Print & PDF -->
+    <section class="container">
+        <div class="feature-row">
+            <div class="feature-copy">
+                <div class="eyebrow">Print &amp; PDF</div>
+                <h3>Big enough to read from the kit.</h3>
+                <p>Setlists come out in bold capitals, two columns, sized to fill the page. A normal set lands on one sheet; a long one runs onto a second. Print through the Mac dialog or save a PDF.</p>
+                <p>The same library can be exported as a lyric book, a chart book of whatever charts you've uploaded, a single-song lyric sheet, an FOH/lighting cue sheet, and a PRO report to expedite your live show royalty reports. Toggle key, capo, and per-song notes, then save those choices as your default.</p>
+            </div>
+            <div class="feature-visual">
+                <div class="print-sheet" aria-label="Stage-ready printed setlist">
+                    <div class="ps-head">
+                        <div class="ps-band">The Gravel Swimmers</div>
+                        <div class="ps-loc">Pizza Luce · Duluth, MN · Fri Mar 14</div>
+                    </div>
+                    <div class="ps-cols">
+                        <div class="ps-col">
+                            <div class="ps-set">Set 1</div>
+                            <ol>
+                                <li><span>Salt Lick</span><span class="key">E</span></li>
+                                <li><span>Copper</span><span class="key">E</span></li>
+                                <li><span>Almanac</span><span class="key">C</span></li>
+                                <li><span>Paper Compass</span><span class="key">D</span></li>
+                                <li><span>Kerosene</span><span class="key">Bm</span></li>
+                                <li><span>Atlantic</span><span class="key">Em</span></li>
+                                <li><span>Headlights</span><span class="key">G</span></li>
+                                <li><span>Heirloom</span><span class="key">A</span></li>
+                            </ol>
+                        </div>
+                        <div class="ps-col">
+                            <div class="ps-set">Set 2</div>
+                            <ol>
+                                <li><span>Gaslight</span><span class="key">Em</span></li>
+                                <li><span>Jolene</span><span class="key">Am</span></li>
+                                <li><span>Dock Light</span><span class="key">G</span></li>
+                                <li><span>Screen</span><span class="key">G</span></li>
+                                <li><span>Fast Car</span><span class="key">C</span></li>
+                                <li><span>County</span><span class="key">D</span></li>
+                                <li><span>Antenna</span><span class="key">E</span></li>
+                                <li><span>Match Head</span><span class="key">B♭</span></li>
+                            </ol>
+                            <div class="ps-encore">Encore</div>
+                            <ol class="encore">
+                                <li><span>Wagon Wheel</span><span class="key">G</span></li>
+                                <li><span>Ophelia</span><span class="key">D</span></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="ps-foot">Created with Setcraft (free version)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="tri-stripe"><span></span><span></span><span></span></div></div>
+
+    <!-- ============================================================ THEMES (live toggle) -->
+    <section class="container section" id="themes" data-screen-label="Themes toggle">
+        <div style="display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center;">
+            <div>
+                <div class="eyebrow">Seventeen themes</div>
+                <h2 class="h2">CHOOSE YOUR <span class="accent">VIBE.</span></h2>
+                <p class="lede">Seventeen themes restyle the whole app and the sheets it prints, and each artist profile remembers its own look. Four of the themes are wired into this page; click a button on the right to preview!</p>
+            </div>
+            <div class="theme-toggle">
+                <div class="theme-swatches">
+                    <button class="theme-swatch" data-theme-btn="yacht" aria-pressed="true" type="button">
+                        <span class="swatch-art" style="background:#e8d5a8;"><img src="assets/icons/icon-yacht.svg" alt=""></span>
+                        <span class="swatch-label">Yacht Rock <span class="chk">✓</span></span>
+                    </button>
+                    <button class="theme-swatch" data-theme-btn="808" aria-pressed="false" type="button">
+                        <span class="swatch-art" style="background:#1c1c1e;"><img src="assets/icons/icon-808.svg" alt=""></span>
+                        <span class="swatch-label">808 <span class="chk">✓</span></span>
+                    </button>
+                    <button class="theme-swatch" data-theme-btn="synthwave" aria-pressed="false" type="button">
+                        <span class="swatch-art" style="background:#0f0025;"><img src="assets/icons/icon-synthwave.svg" alt=""></span>
+                        <span class="swatch-label">Synthwave <span class="chk">✓</span></span>
+                    </button>
+                    <button class="theme-swatch" data-theme-btn="metal" aria-pressed="false" type="button">
+                        <span class="swatch-art" style="background:#0d0d0d;"><img src="assets/icons/icon-metal.svg" alt=""></span>
+                        <span class="swatch-label">Metal Mayhem <span class="chk">✓</span></span>
+                    </button>
+                </div>
+                <p class="theme-toggle-caption">This is one of Setcraft's <strong>17 themes</strong>. Try a few.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo import -->
+    <section class="container">
+        <div class="feature-row flip">
+            <div class="feature-copy">
+                <div class="badge-row">
+                    <span class="badge paid">Paid feature</span>
+                    <span class="badge online">Needs internet</span>
+                </div>
+                <div class="eyebrow">Photo setlist import</div>
+                <h3>A photo of the setlist is enough.</h3>
+                <p>Got an ancient setlist you'd like to add to your database? Take a photo of a handwritten or printed set and upload it to the app. Setcraft reads the titles, matches each one against your library with a confidence score and a few alternates, and you confirm the calls to build that show's set.</p>
+                <p>This is the one feature that requires an internet connection (and a paid license), because the photo gets read on our server. You get twenty uploads per month.</p>
+                <div class="privacy-note">The photo goes to our server, which hands it to Anthropic's API to read the text. Only the extracted titles come back. <strong>Your song library never leaves your Mac.</strong> See the <a href="privacy.html">Privacy Policy</a>.</div>
+            </div>
+            <div class="feature-visual">
+                <img class="media-photo" src="media/setlist-photo.jpg" width="1103" height="1400" alt="A handwritten setlist pinned to a wall — bold marker song titles, the kind of sheet you photograph to import into Setcraft">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bandsintown sync -->
+    <section class="container">
+        <div class="feature-row">
+            <div class="feature-copy">
+                <div class="eyebrow">Shows</div>
+                <h3>YOUR GIG CALENDAR <span class="accent">AT YOUR FINGERTIPS</span></h3>
+                <p>Add details for your shows to create your venue and city history. Setcraft will track the songs you play in each venue and city, and help you keep your sets fresh when you come back.</p>
+                <div class="badge-row" style="margin-top: 6px;">
+                    <span class="badge paid">Paid feature</span>
+                    <span class="badge online">Needs internet</span>
+                </div>
+                <p>Import Shows from Bandsintown (paid feature).
+Connect your account once with your artist name and API key, and Setcraft pulls in the upcoming dates you haven't entered yet. If you've got multiple artist profiles, you can enter their Bandsintown keys and sync all your calendars at once.</p>
+            </div>
+            <div class="feature-visual">
+                <video class="media-clip" autoplay muted loop playsinline aria-label="Screen recording of adding shows in Setcraft: fuzzy venue matching and importing dates from Bandsintown">
+                    <source src="media/shows.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="tri-stripe"><span></span><span></span><span></span></div></div>
+
+    <!-- ============================================================ DOWNLOAD -->
+    <section class="container section" id="download" data-screen-label="Download">
+        <div class="eyebrow">Download</div>
+        <h2 class="h2">ONE PRICE, <span class="accent">UNLOCK ALL FEATURES.</span> </h2>
+        <div class="buy-wrap">
+            <div class="panel-card accent">
+                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stripe-red); margin-bottom: 8px;">Setcraft Lifetime</div>
+                <div class="buy-price">
+                    <span class="amount"><span class="currency">$</span>19.99</span>
+                    <span class="once">One-time<br>lifetime license</span>
+                </div>
+                <p class="buy-prod">Setcraft V1 Lifetime License (One Artist Profile)</p>
+                <ul class="buy-list">
+                    <li>Unlimited songs</li>
+                    <li>Photo setlist import, 20 per month</li>
+                    <li>Import Shows from Bandsintown</li>
+                    <li>Watermark-free printing and PDF export</li>
+                    <li>Every V1 update included</li>
+                </ul>
+                <a href="https://setcraft.lemonsqueezy.com/checkout/buy/f88e5bc5-1dc2-4eec-bb64-9fab53324932" class="price-cta featured-cta">Buy Setcraft</a>
+                <p class="download-note">Checkout runs through Lemon Squeezy, our merchant of record. They take payment and email your license key; you enter it in the app to unlock the paid features.</p>
+                <p class="download-note addon-note">Running more than one act? Each additional artist profile is a separate one-time $2.99 purchase, available within the app to all licensed users.</p>
+            </div>
+            <div class="panel-card">
+                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--powder-deep); margin-bottom: 8px;">Start free</div>
+                <p style="font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin: 0 0 18px;">You don't have to decide now. Download the free version (no credit card required), build a couple of real sets, and buy your full license from inside the app when you're ready to go to eleven.</p>
+                <ul class="buy-list">
+                    <li>Up to 15 songs</li>
+                    <li>One artist profile</li>
+                    <li>Full setlist building and all 17 themes</li>
+                    <li>Print and PDF export with a small free-version footer</li>
+                    <li>Never expires — use it forever, free</li>
+                </ul>
+                <a href="#" class="price-cta" data-dmg>Download Free</a>
+                <p class="download-note">No account, no card. Buy later when you're ready.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ FAQ -->
+    <section class="container section" id="faq" data-screen-label="FAQ">
+        <div class="eyebrow">Honest questions</div>
+        <h2 class="h2">Before you download.</h2>
+        <div class="faq-grid" style="margin-top: 36px;">
+            <div class="faq-item">
+                <h4>WHAT DO I NEED TO RUN SETCRAFT?</h4>
+                <p>An Apple Silicon Mac, meaning an M1, M2, M3, M4 or later, on macOS 12 Monterey or newer. It won't run on older Intel Macs, and there's no Windows or web version for end users.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What does the free tier include?</h4>
+                <p>Up to 15 songs, one artist profile, every theme, full setlist building, and all the PDF and print exports. Free exports carry a small "Created with Setcraft (free version)" footer. Setlist photo import and Bandsintown show import require a paid license and an internet connection. Once you unlock the full version, you can create unlimited shows, songs, and setlists for one artist profile.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What does photo import need?</h4>
+                <p>A paid license and an internet connection. The photo gets read on our server, so it's the one online feature. You get twenty imports a month.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Where does my data live?</h4>
+                <p>On your Mac. Your song library, shows, and setlists are stored locally and never sent to our servers. The single exception is a setlist photo you choose to import, covered in the Privacy Policy. Future versions may include opt-in manual cloud backup of artist data, but we'll never snoop without your express permission.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How does the license work?</h4>
+                <p>One payment of $19.99 for a lifetime license (one artist profile). We email you a license key after checkout; you enter it in the app to activate all the paid features. No subscription, ever.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is there an iPad version?</h4>
+                <p>Not quite yet. Setcraft V1 is a Mac desktop app. A lightweight iPad Reader for viewing your setlists/lyrics/charts on stage is on the roadmap, with no date yet. Buying the Mac app doesn't include it, and V1 doesn't sync between devices. Even though Setcraft isn't yet available on iOS, in V1 you can export any of your setlists, charts, or lyric books as PDFs which are formatted to read on an iPad screen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                        <span class="brand-text">Setcraft</span>
+                    </a>
+                    <p class="footer-tag">The setlist app for working musicians. Built for the stage.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="#features">Features</a>
+                    <a href="#themes">Themes</a>
+                    <a href="#download">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="terms.html#notices">Third-party notices</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Talk to us</h5>
+                    <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Setcraft LLC</span>
+                <span>getsetcraft.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="tweaks-root"></div>
+
+    <script>
+        /* Keep each looping feature clip playing only while it's on screen —
+           browsers throttle/pause off-screen autoplay, so resume on enter. */
+        (function () {
+            var clips = document.querySelectorAll('.media-clip');
+            if (!clips.length) return;
+            if (!('IntersectionObserver' in window)) {
+                clips.forEach(function (v) { v.play().catch(function(){}); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    var v = e.target;
+                    if (e.isIntersecting) { v.play().catch(function(){}); }
+                    else if (!v.paused) { v.pause(); }
+                });
+            }, { threshold: 0.25 });
+            clips.forEach(function (v) { io.observe(v); });
+        })();
+    </script>
+
+    <script type="text/babel">
+        /* global TweaksPanel, TweakSection, TweakRadio, TweakToggle, useTweaks */
+        const { useEffect } = React;
+
+        const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+          "headline": "stacked-inline",
+          "show_video": true,
+          "cta_label": "Download Free"
+        }/*EDITMODE-END*/;
+
+        function IndexTweaks() {
+            const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+            useEffect(() => {
+                const h1 = document.getElementById('hero-h1');
+                if (!h1) return;
+                h1.innerHTML = tweaks.headline === 'two-line'
+                    ? 'Get Ready.<br><strong>Get Setcraft.</strong>'
+                    : 'Get Ready. <strong style="white-space: nowrap;">Get Setcraft.</strong>';
+            }, [tweaks.headline]);
+
+            useEffect(() => {
+                const v = document.getElementById('video');
+                if (v) v.style.display = tweaks.show_video ? '' : 'none';
+            }, [tweaks.show_video]);
+
+            useEffect(() => {
+                const main = document.querySelector('#hero-cta .btn-main');
+                if (main) main.textContent = tweaks.cta_label;
+            }, [tweaks.cta_label]);
+
+            return (
+                <TweaksPanel>
+                    <TweakSection title="Hero">
+                        <TweakRadio label="Headline" value={tweaks.headline}
+                            options={['stacked-inline', 'two-line']}
+                            onChange={v => setTweak('headline', v)} />
+                        <TweakRadio label="Primary CTA" value={tweaks.cta_label}
+                            options={['Download Free', 'Try It Free', 'Get Setcraft']}
+                            onChange={v => setTweak('cta_label', v)} />
+                    </TweakSection>
+                    <TweakSection title="Sections">
+                        <TweakToggle label="Show walkthrough video" value={tweaks.show_video}
+                            onChange={v => setTweak('show_video', v)} />
+                    </TweakSection>
+                </TweaksPanel>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<IndexTweaks />);
+    </script>
+
+</body>
+</html>
