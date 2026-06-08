@@ -3,6 +3,22 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.1</title>
+            <pubDate>Mon, 08 Jun 2026 15:15:34 -0400</pubDate>
+            <sparkle:version>1.2.1</sparkle:version>
+            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Navigation and page labels now read in consistent title case (Build Setlist,
+  Photo Import), so they display correctly on themes whose fonts are not all-caps.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.1/Setcraft.dmg" length="105332762" type="application/octet-stream" sparkle:edSignature="VfHPofRCK4rd4/Vup2xx+fR1DspN9W+gFEiFODbQHem3cX94TRMpvGtNjsLSI51/6osGVESBCviCKGult8pmDw=="/>
+        </item>
+        <item>
             <title>1.2.0</title>
             <pubDate>Mon, 08 Jun 2026 10:07:44 -0400</pubDate>
             <sparkle:version>1.2.0</sparkle:version>
