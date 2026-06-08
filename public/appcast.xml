@@ -9,10 +9,28 @@
             <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## Changes
+            <description sparkle:format="markdown"><![CDATA[## What's new
 
-- Help > About Setcraft now opens the About panel.
-- Removed the unused macOS window tab bar for a cleaner single-window app.
+**1.2.4**
+
+- Help > About now opens the About panel.
+- Removed the unused macOS window tab bar.
+
+**1.2.3**
+
+- Tutorial wording fixes: exploring the demo band, cover songs, and backups.
+
+**1.2.2**
+
+- Lyric and chart books now print, not just export to PDF.
+- Photo Import no longer shows "Setlist created" before you import anything.
+- Account & License shows your license status and activated artist profiles.
+- The Shows list gains a PRO Report link, and the tutorials were reviewed for
+  accuracy with new walkthroughs.
+
+**1.2.1**
+
+- Title-cased the navigation and page labels.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
