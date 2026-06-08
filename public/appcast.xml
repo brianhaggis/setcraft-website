@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.2</title>
+            <pubDate>Mon, 08 Jun 2026 17:03:23 -0400</pubDate>
+            <sparkle:version>1.2.2</sparkle:version>
+            <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Lyric and chart books now print, not just export to PDF.
+- Photo Import no longer shows "Setlist created" before you import anything.
+- Account & License shows your license status and activated artist profiles.
+- The Shows list gains a PRO Report link on each show with a setlist.
+- Tutorials reviewed for accuracy, with new walkthroughs for lyrics and charts,
+  show filtering, saving, and a Backup & Restore tour.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.2/Setcraft.dmg" length="105270054" type="application/octet-stream" sparkle:edSignature="dC1gl65aQDPl5ezSHpLHPlO5FPn+SqPSXjhLfagT4SMZQZyVy0hQRMQh0bl0aFyGPkZA5HcaoGtV0cCDaO+lDA=="/>
+        </item>
+        <item>
             <title>1.2.1</title>
             <pubDate>Mon, 08 Jun 2026 15:15:34 -0400</pubDate>
             <sparkle:version>1.2.1</sparkle:version>
