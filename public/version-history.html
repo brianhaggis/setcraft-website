@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version History — Setcraft</title>
+    <meta name="description" content="What's changed in each release of Setcraft, the setlist app for working musicians.">
+    <meta name="robots" content="noindex, nofollow"> <!-- TEMP: pre-launch, remove to allow indexing -->
+    <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
+    <link rel="stylesheet" href="style.css?v=28">
+    <script src="theme-switcher.js"></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                <span class="brand-text">Setcraft</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#themes" class="nav-link">Themes</a>
+                <a href="index.html#download" class="nav-cta">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container section">
+        <div class="legal">
+            <a href="index.html" class="back">← Back to Setcraft</a>
+            <h1>Version History</h1>
+            <p class="updated">Current release · 1.2.4</p>
+
+            <div class="cl-entry">
+                <h2 class="cl-version">1.2.4 <span class="cl-current">Current</span></h2>
+                <p class="cl-date">June 8, 2026</p>
+                <ul>
+                <li>Help &gt; About Setcraft now opens the standard About panel (it was an AppKit call made off the main thread, so it silently did nothing).</li>
+                <li>Removed the macOS window tab bar. Setcraft is a single-window app, so the default tabbing (the View &gt; Show Tab Bar item and the empty tab strip) only added confusion.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.2.3</h2>
+                <p class="cl-date">June 8, 2026</p>
+                <ul>
+                <li>Tutorial copy fixes: the overview&#x27;s closing card now explains how to reach the demo band (via the Artist Switcher) rather than implying you are already in it; the songs &quot;Type&quot; step no longer claims covers print the original artist (they do not); the Backup tutorial highlights the Backup tab.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.2.2</h2>
+                <p class="cl-date">June 8, 2026</p>
+                <ul>
+                <li>Lyric and chart books now print, not just PDF export. The desktop Print path honors the lyric/chart book checkboxes instead of dropping them.</li>
+                <li>Photo Import no longer shows &quot;Setlist created&quot; and &quot;Review Matches&quot; before you import anything (a desktop-only gate bug).</li>
+                <li>Backstage: the Account &amp; License tab shows license status and the number of activated additional artist profiles; the Artists tab is wider so profile rows with long band names no longer wrap.</li>
+                <li>The Shows list now has a PRO Report link on each show with a setlist.</li>
+                <li>The dashboard rename (pencil) icon follows the theme color.</li>
+                <li>Tutorials: corrected the set cap (four, not unlimited), the default builder view (two sets, not one), and setlist saving (manual Save, not automatic); fixed the song filter list and the print-dialog wording. Added Lyrics, Charts, Shows filtering, and a Save step, a new Backup &amp; Restore tutorial, and a data safety stop on the overview. Removed the redundant Run Setup Wizard entry.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.2.1</h2>
+                <p class="cl-date">June 8, 2026</p>
+                <ul>
+                <li>Navigation and page labels are now consistently title-cased (&quot;Build Setlist&quot;, &quot;Photo Import&quot;) so they read correctly on themes whose fonts are not all-caps.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.2.0</h2>
+                <p class="cl-date">June 8, 2026</p>
+                <ul>
+                <li>Automatic updates via Sparkle: the app checks the signed appcast feed (<code>getsetcraft.com/appcast.xml</code>) and can download, install, and relaunch a new version itself. Manual check from Help, Check for Updates.</li>
+                <li>Also carries the interim lightweight update check, which only runs on builds that do not have Sparkle, so there is never a double prompt.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.1.0</h2>
+                <p class="cl-date">June 7, 2026</p>
+                <ul>
+                <li>Local Backup: automatic on-device disaster-recovery snapshots, taken on launch and before any destructive action, with full rollback from the Backstage Backup tab.</li>
+                <li>Backstage reorganized into Preferences, Integrations, and Account &amp; License.</li>
+                <li>Paid printouts no longer carry the free-version watermark.</li>
+                <li>A real upgrade prompt at the free song limit, replacing the plain error.</li>
+                <li>PRO Report reachable directly from the show page.</li>
+                <li>Accessibility: visible keyboard focus, screen-reader labels on icon buttons.</li>
+                <li>Broad copy and layout polish from the product audit.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.10</h2>
+                <p class="cl-date">June 6, 2026</p>
+                <ul>
+                <li>Final desktop setlist-drag fix (clone and slip behavior in the WKWebView).</li>
+                <li>License reclaim: &quot;deactivate all other computers&quot;.</li>
+                <li>Free-tier nudge when over the 15-song limit.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.9</h2>
+                
+                <ul>
+                <li>Drag clone visibility, balanced print columns, metaset-note print fix.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.8</h2>
+                
+                <ul>
+                <li>Fix setlist drag in the desktop WKWebView (Sortable pointer fallback).</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.7</h2>
+                
+                <ul>
+                <li>Backup and Restore added (Backstage Backup tab, portable migration).</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.6</h2>
+                
+                <ul>
+                <li>Block duplicate artist names within an account.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.5</h2>
+                
+                <ul>
+                <li>Theme-preview display fonts in the picker.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.4</h2>
+                
+                <ul>
+                <li>Wizard polish; removed the non-functional desktop logout.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.3</h2>
+                
+                <ul>
+                <li>Launch-fix release: the Dock-hang on first open.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.2</h2>
+                
+                <ul>
+                <li>Onboarding theme step with a live full-screen builder preview.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.1</h2>
+                
+                <ul>
+                <li>Add-artist UX: switcher entry, Bandsintown at creation, auto-switch, Backstage card.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">1.0.0</h2>
+                <p class="cl-date">June 2, 2026</p>
+                <ul>
+                <li>First signed and notarized release build, published to the free download channel and wired to Lemon Squeezy. Not distributed to anyone.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">Pre-release</h2>
+                
+                <ul>
+                <li>Phase 2 scaffolding: arm64 desktop build via pywebview and py2app, code signing, notarization.</li>
+                <li>Phase 1 (tag <code>v0.1.0-phase-1</code>): core app feature-complete in Flask. Song library, lyrics with inline chords, chart upload, shows, the setlist builder, themes, WeasyPrint printing.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                        <span class="brand-text">Setcraft</span>
+                    </a>
+                    <p class="footer-tag">The setlist app for working musicians. Built for the stage.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#download">Download</a>
+                    <a href="version-history.html">Version History</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="terms.html#notices">Third-party notices</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Talk to us</h5>
+                    <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Setcraft LLC. Made for working bands.</span>
+                <span>getsetcraft.com</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

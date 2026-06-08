@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's New in Setcraft</title>
+<style>
+  body { font: 14px/1.6 -apple-system, "Helvetica Neue", Arial, sans-serif;
+         color: #1a1a1a; margin: 0; padding: 18px 20px; background: #fff; }
+  h1 { font-size: 17px; margin: 0 0 14px; }
+  section { margin: 0 0 18px; }
+  h2 { font-size: 14px; margin: 0 0 2px; color: #111;
+        border-bottom: 1px solid #e6e6e6; padding-bottom: 4px; }
+  .d { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
+        color: #8a8a8a; margin: 2px 0 8px; }
+  .cur { font-size: 10px; font-weight: 700; text-transform: uppercase;
+          letter-spacing: 0.05em; color: #fff; background: #2b7a3d;
+          border-radius: 999px; padding: 1px 7px; vertical-align: middle; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 0 0 5px; }
+  code { background: #f0f0f0; border-radius: 4px; padding: 0 4px; font-size: 12px; }
+  .more { font-size: 12px; color: #6a6a6a; border-top: 1px solid #eee; padding-top: 12px; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #1d1d1f; }
+    h1, h2 { color: #f2f2f2; }
+    h2 { border-bottom-color: #3a3a3c; }
+    code { background: #2c2c2e; }
+    .more { color: #9a9a9a; border-top-color: #3a3a3c; }
+  }
+</style>
+</head>
+<body>
+  <h1>What's New in Setcraft</h1>
+    <section>
+      <h2>1.2.4 <span class="cur">Current</span></h2>
+      <div class="d">June 8, 2026</div>
+      <ul>
+      <li>Help &gt; About Setcraft now opens the standard About panel (it was an AppKit call made off the main thread, so it silently did nothing).</li>
+      <li>Removed the macOS window tab bar. Setcraft is a single-window app, so the default tabbing (the View &gt; Show Tab Bar item and the empty tab strip) only added confusion.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>1.2.3</h2>
+      <div class="d">June 8, 2026</div>
+      <ul>
+      <li>Tutorial copy fixes: the overview&#x27;s closing card now explains how to reach the demo band (via the Artist Switcher) rather than implying you are already in it; the songs &quot;Type&quot; step no longer claims covers print the original artist (they do not); the Backup tutorial highlights the Backup tab.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>1.2.2</h2>
+      <div class="d">June 8, 2026</div>
+      <ul>
+      <li>Lyric and chart books now print, not just PDF export. The desktop Print path honors the lyric/chart book checkboxes instead of dropping them.</li>
+      <li>Photo Import no longer shows &quot;Setlist created&quot; and &quot;Review Matches&quot; before you import anything (a desktop-only gate bug).</li>
+      <li>Backstage: the Account &amp; License tab shows license status and the number of activated additional artist profiles; the Artists tab is wider so profile rows with long band names no longer wrap.</li>
+      <li>The Shows list now has a PRO Report link on each show with a setlist.</li>
+      <li>The dashboard rename (pencil) icon follows the theme color.</li>
+      <li>Tutorials: corrected the set cap (four, not unlimited), the default builder view (two sets, not one), and setlist saving (manual Save, not automatic); fixed the song filter list and the print-dialog wording. Added Lyrics, Charts, Shows filtering, and a Save step, a new Backup &amp; Restore tutorial, and a data safety stop on the overview. Removed the redundant Run Setup Wizard entry.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>1.2.1</h2>
+      <div class="d">June 8, 2026</div>
+      <ul>
+      <li>Navigation and page labels are now consistently title-cased (&quot;Build Setlist&quot;, &quot;Photo Import&quot;) so they read correctly on themes whose fonts are not all-caps.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>1.2.0</h2>
+      <div class="d">June 8, 2026</div>
+      <ul>
+      <li>Automatic updates via Sparkle: the app checks the signed appcast feed (<code>getsetcraft.com/appcast.xml</code>) and can download, install, and relaunch a new version itself. Manual check from Help, Check for Updates.</li>
+      <li>Also carries the interim lightweight update check, which only runs on builds that do not have Sparkle, so there is never a double prompt.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>1.1.0</h2>
+      <div class="d">June 7, 2026</div>
+      <ul>
+      <li>Local Backup: automatic on-device disaster-recovery snapshots, taken on launch and before any destructive action, with full rollback from the Backstage Backup tab.</li>
+      <li>Backstage reorganized into Preferences, Integrations, and Account &amp; License.</li>
+      <li>Paid printouts no longer carry the free-version watermark.</li>
+      <li>A real upgrade prompt at the free song limit, replacing the plain error.</li>
+      <li>PRO Report reachable directly from the show page.</li>
+      <li>Accessibility: visible keyboard focus, screen-reader labels on icon buttons.</li>
+      <li>Broad copy and layout polish from the product audit.</li>
+      </ul>
+    </section>
+    <p class="more">See the full history at <a href="https://getsetcraft.com/version-history.html">getsetcraft.com/version-history</a>.</p>
+</body>
+</html>
