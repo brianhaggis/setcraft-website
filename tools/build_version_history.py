@@ -13,8 +13,12 @@ Outputs (both under public/):
     release-notes.html     bare page shown inside the Sparkle update prompt
                            (the appcast items' <sparkle:releaseNotesLink> points here)
 
-The two pages share the parsed changelog; only the surrounding template differs.
-No site build step is involved: public/ is served as-is by Cloudflare Pages.
+Presentation: entries are grouped into ONE block per release day, newest first.
+A flurry of same-day point releases (e.g. 1.2.0 through 1.2.4) reads as a single
+dated block listing the version span, rather than a long churn of tiny releases.
+Entries with no date in the changelog (the old internal point bumps and the
+pre-release notes) are omitted. No site build step is involved: public/ is served
+as-is by Cloudflare Pages.
 """
 
 import html
@@ -26,8 +30,8 @@ REPO = pathlib.Path(__file__).resolve().parent.parent
 DEFAULT_CHANGELOG = REPO.parent / "setcraft" / "CHANGELOG.md"
 PUBLIC = REPO / "public"
 
-# How many recent versions the Sparkle prompt shows (the website page shows all).
-SPARKLE_LIMIT = 6
+# How many recent release DAYS the Sparkle prompt shows (the website page shows all).
+SPARKLE_DAY_LIMIT = 4
 
 MONTHS = {
     "01": "January", "02": "February", "03": "March", "04": "April",
@@ -82,6 +86,35 @@ def parse_changelog(text):
     return entries
 
 
+def group_by_day(entries):
+    """Collapse per-version entries into one block per release day, newest day
+    first. Entries without a date (the old internal point bumps and the
+    pre-release notes) are dropped, so the page reads as a handful of dated
+    releases rather than a long churn of tiny versions. Versions within a day
+    stay newest-first, as they appear in the changelog."""
+    buckets, index = [], {}
+    for e in entries:
+        if not e["date"]:
+            continue
+        b = index.get(e["date"])
+        if b is None:
+            b = {"date": e["date"], "versions": [], "bullets": [], "current": False}
+            index[e["date"]] = b
+            buckets.append(b)
+        b["versions"].append(e["version"])
+        b["bullets"].extend(e["bullets"])
+        b["current"] = b["current"] or e["current"]
+    return buckets
+
+
+def version_label(versions):
+    """'Version 1.1.0' for a single release, 'Versions 1.2.0–1.2.4' (en dash)
+    for a day that shipped several."""
+    if len(versions) == 1:
+        return f"Version {versions[0]}"
+    return f"Versions {versions[-1]}–{versions[0]}"
+
+
 def render_inline(s):
     """Escape, then re-apply the small bit of Markdown the changelog uses:
     `code` spans and **bold**."""
@@ -91,23 +124,18 @@ def render_inline(s):
     return out
 
 
-def render_entries(entries):
-    """Shared HTML for the list of version entries."""
+def render_entries(buckets):
+    """Site-page HTML: one card per release day."""
     blocks = []
-    for e in entries:
-        badge = ' <span class="cl-current">Current</span>' if e["current"] else ""
-        date = (
-            f'<p class="cl-date">{html.escape(pretty_date(e["date"]))}</p>'
-            if e["date"]
-            else ""
-        )
+    for b in buckets:
+        badge = ' <span class="cl-current">Current</span>' if b["current"] else ""
         items = "\n".join(
-            f"                <li>{render_inline(b)}</li>" for b in e["bullets"]
+            f"                <li>{render_inline(x)}</li>" for x in b["bullets"]
         )
         blocks.append(
             f"""            <div class="cl-entry">
-                <h2 class="cl-version">{html.escape(e["version"])}{badge}</h2>
-                {date}
+                <h2 class="cl-version">{html.escape(pretty_date(b["date"]))}{badge}</h2>
+                <p class="cl-date">{html.escape(version_label(b["versions"]))}</p>
                 <ul>
 {items}
                 </ul>
@@ -166,6 +194,7 @@ FOOTER = """    <footer class="site-footer">
 
 
 def build_site_page(entries):
+    buckets = group_by_day(entries)
     latest = entries[0]["version"] if entries else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -188,7 +217,7 @@ def build_site_page(entries):
             <h1>Version History</h1>
             <p class="updated">Current release · {html.escape(latest)}</p>
 
-{render_entries(entries)}
+{render_entries(buckets)}
         </div>
     </section>
 
@@ -200,18 +229,18 @@ def build_site_page(entries):
 
 def build_sparkle_page(entries):
     """A bare, self-contained page (no site nav/footer) for the Sparkle update
-    prompt's small WebView. Shows the most recent versions, then links to the
-    full history."""
-    recent = entries[:SPARKLE_LIMIT]
+    prompt's small WebView. Shows the most recent release days, then links to
+    the full history."""
+    buckets = group_by_day(entries)
+    recent = buckets[:SPARKLE_DAY_LIMIT]
     rows = []
-    for e in recent:
-        badge = ' <span class="cur">Current</span>' if e["current"] else ""
-        date = f'<div class="d">{html.escape(pretty_date(e["date"]))}</div>' if e["date"] else ""
-        items = "\n".join(f"      <li>{render_inline(b)}</li>" for b in e["bullets"])
+    for b in recent:
+        badge = ' <span class="cur">Current</span>' if b["current"] else ""
+        items = "\n".join(f"      <li>{render_inline(x)}</li>" for x in b["bullets"])
         rows.append(
             f"""    <section>
-      <h2>{html.escape(e["version"])}{badge}</h2>
-      {date}
+      <h2>{html.escape(pretty_date(b["date"]))}{badge}</h2>
+      <div class="d">{html.escape(version_label(b["versions"]))}</div>
       <ul>
 {items}
       </ul>
@@ -219,7 +248,7 @@ def build_sparkle_page(entries):
         )
     body = "\n".join(rows)
     more = ""
-    if len(entries) > len(recent):
+    if len(buckets) > len(recent):
         more = (
             '\n    <p class="more">See the full history at '
             '<a href="https://getsetcraft.com/version-history.html">'
@@ -271,11 +300,12 @@ def main():
     entries = parse_changelog(src.read_text())
     if not entries:
         sys.exit("No version entries parsed from the changelog.")
+    days = group_by_day(entries)
     (PUBLIC / "version-history.html").write_text(build_site_page(entries))
     (PUBLIC / "release-notes.html").write_text(build_sparkle_page(entries))
-    print(f"Parsed {len(entries)} entries from {src}")
-    print(f"Wrote {PUBLIC / 'version-history.html'}")
-    print(f"Wrote {PUBLIC / 'release-notes.html'} (latest {min(SPARKLE_LIMIT, len(entries))})")
+    print(f"Parsed {len(entries)} versions into {len(days)} release days from {src}")
+    print(f"Wrote {PUBLIC / 'version-history.html'} (all {len(days)} days)")
+    print(f"Wrote {PUBLIC / 'release-notes.html'} (latest {min(SPARKLE_DAY_LIMIT, len(days))} days)")
 
 
 if __name__ == "__main__":
