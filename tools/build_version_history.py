@@ -178,6 +178,7 @@ FOOTER = """    <footer class="site-footer">
                     <h5>Legal</h5>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms</a>
+                    <a href="licenses.html">Open-Source Licenses</a>
                     <a href="terms.html#notices">Third-party notices</a>
                 </div>
                 <div class="footer-col">

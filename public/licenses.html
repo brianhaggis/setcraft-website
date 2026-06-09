@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open-Source Licenses — Setcraft</title>
+    <meta name="description" content="The open-source software Setcraft is built with, and the licenses it is used under.">
+    <meta name="robots" content="noindex, nofollow"> <!-- TEMP: pre-launch, remove to allow indexing -->
+    <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
+    <link rel="stylesheet" href="style.css?v=28">
+    <script src="theme-switcher.js"></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                <span class="brand-text">Setcraft</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#themes" class="nav-link">Themes</a>
+                <a href="index.html#download" class="nav-cta">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container section">
+        <div class="legal">
+            <a href="index.html" class="back">← Back to Setcraft</a>
+            <h1>Open-Source Licenses</h1>
+            <p class="updated">The software Setcraft is built with</p>
+
+            <p>Setcraft is built with open-source software, and we're grateful to the people who make it. The components below are included in or used by the app, each under its own license. Where a license requires it, the full text is available from the linked project and on request from <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>.</p>
+            <p>The app contains no copyleft (GPL or AGPL) components. Everything below is under a permissive license (BSD, MIT, Apache, PSF, and similar) or the LGPL. LGPL libraries are linked dynamically so they can be replaced.</p>
+
+            <h2>Application &amp; framework</h2>
+            <ul>
+                <li><strong>Python</strong> — Python Software Foundation License</li>
+                <li><strong>pywebview</strong> — BSD-3-Clause</li>
+                <li><strong>PyObjC</strong> — MIT</li>
+                <li><strong>Sparkle</strong> (auto-update) — MIT</li>
+                <li><strong>SortableJS</strong> (drag-and-drop) — MIT</li>
+            </ul>
+
+            <h2>Web layer</h2>
+            <ul>
+                <li><strong>Flask</strong>, with <strong>Werkzeug, Jinja2, MarkupSafe, Click, ItsDangerous, Blinker</strong> — BSD-3-Clause / MIT</li>
+                <li><strong>Flask-Login</strong> — MIT</li>
+                <li><strong>requests</strong> — Apache-2.0</li>
+                <li><strong>charset-normalizer</strong> — MIT</li>
+            </ul>
+
+            <h2>Documents, text &amp; images</h2>
+            <ul>
+                <li><strong>WeasyPrint</strong> and its companions <strong>pydyf, tinycss2, cssselect2, Pyphen, fontTools, html5lib, webencodings</strong> — BSD-3-Clause / MIT / Apache-2.0</li>
+                <li><strong>pypdf</strong> — BSD-3-Clause</li>
+                <li><strong>Pillow</strong> — MIT-CMU (HPND)</li>
+                <li><strong>Python-Markdown</strong> — BSD-3-Clause</li>
+                <li><strong>bleach</strong> — Apache-2.0</li>
+                <li><strong>RapidFuzz</strong> — MIT</li>
+                <li><strong>Anthropic Python SDK</strong> — MIT</li>
+            </ul>
+
+            <h2>Native libraries</h2>
+            <ul>
+                <li><strong>SQLite</strong> — Public Domain</li>
+                <li><strong>OpenSSL</strong> — Apache-2.0</li>
+                <li><strong>xz / liblzma</strong> — 0BSD</li>
+                <li><strong>libmpdec</strong> — BSD-2-Clause</li>
+                <li><strong>HarfBuzz</strong> — Old MIT; <strong>FreeType</strong> — FreeType License; <strong>Fontconfig</strong> — MIT-style; <strong>libpng</strong> — libpng License; <strong>PCRE2</strong> — BSD-3-Clause</li>
+                <li><strong>GLib / GObject / GIO / GModule, Pango, FriBidi, libdatrie, libthai, GNU gettext (libintl), Graphite2</strong> — LGPL-2.1-or-later (linked dynamically; source available on request)</li>
+            </ul>
+
+            <h2>Fonts</h2>
+            <p>Setcraft bundles these typefaces under the SIL Open Font License 1.1 or the Apache License 2.0: Inter, Bebas Neue, Barlow Condensed, Orbitron, Playfair Display, Bangers, Lora, Righteous, DM Serif Display, Abril Fatface, Press Start 2P, VT323, Sacramento, Permanent Marker, Share Tech Mono, Metal Mania, and Bravura / Bravura Text.</p>
+
+            <h2>Hosted services</h2>
+            <p>Setlist photo import sends your photo to Setcraft's server, which uses Anthropic's API to read it (see the <a href="privacy.html">Privacy Policy</a>). The server uses pypdfium2 (PDFium) and pillow-heif to handle PDF and HEIC uploads. These run on our servers and are not part of the app.</p>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                        <span class="brand-text">Setcraft</span>
+                    </a>
+                    <p class="footer-tag">The setlist app for working musicians. Built for the stage.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#download">Download</a>
+                    <a href="version-history.html">Version History</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="licenses.html">Open-Source Licenses</a>
+                    <a href="terms.html#notices">Third-party notices</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Talk to us</h5>
+                    <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Setcraft LLC. Made for working bands.</span>
+                <span>getsetcraft.com</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

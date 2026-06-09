@@ -29,12 +29,14 @@
         <div class="legal">
             <a href="index.html" class="back">← Back to Setcraft</a>
             <h1>Version History</h1>
-            <p class="updated">Current release · 1.2.4</p>
+            <p class="updated">Current release · 1.2.5</p>
 
             <div class="cl-entry">
                 <h2 class="cl-version">June 8, 2026 <span class="cl-current">Current</span></h2>
-                <p class="cl-date">Versions 1.2.0–1.2.4</p>
+                <p class="cl-date">Versions 1.2.0–1.2.5</p>
                 <ul>
+                <li>Licensing cleanup: the app no longer bundles any copyleft components. PDF rasterization moved from PyMuPDF (AGPL) to PDFium, and the HEIC/HEVC libraries (which pulled in GPL-licensed x265) were dropped from the app, since that work only ever runs on the server. The shipped binary is now permissive/LGPL only.</li>
+                <li>Added an Open-Source Licenses page, reachable from the About panel, the Help menu, Backstage, and the website.</li>
                 <li>Help &gt; About Setcraft now opens the standard About panel (it was an AppKit call made off the main thread, so it silently did nothing).</li>
                 <li>Removed the macOS window tab bar. Setcraft is a single-window app, so the default tabbing (the View &gt; Show Tab Bar item and the empty tab strip) only added confusion.</li>
                 <li>Tutorial copy fixes: the overview&#x27;s closing card now explains how to reach the demo band (via the Artist Switcher) rather than implying you are already in it; the songs &quot;Type&quot; step no longer claims covers print the original artist (they do not); the Backup tutorial highlights the Backup tab.</li>
@@ -101,6 +103,7 @@
                     <h5>Legal</h5>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms</a>
+                    <a href="licenses.html">Open-Source Licenses</a>
                     <a href="terms.html#notices">Third-party notices</a>
                 </div>
                 <div class="footer-col">
