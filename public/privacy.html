@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Setcraft</title>
-    <meta name="description" content="How Setcraft handles your data. Everything stays on your Mac, with one disclosed exception: setlist photo import.">
+    <meta name="description" content="How Setcraft handles your data. Setcraft runs on your Mac and your content stays on your Mac, with photo import as the one disclosed exception.">
     <meta name="robots" content="noindex, nofollow"> <!-- TEMP: pre-launch, remove to allow indexing -->
     <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
-    <link rel="stylesheet" href="style.css?v=27">
+    <link rel="stylesheet" href="style.css?v=29">
     <script src="theme-switcher.js"></script>
 </head>
 <body>
@@ -29,29 +29,101 @@
         <div class="legal">
             <a href="index.html" class="back">← Back to Setcraft</a>
             <h1>Privacy Policy</h1>
-            <p class="updated">Draft · last updated June 2026</p>
+            <p class="updated">Last updated: June 8, 2026</p>
 
-            <div class="draft-flag"><strong>Draft for layout.</strong> Final Privacy Policy text is provided or approved by Brian. The photo-import disclosure below is the one passage that has to be present and accurate, so it is written out in full.</div>
+            <p class="lede">Setcraft is a setlist app for musicians. This policy explains what data the app touches, where it goes, and who else is involved. We have tried to keep it short and honest.</p>
 
-            <h2>The short version</h2>
-            <p>Setcraft is a local-first macOS app. Your song library, shows, setlists, lyrics, and chord charts are stored on your Mac. We don't have copies of them, and using the app requires no account.</p>
+            <p class="lede">The short version: Setcraft runs on your Mac, and your songs, lyrics, charts, shows, setlists, and notes stay on your Mac. You do not need an account to use it. Almost nothing leaves your device. The exceptions are spelled out below.</p>
 
-            <h2>Setlist photo import</h2>
-            <p>Setlist photo import is the one feature that sends data off your device. When you import a setlist photo, <strong>the photo is sent to our server, which forwards it to Anthropic's API</strong> to read the setlist text. Only the extracted text comes back to the app, which then matches it against the library already on your Mac.</p>
-            <p>Your song library, lyrics, and charts are not part of that request and never leave your Mac. Photo import is a paid, online feature; if you never use it, no song data leaves your device through Setcraft.</p>
+            <h2>1. Who we are</h2>
+            <p>Setcraft is made by <strong>Setcraft LLC</strong>, a Pennsylvania limited liability company, registered at 5588 East Texas Rd, East Texas, PA 18046.</p>
+            <p>For privacy questions, contact us at <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>.</p>
+            <p>Setcraft is a native macOS app (Apple Silicon, macOS 12 and later). It is signed, notarized, and sold directly from getsetcraft.com, not through the Mac App Store. We also run a small hosted backend (for photo import and licensing) and a marketing website.</p>
 
-            <h2>What we do not collect</h2>
+            <h2>2. Setcraft is local-first</h2>
+            <p>Your song library, lyrics, chord charts, shows, setlists, and notes are stored in a database on your own Mac, in <code>~/Library/Application Support/Setcraft/</code>.</p>
+            <p><strong>No account is required to use the app.</strong> We do not receive or store copies of that content. There is exactly one feature that sends your content off the device (photo import, described below), plus a few operational connections for licensing, optional Bandsintown sync, and software updates. Each is covered below.</p>
+
+            <h2>3. What the app processes, and why</h2>
+
+            <h3>3a. Setlist photo import</h3>
+            <p>This is the one feature that sends your content off your Mac, and it only runs when you choose to use it.</p>
+            <p>When you import a photo of a paper or handwritten setlist, the image is sent to <strong>Setcraft's server</strong> (hosted on <strong>Render</strong>), which forwards it to <strong>Anthropic's API</strong> to read the text in the image. Only the extracted text comes back to the app, where it is matched against your local library.</p>
             <ul>
-                <li>No copies of your library, setlists, lyrics, or charts.</li>
-                <li>No account is required to download and use the free version.</li>
-                <li>No advertising trackers.</li>
+                <li><strong>What is sent:</strong> the photo itself, along with your license key, which our server uses to confirm you have a paid license and to count your monthly uploads. Your song library, lyrics, and charts are not part of the request and never leave your Mac.</li>
+                <li><strong>Sub-processors:</strong> Render (hosting) and Anthropic (reading the image).</li>
+                <li><strong>How we handle the photo:</strong> the photo is held only for the time it takes to process your request. It is not stored, not added to any database, and not logged. During processing it may be briefly written to a temporary file and is deleted automatically when the request completes. The only lasting record we keep is a monthly upload count tied to a one-way hash of your license key. That record contains no image, no email, and no readable license key.</li>
+                <li><strong>What Anthropic does with it:</strong> Anthropic does not use data sent to its commercial API to train its models. By default, Anthropic automatically deletes API inputs and outputs within 30 days, with limited exceptions (for example, content flagged for policy violations, or where a legal hold applies).</li>
+                <li><strong>Requirements:</strong> this is a paid feature and needs an internet connection.</li>
+                <li><strong>Legal basis (GDPR):</strong> performance of the contract, meaning the feature you asked us to run.</li>
             </ul>
 
-            <h2>Payment</h2>
-            <p>Purchases run through Lemon Squeezy, our merchant of record. They process payment and issue your license key. We don't see or store your card details.</p>
+            <h3>3b. Licensing and purchase</h3>
+            <p>Purchases run through <strong>Lemon Squeezy</strong>, which acts as the merchant of record. They collect your email and payment details and issue your license key. <strong>We never see or store your card details.</strong></p>
+            <p>Your license key is stored locally on your Mac, in the <strong>macOS Keychain</strong>. When the app activates, deactivates, or periodically re-validates your license, it communicates <strong>directly with Lemon Squeezy</strong> and transmits the license key plus a device identifier, since activation is limited by device seat. Our own server is not involved in that exchange and does not receive your device identifier.</p>
+            <p>Your license key does reach our server in two cases: when you use photo import (your key is sent to authorize and meter the request, as described above), and when you use "deactivate all other computers" to reclaim seats. In both cases our server only ever stores a one-way hash of the key, never the key itself.</p>
+            <ul>
+                <li><strong>Data involved:</strong> your email (collected at purchase by Lemon Squeezy), your license key, a device identifier (held by Lemon Squeezy), and activation count.</li>
+                <li><strong>Legal basis (GDPR):</strong> performance of the contract.</li>
+            </ul>
 
-            <h2>Contact</h2>
-            <p>Questions about privacy: <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>.</p>
+            <h3>3c. Bandsintown sync (optional)</h3>
+            <p>If you supply your own <strong>Bandsintown API key</strong>, the app uses it to pull your upcoming shows from the <strong>Bandsintown API</strong>. This is something you start, using your own Bandsintown account.</p>
+            <ul>
+                <li><strong>Data involved:</strong> your Bandsintown API key and the show data it returns.</li>
+                <li><strong>Legal basis (GDPR):</strong> consent and/or performance of the contract.</li>
+            </ul>
+
+            <h3>3d. Software updates</h3>
+            <p>Automatic update checks are opt-in. If you turn them on, the app checks <code>getsetcraft.com/appcast.xml</code> (hosted on <strong>Cloudflare Pages</strong>) using <strong>Sparkle</strong>, and downloads updates from <strong>GitHub Releases</strong>. A lightweight fallback check may call the <strong>GitHub API</strong>.</p>
+            <p>These requests carry standard network metadata to the update and CDN hosts: your IP address, the app version, your OS version, and a user-agent string. This is true of any network request, not something extra we collect.</p>
+            <p>Sparkle's optional anonymous system profiling is turned <strong>off</strong>, so no anonymized profile of your system is sent with update checks.</p>
+
+            <h3>3e. Analytics and tracking</h3>
+            <p>Setcraft has <strong>no advertising trackers, no third-party analytics SDKs, no telemetry, and no crash reporting</strong> in the app. We do not build a profile of you or your usage. If this ever changes, we will update this section before adding any such tool.</p>
+
+            <h2>4. Third parties and sub-processors</h2>
+            <table>
+                <thead>
+                    <tr><th>Provider</th><th>Role</th><th>What they receive</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Anthropic</td><td>Reads the setlist photo for photo import</td><td>the setlist photo</td></tr>
+                    <tr><td>Render</td><td>Hosts the photo-import proxy and licensing backend</td><td>the photo (in transit), your license key (hashed for metering), request metadata</td></tr>
+                    <tr><td>Lemon Squeezy</td><td>Merchant of record, issues license keys</td><td>email, payment data, license and device info</td></tr>
+                    <tr><td>Bandsintown</td><td>Optional show sync, using your own key</td><td>your API key, show queries</td></tr>
+                    <tr><td>Cloudflare</td><td>Hosts the website and update feed</td><td>update-check metadata (IP, version)</td></tr>
+                    <tr><td>GitHub</td><td>Hosts release downloads</td><td>download request metadata</td></tr>
+                </tbody>
+            </table>
+            <p>We handle support email ourselves at <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>; it does not pass through a third-party helpdesk service.</p>
+            <p>Each of these providers may rely on its own sub-processors, such as major US cloud-hosting and payment-infrastructure providers, under its own data-processing terms.</p>
+
+            <h2>5. International transfers</h2>
+            <p>Your data may be processed in the United States and wherever the providers listed above operate. We rely on those providers' own data-transfer safeguards (such as Standard Contractual Clauses or Data Privacy Framework participation) for any transfer of personal data out of your region.</p>
+
+            <h2>6. Your rights</h2>
+            <p>If you are in the EU or UK, you have the right to access, correct, erase, restrict, and port your data, to object to processing, and to withdraw consent. You also have the right to complain to your local data protection authority.</p>
+            <p>If you are in California, you have the right to know what we collect, to delete and correct it, and to opt out of any "sale" or "sharing" of personal information. Setcraft does not sell or rent personal information. We will not discriminate against you for exercising these rights.</p>
+            <p>To exercise any of these, email <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>. Keep in mind that most of your content lives locally on your Mac and is under your direct control. You can delete the local database, and the in-app Backup, Restore, and snapshot tools all operate locally.</p>
+
+            <h2>7. Retention</h2>
+            <ul>
+                <li><strong>Local content:</strong> kept on your Mac and controlled by you. We do not hold it.</li>
+                <li><strong>Photo-import images:</strong> not stored. The photo exists on our server only for the duration of the request and is then gone. Anthropic deletes API data within 30 days by default.</li>
+                <li><strong>Monthly upload count:</strong> we keep a per-license monthly upload counter, tied to a one-way hash of your license key, to enforce fair use of photo import. It contains no image, email, or readable key.</li>
+                <li><strong>Purchase and license records</strong> (via Lemon Squeezy and our backend): kept for as long as tax and accounting law requires, which can be up to about seven years.</li>
+            </ul>
+
+            <h2>8. Children</h2>
+            <p>Setcraft is not directed to children under 13, and we do not knowingly collect their data.</p>
+
+            <h2>9. Security</h2>
+            <p>Your local data sits inside your macOS user account, and your license key is stored in the macOS Keychain on your device. Data sent to our server and to the providers above travels over HTTPS. Our server keeps very little data and identifies usage by a one-way hash rather than your license key. Hosting and infrastructure security are provided by Render, which maintains recognized security certifications. No method of transmission or storage is completely secure, but we use appropriate measures to protect the limited data we handle.</p>
+
+            <h2>10. Changes and contact</h2>
+            <p>If we change this policy, we will post the new version on our site and update the "Last updated" date above.</p>
+            <p>Questions: <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>.</p>
         </div>
     </section>
 
@@ -76,7 +148,6 @@
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms</a>
                     <a href="licenses.html">Open-Source Licenses</a>
-                    <a href="terms.html#notices">Third-party notices</a>
                 </div>
                 <div class="footer-col">
                     <h5>Talk to us</h5>

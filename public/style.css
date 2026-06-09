@@ -1802,3 +1802,31 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     padding: 0 5px;
     font-size: 0.9em;
 }
+
+/* ── Legal pages: tables, h3, lede (privacy / terms) ───────────────────── */
+.legal h3 {
+    font-size: 1.02rem;
+    font-weight: 650;
+    color: var(--ink);
+    margin: 1.6rem 0 0.5rem;
+}
+.legal .lede { font-size: 1.05rem; }
+.legal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 15px;
+}
+.legal th, .legal td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+    color: var(--ink-soft);
+}
+.legal th {
+    font-weight: 650;
+    color: var(--ink);
+    border-bottom: 2px solid var(--hairline);
+}
+.legal tr:last-child td { border-bottom: none; }
