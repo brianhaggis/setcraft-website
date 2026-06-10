@@ -186,7 +186,7 @@ FOOTER = """    <footer class="site-footer">
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2026 Setcraft LLC. Made for working bands.</span>
+                <span>© 2026 Setcraft LLC. Setcraft is a trademark of Setcraft LLC.</span>
                 <span>getsetcraft.com</span>
             </div>
         </div>
