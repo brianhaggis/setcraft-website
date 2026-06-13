@@ -3,6 +3,24 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.9</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Sat, 13 Jun 2026 19:47:26 -0400</pubDate>
+            <sparkle:version>1.2.9</sparkle:version>
+            <sparkle:shortVersionString>1.2.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The printed Tech Cue Sheet now starts each set on its own page, instead of
+  packing the next set below the previous one, and a single song's row no longer
+  splits across a page break.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.9/Setcraft.dmg" length="69360619" type="application/octet-stream" sparkle:edSignature="l2D7VW6P4Q5/0dcsFpXKJZRHXTnQvCZ3Vos/fXMKq68BGhAtjUWjS0Y0BZFqJgQp9PYmeZr9aZDIG715kBsjAA=="/>
+        </item>
+        <item>
             <title>1.2.8</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Thu, 11 Jun 2026 20:08:24 -0400</pubDate>
