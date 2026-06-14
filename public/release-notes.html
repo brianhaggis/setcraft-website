@@ -32,7 +32,15 @@
 <body>
   <h1>What's New in Setcraft</h1>
     <section>
-      <h2>June 13, 2026 <span class="cur">Current</span></h2>
+      <h2>June 14, 2026 <span class="cur">Current</span></h2>
+      <div class="d">Version 1.2.10</div>
+      <ul>
+      <li>In the setlist builder, the Between-Song Reminders panel moved from beneath the sets into the song library column, so saving reminders no longer shrinks the room for the setlist above it. The reminders and metaset panels are now collapsible, and a saved reminder can be added to the current set with a single click as well as by dragging it in.</li>
+      <li>The builder&#x27;s saved-setlist bar gained a Tech Cue Sheet button, next to Print / PDF.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>June 13, 2026</h2>
       <div class="d">Version 1.2.9</div>
       <ul>
       <li>The printed Tech Cue Sheet now starts each set on its own page, instead of packing the next set into the leftover space below the previous one. A single song&#x27;s row also no longer splits across a page break (which could leave its FOH/Lighting notes stranded at the top of the next page without the song name).</li>
@@ -56,26 +64,6 @@
       <div class="d">Version 1.2.6</div>
       <ul>
       <li>Added Privacy Policy and Terms of Service links, reachable from the Help menu and from Backstage (they open the published versions on getsetcraft.com).</li>
-      </ul>
-    </section>
-    <section>
-      <h2>June 8, 2026</h2>
-      <div class="d">Versions 1.2.0–1.2.5</div>
-      <ul>
-      <li>Licensing cleanup: the app no longer bundles any copyleft components. PDF rasterization moved from PyMuPDF (AGPL) to PDFium, and the HEIC/HEVC libraries (which pulled in GPL-licensed x265) were dropped from the app, since that work only ever runs on the server. The shipped binary is now permissive/LGPL only.</li>
-      <li>Added an Open-Source Licenses page, reachable from the About panel, the Help menu, Backstage, and the website.</li>
-      <li>Help &gt; About Setcraft now opens the standard About panel (it was an AppKit call made off the main thread, so it silently did nothing).</li>
-      <li>Removed the macOS window tab bar. Setcraft is a single-window app, so the default tabbing (the View &gt; Show Tab Bar item and the empty tab strip) only added confusion.</li>
-      <li>Tutorial copy fixes: the overview&#x27;s closing card now explains how to reach the demo band (via the Artist Switcher) rather than implying you are already in it; the songs &quot;Type&quot; step no longer claims covers print the original artist (they do not); the Backup tutorial highlights the Backup tab.</li>
-      <li>Lyric and chart books now print, not just PDF export. The desktop Print path honors the lyric/chart book checkboxes instead of dropping them.</li>
-      <li>Photo Import no longer shows &quot;Setlist created&quot; and &quot;Review Matches&quot; before you import anything (a desktop-only gate bug).</li>
-      <li>Backstage: the Account &amp; License tab shows license status and the number of activated additional artist profiles; the Artists tab is wider so profile rows with long band names no longer wrap.</li>
-      <li>The Shows list now has a PRO Report link on each show with a setlist.</li>
-      <li>The dashboard rename (pencil) icon follows the theme color.</li>
-      <li>Tutorials: corrected the set cap (four, not unlimited), the default builder view (two sets, not one), and setlist saving (manual Save, not automatic); fixed the song filter list and the print-dialog wording. Added Lyrics, Charts, Shows filtering, and a Save step, a new Backup &amp; Restore tutorial, and a data safety stop on the overview. Removed the redundant Run Setup Wizard entry.</li>
-      <li>Navigation and page labels are now consistently title-cased (&quot;Build Setlist&quot;, &quot;Photo Import&quot;) so they read correctly on themes whose fonts are not all-caps.</li>
-      <li>Automatic updates via Sparkle: the app checks the signed appcast feed (<code>getsetcraft.com/appcast.xml</code>) and can download, install, and relaunch a new version itself. Manual check from Help, Check for Updates.</li>
-      <li>Also carries the interim lightweight update check, which only runs on builds that do not have Sparkle, so there is never a double prompt.</li>
       </ul>
     </section>
     <p class="more">See the full history at <a href="https://getsetcraft.com/version-history.html">getsetcraft.com/version-history</a>.</p>
