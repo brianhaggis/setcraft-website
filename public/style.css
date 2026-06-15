@@ -1830,3 +1830,19 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     border-bottom: 2px solid var(--hairline);
 }
 .legal tr:last-child td { border-bottom: none; }
+
+/* Closed-beta notice strip at the top of the page. Inverts the page colors
+   (ink on paper) so it stands out and stays legible across every theme. */
+.beta-banner {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 9px 18px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+.beta-banner a {
+    color: var(--paper);
+    text-decoration: underline;
+    font-weight: 700;
+}
