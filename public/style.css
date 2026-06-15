@@ -1846,3 +1846,32 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     text-decoration: underline;
     font-weight: 700;
 }
+
+/* Buy/Download CTAs are greyed out during the closed beta. */
+.cta-disabled {
+    opacity: 0.4;
+    filter: grayscale(0.7);
+    pointer-events: none;
+    cursor: default;
+}
+/* The "Closed beta" flag shown next to each disabled CTA. */
+.beta-flag-line {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 10px 0 0;
+}
+.beta-flag {
+    display: inline-block;
+    background: var(--stripe-red);
+    color: #fff;
+    font-family: var(--font-display, inherit);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
