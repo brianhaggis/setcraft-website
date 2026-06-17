@@ -3,6 +3,31 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.13</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 17 Jun 2026 13:38:23 -0400</pubDate>
+            <sparkle:version>1.2.13</sparkle:version>
+            <sparkle:shortVersionString>1.2.13</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The free version is friendlier: limits surface only when you reach one, instead
+  of as persistent banners. Your primary artist profile and the demo band stay
+  available; extra profiles need a license, and you choose which profile is your
+  primary in Backstage.
+- The demo band is a full sandbox now (45 songs, lyrics, a sample chart, saved
+  reminders). Build full-length setlists and tech cue sheets with it on the free
+  version, with clean, unwatermarked exports. It's read-only, and you can hide it
+  from Backstage instead of deleting it.
+- Free version: a setlist is capped at 15 songs (the demo is exempt), and
+  Bandsintown sync shows as locked.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.13/Setcraft.dmg" length="69296819" type="application/octet-stream" sparkle:edSignature="UdEJR86IWp0lJeIpYFV4KJmtlhhyw0eDF5Jwp660dcIFZirRRQ2CvWu+7jT6+4Iqpo2nZ71haw8fldovmtusDg=="/>
+        </item>
+        <item>
             <title>1.2.12</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Mon, 15 Jun 2026 22:41:11 -0400</pubDate>
