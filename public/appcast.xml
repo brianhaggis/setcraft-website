@@ -3,6 +3,27 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.14</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 18 Jun 2026 00:09:19 -0400</pubDate>
+            <sparkle:version>1.2.14</sparkle:version>
+            <sparkle:shortVersionString>1.2.14</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- You can now enter an additional-artist-profile add-on key right on the
+  Account & License tab in Backstage, instead of only inside the Manage Artists
+  dialog.
+- When you have a paid artist profile you have not created yet, Backstage points
+  it out: a note on the Account & License tab and a small count badge on the
+  Artists tab, so an unused seat does not sit there unnoticed.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.14/Setcraft.dmg" length="69298712" type="application/octet-stream" sparkle:edSignature="rIQzYV9u01aav/PGUifC7AFCgdnG4Nqpr3yZLVRCqVaIZ4o/D9jrRRyPbxc6AqGxvoWsiosOhfLSJIl5AafNCw=="/>
+        </item>
+        <item>
             <title>1.2.13</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 17 Jun 2026 13:38:23 -0400</pubDate>
