@@ -3,6 +3,23 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.15</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 18 Jun 2026 11:31:54 -0400</pubDate>
+            <sparkle:version>1.2.15</sparkle:version>
+            <sparkle:shortVersionString>1.2.15</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The demo band's name no longer shows a rename (pencil) button on the dashboard.
+  The demo is a read-only sample, so its name was never editable.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.15/Setcraft.dmg" length="69473924" type="application/octet-stream" sparkle:edSignature="v1Kt4MUa8n3R0SOfBPqRgxdxey+5eRreFLUxfZ1oKVWSC2jXdQAmPYRfgbKqBjf4sgonWEKth6T5PJQS/pQSAQ=="/>
+        </item>
+        <item>
             <title>1.2.14</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Thu, 18 Jun 2026 00:09:19 -0400</pubDate>
