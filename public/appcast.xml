@@ -3,6 +3,27 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.18</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Fri, 19 Jun 2026 15:51:19 -0400</pubDate>
+            <sparkle:version>1.2.18</sparkle:version>
+            <sparkle:shortVersionString>1.2.18</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The small "?" help markers are gone. Tooltips now appear when you hover over a
+  label, and a new switch in Backstage (Preferences) turns help tooltips on or off.
+- Printed setlists and exported PDFs now use one consistent font, regardless of the
+  theme you have on in the app.
+- Backstage theme tiles are more compact, and the song editor (and other dialogs)
+  open scrolled to the top so the first field is in view.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.18/Setcraft.dmg" length="69977768" type="application/octet-stream" sparkle:edSignature="Xy9UBmge29NhJlO37EEGpyv7OFWv5Q5teAeyQP4ukLZffm6LDFAkp3C506NNeimEKpuAt3EO6dOMYPLIx61UDQ=="/>
+        </item>
+        <item>
             <title>1.2.17</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Fri, 19 Jun 2026 14:17:52 -0400</pubDate>
