@@ -3,6 +3,31 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.16</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 18 Jun 2026 21:10:13 -0400</pubDate>
+            <sparkle:version>1.2.16</sparkle:version>
+            <sparkle:shortVersionString>1.2.16</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Fixed license activation from the first-launch welcome screen, which failed with
+  "Could not reach the activation server" during onboarding.
+- The onboarding "Pick a look" step keeps its Back and Next buttons in view, and
+  its preview no longer shows non-clickable navigation links.
+- The top navigation links now show on the dashboard too, and "Backstage" carries
+  a gear icon so its settings purpose reads at a glance.
+- The Bandsintown sync window links to a short guide for getting your API key, and
+  the upgrade prompts open straight to the Account & License tab.
+- Backstage: the Primary and Active badges next to a profile name are aligned and
+  evenly spaced.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.16/Setcraft.dmg" length="68488137" type="application/octet-stream" sparkle:edSignature="YggPc7Hfs8/foi05crWxXbt3p+/KCLWgHA3bxwTVAeW7yOvE4fDC2HLOUBKp4hNjjN7fpXf5IIwyAuqI+xRKAw=="/>
+        </item>
+        <item>
             <title>1.2.15</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Thu, 18 Jun 2026 11:31:54 -0400</pubDate>
