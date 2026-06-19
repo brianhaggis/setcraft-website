@@ -17,7 +17,6 @@
   to troubleshooting.
 - Fixed a case where adding an artist profile showed the upgrade prompt even when
   you had a paid seat free (the demo band was being counted against your limit).
-- A few things are hidden in the app for the people who go looking. No hints.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
