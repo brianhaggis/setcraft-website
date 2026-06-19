@@ -173,6 +173,7 @@ FOOTER = """    <footer class="site-footer">
                     <a href="index.html#features">Features</a>
                     <a href="index.html#download">Download</a>
                     <a href="version-history.html">Version History</a>
+                    <a href="help.html">Help</a>
                 </div>
                 <div class="footer-col">
                     <h5>Legal</h5>

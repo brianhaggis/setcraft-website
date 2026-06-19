@@ -33,8 +33,13 @@
   <h1>What's New in Setcraft</h1>
     <section>
       <h2>June 18, 2026 <span class="cur">Current</span></h2>
-      <div class="d">Versions 1.2.14–1.2.15</div>
+      <div class="d">Versions 1.2.14–1.2.16</div>
       <ul>
+      <li>Fixed license activation from the first-launch welcome screen. Entering a key and email on the onboarding &quot;Activate&quot; step failed with &quot;Could not reach the activation server,&quot; even though the same key worked once you skipped to the free version and activated from Backstage. The onboarding guard was redirecting the activation request to the wizard page before it reached the license routes, so the response came back as HTML and the screen misread it as a connection failure. The <code>/api/activate</code> and <code>/api/license/reclaim</code> routes are now allowed to run during onboarding.</li>
+      <li>The onboarding wizard&#x27;s &quot;Pick a look&quot; step now keeps its Back and Next buttons in view. The theme tiles were large enough that the full set pushed Next off the bottom of the window, which made it look like the buttons in the preview behind the picker were how you advanced. The tiles are now compact so everything fits, and the preview behind the picker no longer shows its (non-clickable) nav links, so there is nothing back there that looks like a way forward.</li>
+      <li>The top navigation links now show on the dashboard too, instead of disappearing there. Having them vanish on the landing page was more confusing than helpful.</li>
+      <li>The &quot;Backstage&quot; navigation item now carries a gear icon, so its settings purpose reads at a glance even if the name&#x27;s backstage metaphor does not land (for example for users whose first language is not English).</li>
+      <li>Backstage Artists tab: the Primary and Active badges next to a profile name now sit in a tidy row, evenly spaced from the name and aligned at the same height.</li>
       <li>The demo band&#x27;s name no longer shows a rename (pencil) button on the dashboard. The demo is a read-only sample, so its name was never editable; the button is gone to match.</li>
       <li>Account &amp; License: you can now enter an additional-artist-profile add-on key right on the Account &amp; License tab. It used to live only inside the Manage Artists dialog, which is not where most people went looking for it.</li>
       <li>When you have a paid artist seat you have not used yet, Backstage now points it out: a note on the Account &amp; License tab and a small count badge on the Artists tab, so an activated-but-uncreated profile does not sit there unnoticed. The badge reads clearly on every theme.</li>
