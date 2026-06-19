@@ -3,6 +3,24 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.19</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Fri, 19 Jun 2026 17:06:46 -0400</pubDate>
+            <sparkle:version>1.2.19</sparkle:version>
+            <sparkle:shortVersionString>1.2.19</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Your saved look and preferences now persist more reliably across app updates,
+  backups, and a move to a new computer.
+- Assorted visual polish and behind-the-scenes refinements.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.19/Setcraft.dmg" length="70220278" type="application/octet-stream" sparkle:edSignature="X6J5iA4fsyOP2LNuM1EV4MMx1f9UWliERs7gPKGzICXASaWPmPh7QHTdPm3hYGMbNKWC43Jk0fbs76ioMU5NDA=="/>
+        </item>
+        <item>
             <title>1.2.18</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Fri, 19 Jun 2026 15:51:19 -0400</pubDate>
