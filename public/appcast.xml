@@ -3,6 +3,25 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.21</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Sat, 20 Jun 2026 12:20:53 -0400</pubDate>
+            <sparkle:version>1.2.21</sparkle:version>
+            <sparkle:shortVersionString>1.2.21</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- AirDrop: send a setlist, tech cue sheet, PRO report, lyric or chart book, or a
+  single song's lyrics or chart straight to a nearby Mac, iPhone, or iPad — right
+  from the Print options, without saving a file first.
+- The PRO Report can now be saved as a PDF (or AirDropped), not just printed.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.21/Setcraft.dmg" length="69563903" type="application/octet-stream" sparkle:edSignature="0CZt48eeJQJaQY+uzpScnVRzoUzC3+U+k0MOtr0mpgQOwN0HdqKElmL7oRBiFZS5ZeQcd36Nr6uh66BGwrrgAg=="/>
+        </item>
+        <item>
             <title>1.2.20</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Fri, 19 Jun 2026 23:38:36 -0400</pubDate>
