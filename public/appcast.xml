@@ -3,6 +3,23 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.20</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Fri, 19 Jun 2026 23:38:36 -0400</pubDate>
+            <sparkle:version>1.2.20</sparkle:version>
+            <sparkle:shortVersionString>1.2.20</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Fixed an occasional macOS alert "beep" that could sound when typing while no
+  text field was focused.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.20/Setcraft.dmg" length="69070463" type="application/octet-stream" sparkle:edSignature="f+iEmp6xCPsEn4wo83FRof7a/n2Ltjh8vGE3ZVarMOn2i0GHLCO/b1BziR1KtMZnKXrhl0eau6t3E0MVpwFxCQ=="/>
+        </item>
+        <item>
             <title>1.2.19</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Fri, 19 Jun 2026 17:06:46 -0400</pubDate>
