@@ -102,7 +102,16 @@ def group_by_day(entries):
             index[e["date"]] = b
             buckets.append(b)
         b["versions"].append(e["version"])
-        b["bullets"].extend(e["bullets"])
+        # Dedupe within the day, preserving first-seen order. Same-day point
+        # releases each carry boilerplate like "Behind-the-scenes polish." — show
+        # it once, not once per version.
+        seen = {x.strip().lower() for x in b["bullets"]}
+        for bullet in e["bullets"]:
+            key = bullet.strip().lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            b["bullets"].append(bullet)
         b["current"] = b["current"] or e["current"]
     return buckets
 
