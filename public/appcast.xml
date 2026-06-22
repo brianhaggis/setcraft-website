@@ -3,6 +3,23 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.27</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Mon, 22 Jun 2026 08:56:43 -0400</pubDate>
+            <sparkle:version>1.2.27</sparkle:version>
+            <sparkle:shortVersionString>1.2.27</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The Lyric Book and Chart Book buttons now have their own clear descriptions.
+- Behind-the-scenes polish.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.27/Setcraft.dmg" length="56571715" type="application/octet-stream" sparkle:edSignature="cFAItsKYGfXoIFS9VpjRdgzpHUyV9fT+EkXTt/1EoXmytWPCB2Xn92QQcSJUYmLihqd/CUTtIgmym+fMCYgrCg=="/>
+        </item>
+        <item>
             <title>1.2.26</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Sun, 21 Jun 2026 17:07:10 -0400</pubDate>
