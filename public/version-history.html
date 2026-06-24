@@ -29,12 +29,16 @@
         <div class="legal">
             <a href="index.html" class="back">← Back to Setcraft</a>
             <h1>Version History</h1>
-            <p class="updated">Current release · 1.2.35</p>
+            <p class="updated">Current release · 1.2.36</p>
 
             <div class="cl-entry">
                 <h2 class="cl-version">June 24, 2026 <span class="cl-current">Current</span></h2>
-                <p class="cl-date">Versions 1.2.33–1.2.35</p>
+                <p class="cl-date">Versions 1.2.33–1.2.36</p>
                 <ul>
+                <li>Smoother navigation: the nav bar no longer flickers or shifts position when you move between tabs (its sizing is now applied as the page first draws, instead of a moment after).</li>
+                <li>Your settings and one-time prompts (like &quot;Don&#x27;t show this again&quot;) now reliably persist between launches; previously some could quietly reset on restart.</li>
+                <li>Theme entrance animations now play once per launch instead of replaying every time you return to the dashboard.</li>
+                <li>Cleaner launch: the window now opens dark instead of flashing white first, and animated themes (including Fireflies) start from the dark wash and resolve into the theme, instead of briefly showing the page before the animation runs.</li>
                 <li>Fixed the Build Setlist screen&#x27;s dark overlay opening at a smaller size and then snapping to fill the window. (The 1.2.34 attempt didn&#x27;t fully resolve it; this addresses the actual cause — the overlay was briefly tied to the page&#x27;s load animation.)</li>
                 <li>Fixed the help tooltip on the New Artist Profile dialog (the Bandsintown &quot;?&quot; icon) not appearing on hover.</li>
                 <li>Fixed the Build Setlist screen briefly showing its dark overlay at the wrong size before snapping to fill the window when it opened.</li>
