@@ -3,6 +3,24 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.33</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 24 Jun 2026 15:43:17 -0400</pubDate>
+            <sparkle:version>1.2.33</sparkle:version>
+            <sparkle:shortVersionString>1.2.33</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Beta testers: a new Beta Tools tab in Backstage, with a "Reset app state" tool that re-runs first-time setup and restores default settings while keeping all of your songs, shows, and setlists.
+- The beta welcome shown on first launch now has a "Don't show this again" option.
+- Assorted visual polish and behind-the-scenes refinements.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.33/Setcraft.dmg" length="57002308" type="application/octet-stream" sparkle:edSignature="a8Nv0xWzFtiYjXaCxUmpATFHOcVHIe7WPRNAzqKRIywHcJBKhVl2iilnZccjs9mYCO1vEPljmXiqoB/opT/2AQ=="/>
+        </item>
+        <item>
             <title>1.2.32</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 24 Jun 2026 14:41:45 -0400</pubDate>
