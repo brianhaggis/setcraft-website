@@ -3,6 +3,23 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.38</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 24 Jun 2026 18:25:18 -0400</pubDate>
+            <sparkle:version>1.2.38</sparkle:version>
+            <sparkle:shortVersionString>1.2.38</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Fixed the navigation bar briefly flashing in a larger placeholder font and then snapping to the correct font on every page.
+- The beta welcome's "Don't show this again" choice now sticks between launches.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.38/Setcraft.dmg" length="57006094" type="application/octet-stream" sparkle:edSignature="isjyro6hJEiSL5rZ/LNgpTq3GWgDV5dXsZCUbqfV4s6B8NAy4qsRKW/fhx/kt9YpcGbDHaUs+XkPOHHsFIPaBw=="/>
+        </item>
+        <item>
             <title>1.2.37</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 24 Jun 2026 18:03:46 -0400</pubDate>
