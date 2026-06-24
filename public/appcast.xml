@@ -3,6 +3,24 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.34</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 24 Jun 2026 16:07:29 -0400</pubDate>
+            <sparkle:version>1.2.34</sparkle:version>
+            <sparkle:shortVersionString>1.2.34</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Fixed the Build Setlist screen briefly showing its dark overlay at the wrong size before snapping to fill the window when it opened.
+- Smoother first paint on the dashboard, so the page resolves cleanly instead of appearing and then animating a beat later.
+- Assorted visual polish and behind-the-scenes refinements.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.34/Setcraft.dmg" length="57004122" type="application/octet-stream" sparkle:edSignature="auuLwpr5HZn9JmS9cpT9W5h/O3O3oRj4YD0vtgVzHcjaj1D8FmDxH18kKnGViU98ywM5PhVOTtzTDVZJT2jDDg=="/>
+        </item>
+        <item>
             <title>1.2.33</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 24 Jun 2026 15:43:17 -0400</pubDate>
