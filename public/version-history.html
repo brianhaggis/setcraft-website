@@ -29,12 +29,13 @@
         <div class="legal">
             <a href="index.html" class="back">← Back to Setcraft</a>
             <h1>Version History</h1>
-            <p class="updated">Current release · 1.2.41</p>
+            <p class="updated">Current release · 1.2.42</p>
 
             <div class="cl-entry">
                 <h2 class="cl-version">June 24, 2026 <span class="cl-current">Current</span></h2>
-                <p class="cl-date">Versions 1.2.33–1.2.41</p>
+                <p class="cl-date">Versions 1.2.33–1.2.42</p>
                 <ul>
+                <li>Fixed the unlockable nav switches (and the icons beside them) jumping into place a moment after each page loaded. They were being added by a script just after the page first drew; now they&#x27;re in place from the first frame, so the nav stays put.</li>
                 <li>The themed wordmark, nav, and headings now load up front, so the nav icons and cards no longer shift into place a frame after each page loads — and without the brief full-window background flash the previous build introduced.</li>
                 <li>Restored a soft fade-in of the page content on navigation (background stays put).</li>
                 <li>Each page now waits for its fonts to be ready and then fades in, which removes the last bit of the one-frame &quot;jump&quot; where icons and cards settled into place after load — and gives a consistent soft fade between pages (this fade now shows even with macOS &quot;Reduce Motion&quot; on).</li>
