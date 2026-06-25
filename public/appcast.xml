@@ -3,6 +3,22 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.43</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 25 Jun 2026 00:17:48 -0400</pubDate>
+            <sparkle:version>1.2.43</sparkle:version>
+            <sparkle:shortVersionString>1.2.43</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Moving between tabs now does a soft fade: the page content fades and gently settles into place while the navigation bar and background stay put.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.43/Setcraft.dmg" length="57006941" type="application/octet-stream" sparkle:edSignature="2slqP8GzXW5Pwlnth2D3SCGiJm6iJZ9nEf+4/o2Sv7EGbnivDe1DOzfm9IjJRuqnKPzk19Oc4XFG2RA7x0doDw=="/>
+        </item>
+        <item>
             <title>1.2.42</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 24 Jun 2026 23:10:33 -0400</pubDate>
