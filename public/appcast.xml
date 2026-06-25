@@ -3,6 +3,22 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.46</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 25 Jun 2026 10:38:04 -0400</pubDate>
+            <sparkle:version>1.2.46</sparkle:version>
+            <sparkle:shortVersionString>1.2.46</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Fixed the navigation icons and switches shifting sideways for a frame each time a page loaded (the wordmark's font finishing loading was nudging the rest of the nav). The nav layout now stays put.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.46/Setcraft.dmg" length="57008010" type="application/octet-stream" sparkle:edSignature="27S3OPN1+taJpV1nkOmVHaZlj7i5PqO4zb3e5zIIZbYMrS4by7ocmDnsJVWEloTCIvrNC0qsK9q/l4rLX3+RCQ=="/>
+        </item>
+        <item>
             <title>1.2.45</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Thu, 25 Jun 2026 10:03:59 -0400</pubDate>

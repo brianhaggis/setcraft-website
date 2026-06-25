@@ -33,8 +33,9 @@
   <h1>What's New in Setcraft</h1>
     <section>
       <h2>June 25, 2026 <span class="cur">Current</span></h2>
-      <div class="d">Versions 1.2.43–1.2.45</div>
+      <div class="d">Versions 1.2.43–1.2.46</div>
       <ul>
+      <li>Fixed the navigation icons and switches shifting sideways for a frame each time a page loaded. The wordmark&#x27;s font finishing loading was widening it and nudging the rest of the nav; the nav layout no longer moves when that happens.</li>
       <li>Fixed updates not fully taking effect: the app could keep using a cached copy of its styling and scripts from an earlier version, so some fixes silently didn&#x27;t apply. Each update now always loads its own fresh assets.</li>
       <li>Reverted the page-load fade from the previous build: it briefly showed the bare page before on-screen elements (like the Build Setlist prompt) appeared. Pages load directly again, without that flash.</li>
       <li>Moving between tabs now does a soft fade: the page content fades and gently settles into place while the navigation bar and background stay put.</li>
