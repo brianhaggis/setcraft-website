@@ -3,6 +3,22 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.48</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 25 Jun 2026 14:22:50 -0400</pubDate>
+            <sparkle:version>1.2.48</sparkle:version>
+            <sparkle:shortVersionString>1.2.48</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- Brought back the soft page fade between tabs, done right this time: content fades and settles while the navigation bar and background stay put. The Build Setlist screen loads instantly without the fade, so its prompt never flashes the way it briefly did in an earlier build.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.48/Setcraft.dmg" length="57008030" type="application/octet-stream" sparkle:edSignature="nHDNSbHwcxDDOlayicUyTooByRzGAGIr9VPVJBw81Uw/WOGN848PjrKxCY7SaSTM6RKSdElJvMvTmcLjCPheCg=="/>
+        </item>
+        <item>
             <title>1.2.47</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Thu, 25 Jun 2026 13:00:39 -0400</pubDate>
