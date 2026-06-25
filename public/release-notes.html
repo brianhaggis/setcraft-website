@@ -33,8 +33,10 @@
   <h1>What's New in Setcraft</h1>
     <section>
       <h2>June 24, 2026 <span class="cur">Current</span></h2>
-      <div class="d">Versions 1.2.33–1.2.40</div>
+      <div class="d">Versions 1.2.33–1.2.41</div>
       <ul>
+      <li>The themed wordmark, nav, and headings now load up front, so the nav icons and cards no longer shift into place a frame after each page loads — and without the brief full-window background flash the previous build introduced.</li>
+      <li>Restored a soft fade-in of the page content on navigation (background stays put).</li>
       <li>Each page now waits for its fonts to be ready and then fades in, which removes the last bit of the one-frame &quot;jump&quot; where icons and cards settled into place after load — and gives a consistent soft fade between pages (this fade now shows even with macOS &quot;Reduce Motion&quot; on).</li>
       <li>Fixed a one-frame jump on page load where the nav icons/switches and the dashboard cards briefly appeared slightly out of place and then snapped into position as fonts finished loading.</li>
       <li>Page navigation now does a quick, soft fade instead of a hard cut.</li>
