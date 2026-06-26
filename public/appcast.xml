@@ -12,7 +12,11 @@
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- The Build Setlist screen now eases in like the rest of the app: the page loads, then the backdrop darkens and the start prompt fades in on top. Leaving it fades out too, so it no longer cuts in and out abruptly.
+- Navigation now holds steady as each page loads, with smooth fades between tabs and a gentle entrance on the Build Setlist screen.
+
+- Fixed updates not always taking full effect, so each new version now loads its latest changes reliably.
+
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -28,7 +32,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Made the page fade between tabs a little longer and a touch more pronounced, so the transition is easier to see.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -44,7 +48,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Brought back the soft page fade between tabs, done right this time: content fades and settles while the navigation bar and background stay put. The Build Setlist screen loads instantly without the fade, so its prompt never flashes the way it briefly did in an earlier build.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -60,7 +64,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed the navigation still shifting on themes that use their font in the nav (such as Fireflies): the font files were re-downloading on every page load and applying a beat late. They're cached now, so the nav holds steady.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -76,7 +80,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed the navigation icons and switches shifting sideways for a frame each time a page loaded (the wordmark's font finishing loading was nudging the rest of the nav). The nav layout now stays put.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -92,7 +96,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed updates not fully taking effect: the app could keep using a cached copy of its styling and scripts from an earlier version, so some fixes silently didn't apply. Each update now always loads its own fresh assets.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -108,7 +112,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Reverted the page-load fade from the previous build: it briefly showed the bare page before on-screen elements (like the Build Setlist prompt) appeared. Pages load directly again, without that flash.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -124,7 +128,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Moving between tabs now does a soft fade: the page content fades and gently settles into place while the navigation bar and background stay put.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -140,7 +144,11 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed nav elements jumping slightly into place a moment after each page loaded. They're now in position from the first frame, so the navigation stays put as you move between tabs.
+- Your settings and one-time prompts now reliably stick between launches.
+
+- Cleaner, steadier launch and navigation, with no flicker or font flash when opening the app or moving between tabs.
+
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -156,8 +164,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Themed fonts now load up front, so the nav icons and dashboard cards no longer shift into place a frame after a page loads — and the brief full-window background flash from the previous build is gone.
-- Restored a soft fade-in of page content on navigation (the background stays put).
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -173,7 +180,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Each page now waits for its fonts before fading in, so navigation no longer shows a one-frame jump of the icons and cards settling into place — and you get a consistent soft fade between pages.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -189,8 +196,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed a one-frame jump on page load where the nav icons and dashboard cards briefly appeared slightly out of place and then snapped into position.
-- Page navigation now does a quick, soft fade instead of a hard cut.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -206,8 +212,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed the navigation bar briefly flashing in a larger placeholder font and then snapping to the correct font on every page.
-- The beta welcome's "Don't show this again" choice now sticks between launches.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -223,7 +228,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Pages now appear instantly when you move between tabs. The brief slide-and-fade that played on every page load is gone (it could read as a stutter, especially on the Songs and Shows lists).
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -239,10 +244,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Smoother navigation: the nav bar no longer flickers or shifts when you move between tabs.
-- Your settings and one-time prompts now reliably persist between launches.
-- Cleaner launch: the window opens dark instead of flashing white, and animated themes resolve in from the dark instead of showing the page first.
-- Theme entrance animations now play once per launch instead of every dashboard visit.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -258,8 +260,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed the Build Setlist screen's dark overlay opening at the wrong size and then snapping to fill the window.
-- Fixed the help tooltip on the New Artist Profile dialog not appearing on hover.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -275,9 +276,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Fixed the Build Setlist screen briefly showing its dark overlay at the wrong size before snapping to fill the window when it opened.
-- Smoother first paint on the dashboard, so the page resolves cleanly instead of appearing and then animating a beat later.
-- Assorted visual polish and behind-the-scenes refinements.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>
@@ -293,9 +292,7 @@ Requires macOS 12 or later on Apple Silicon.
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[## Changes
 
-- Beta testers: a new Beta Tools tab in Backstage, with a "Reset app state" tool that re-runs first-time setup and restores default settings while keeping all of your songs, shows, and setlists.
-- The beta welcome shown on first launch now has a "Don't show this again" option.
-- Assorted visual polish and behind-the-scenes refinements.
+- Various small visual fixes and behind-the-scenes polish.
 
 Requires macOS 12 or later on Apple Silicon.
 ]]></description>

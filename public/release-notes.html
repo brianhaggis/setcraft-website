@@ -35,40 +35,18 @@
       <h2>June 25, 2026 <span class="cur">Current</span></h2>
       <div class="d">Versions 1.2.43–1.2.50</div>
       <ul>
-      <li>The Build Setlist screen now eases in like the rest of the app: the page loads, then the backdrop darkens and the start prompt fades in on top. Leaving it fades out too, so it no longer cuts in and out abruptly.</li>
-      <li>Made the page fade between tabs a little longer and a touch more pronounced, so the transition is easier to see.</li>
-      <li>Brought back the soft page fade between tabs, done right this time: the page content fades and gently settles while the navigation bar and background stay put. The Build Setlist screen loads instantly without the fade, so its prompt never flashes the way it briefly did in an earlier build.</li>
-      <li>Fixed the nav still shifting on themes that use their font in the navigation (such as Fireflies): the font files were being re-downloaded on every page load, so the font applied a beat late and nudged the nav. Fonts are cached now, so the nav is steady from the first frame. (After installing this, the very first page may still settle once as the font caches, then it&#x27;s stable.)</li>
-      <li>Fixed the navigation icons and switches shifting sideways for a frame each time a page loaded. The wordmark&#x27;s font finishing loading was widening it and nudging the rest of the nav; the nav layout no longer moves when that happens.</li>
-      <li>Fixed updates not fully taking effect: the app could keep using a cached copy of its styling and scripts from an earlier version, so some fixes silently didn&#x27;t apply. Each update now always loads its own fresh assets.</li>
-      <li>Reverted the page-load fade from the previous build: it briefly showed the bare page before on-screen elements (like the Build Setlist prompt) appeared. Pages load directly again, without that flash.</li>
-      <li>Moving between tabs now does a soft fade: the page content fades and gently settles into place while the navigation bar and background stay put.</li>
+      <li>Navigation now holds steady as each page loads, with smooth fades between tabs and a gentle entrance on the Build Setlist screen.</li>
+      <li>Fixed updates not always taking full effect, so each new version now loads its latest changes reliably.</li>
+      <li>Various small visual fixes and behind-the-scenes polish.</li>
       </ul>
     </section>
     <section>
       <h2>June 24, 2026</h2>
       <div class="d">Versions 1.2.33–1.2.42</div>
       <ul>
-      <li>Fixed the unlockable nav switches (and the icons beside them) jumping into place a moment after each page loaded. They were being added by a script just after the page first drew; now they&#x27;re in place from the first frame, so the nav stays put.</li>
-      <li>The themed wordmark, nav, and headings now load up front, so the nav icons and cards no longer shift into place a frame after each page loads — and without the brief full-window background flash the previous build introduced.</li>
-      <li>Restored a soft fade-in of the page content on navigation (background stays put).</li>
-      <li>Each page now waits for its fonts to be ready and then fades in, which removes the last bit of the one-frame &quot;jump&quot; where icons and cards settled into place after load — and gives a consistent soft fade between pages (this fade now shows even with macOS &quot;Reduce Motion&quot; on).</li>
-      <li>Fixed a one-frame jump on page load where the nav icons/switches and the dashboard cards briefly appeared slightly out of place and then snapped into position as fonts finished loading.</li>
-      <li>Page navigation now does a quick, soft fade instead of a hard cut.</li>
-      <li>Fixed the navigation bar briefly flashing in a larger/placeholder font and then snapping to the correct font on every page — fonts now display correctly from the first frame.</li>
-      <li>The beta welcome&#x27;s &quot;Don&#x27;t show this again&quot; choice now sticks between launches (it&#x27;s saved with your profile instead of in browser storage that could reset).</li>
-      <li>Pages now appear instantly when you move between tabs. The brief slide-and-fade that played on every page is gone — it was replaying on each click (and made the longer Songs and Shows lists look like they stuttered in as they loaded).</li>
-      <li>Smoother navigation: the nav bar no longer flickers or shifts position when you move between tabs (its sizing is now applied as the page first draws, instead of a moment after).</li>
-      <li>Your settings and one-time prompts (like &quot;Don&#x27;t show this again&quot;) now reliably persist between launches; previously some could quietly reset on restart.</li>
-      <li>Theme entrance animations now play once per launch instead of replaying every time you return to the dashboard.</li>
-      <li>Cleaner launch: the window now opens dark instead of flashing white first, and animated themes (including Fireflies) start from the dark wash and resolve into the theme, instead of briefly showing the page before the animation runs.</li>
-      <li>Fixed the Build Setlist screen&#x27;s dark overlay opening at a smaller size and then snapping to fill the window. (The 1.2.34 attempt didn&#x27;t fully resolve it; this addresses the actual cause — the overlay was briefly tied to the page&#x27;s load animation.)</li>
-      <li>Fixed the help tooltip on the New Artist Profile dialog (the Bandsintown &quot;?&quot; icon) not appearing on hover.</li>
-      <li>Fixed the Build Setlist screen briefly showing its dark overlay at the wrong size before snapping to fill the window when it opened.</li>
-      <li>Smoother first paint on the dashboard, so the page resolves cleanly instead of appearing and then animating a beat later.</li>
-      <li>Assorted visual polish and behind-the-scenes refinements.</li>
-      <li>Beta testers: a new Beta Tools tab in Backstage, with a &quot;Reset app state&quot; tool that re-runs first-time setup and restores default settings while keeping all of your songs, shows, and setlists.</li>
-      <li>The beta welcome shown on first launch now has a &quot;Don&#x27;t show this again&quot; option.</li>
+      <li>Your settings and one-time prompts now reliably stick between launches.</li>
+      <li>Cleaner, steadier launch and navigation, with no flicker or font flash when opening the app or moving between tabs.</li>
+      <li>Various small visual fixes and behind-the-scenes polish.</li>
       </ul>
     </section>
     <section>
