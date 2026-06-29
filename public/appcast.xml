@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.2.53</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Mon, 29 Jun 2026 16:32:01 -0400</pubDate>
+            <sparkle:version>1.2.53</sparkle:version>
+            <sparkle:shortVersionString>1.2.53</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- When you build a setlist, you can now create a brand-new show right from the start window, without leaving for the Shows page.
+
+- Photo import can now turn a line it doesn't recognize into a new song on the spot. Enter the title and short name, your main artist is filled in for you (editable for covers), and it's added to your library as you import.
+
+- The action buttons on each show in the Shows list are easier to read.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.2.53/Setcraft.dmg" length="57027962" type="application/octet-stream" sparkle:edSignature="W7q8EGC1dXFbCOI9ZWF3d++gbLS60q0tNWKLIosDVBuJxhkwzg2eAq1gppIWNeiHmMa/qaxLo7LE7rY9wBp+BA=="/>
+        </item>
+        <item>
             <title>1.2.50</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Thu, 25 Jun 2026 16:08:45 -0400</pubDate>
