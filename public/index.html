@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setcraft · Get Ready. Get Setcraft.</title>
-    <meta name="description" content="Setcraft keeps your songs on your Mac, builds tonight's set with a few drags, and prints a sheet the whole band can read from the stage. One-time license, $19.99. No subscription.">
+    <meta name="description" content="Setcraft keeps your songs on your Mac, builds tonight's set with a few drags, and prints a sheet the whole band can read from the stage. One-time license from $19.99. Free 30-day trial. No subscription.">
     <meta name="robots" content="noindex, nofollow"> <!-- TEMP: pre-launch, remove to allow indexing -->
     <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
     <link rel="stylesheet" href="style.css?v=27">
@@ -42,7 +42,7 @@
 
             <div class="hero-actions">
                 <a class="btn-lg btn-download cta-disabled" aria-disabled="true" id="hero-cta"><span class="btn-main">Download Free</span><span class="btn-desc">Yours to keep. The paid version unlocks the full feature set.</span></a>
-                <a class="btn-lg btn-buy cta-disabled" aria-disabled="true"><span class="btn-main">Buy · $19.99</span><span class="btn-desc">Unlocks every feature, for good</span></a>
+                <a class="btn-lg btn-buy cta-disabled" aria-disabled="true" href="#TODO-pro-checkout"><span class="btn-main">Buy Pro · $19.99</span><span class="btn-desc">Unlocks every feature, for good</span></a>
             </div>
             <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Downloading and buying reopen at public release. <a href="mailto:hello@getsetcraft.com?subject=Setcraft%20beta%20access">Request an invite</a>.</p>
             <p class="req-line"><strong>Apple Silicon Mac</strong>, M1 or later, on macOS 12 Monterey or newer. No Intel Macs, no Windows.</p>
@@ -385,41 +385,76 @@ Connect your account once with your artist name and API key, and Setcraft pulls 
     <!-- ============================================================ DOWNLOAD -->
     <section class="container section" id="download" data-screen-label="Download">
         <div class="eyebrow">Download</div>
-        <h2 class="h2">ONE PRICE, <span class="accent">UNLOCK ALL FEATURES.</span> </h2>
+        <h2 class="h2">TWO TIERS, <span class="accent">ONE-TIME PRICE.</span> </h2>
+        <p class="lede" style="max-width: 640px;">Pick the one that fits how you work. Both are lifetime licenses with every V1 update included. No subscription, ever.</p>
         <div class="buy-wrap">
             <div class="panel-card accent">
-                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stripe-red); margin-bottom: 8px;">Setcraft Lifetime</div>
+                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stripe-red); margin-bottom: 8px;">Setcraft Pro</div>
                 <div class="buy-price">
                     <span class="amount"><span class="currency">$</span>19.99</span>
                     <span class="once">One-time<br>lifetime license</span>
                 </div>
-                <p class="buy-prod">Setcraft V1 Lifetime License (One Artist Profile)</p>
+                <p class="buy-prod">For the artist running one act.</p>
                 <ul class="buy-list">
-                    <li>Unlimited songs</li>
-                    <li>Photo setlist import, 20 per month</li>
-                    <li>Import Shows from Bandsintown</li>
+                    <li>One artist profile</li>
+                    <li>Unlimited songs, shows, and setlists</li>
                     <li>Watermark-free printing and PDF export</li>
+                    <li>Photo setlist import, 20 per month</li>
+                    <li>Import shows from Bandsintown</li>
                     <li>Every V1 update included</li>
                 </ul>
-                <a class="price-cta featured-cta cta-disabled" aria-disabled="true">Buy Setcraft</a>
+                <a class="price-cta featured-cta cta-disabled" aria-disabled="true" href="#TODO-pro-checkout">Buy Pro</a>
                 <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Buying reopens at public release.</p>
                 <p class="download-note">Checkout runs through Lemon Squeezy, our merchant of record. They take payment and email your license key; you enter it in the app to unlock the paid features.</p>
-                <p class="download-note addon-note">Running more than one act? Add artist profiles from inside the app, a one-time purchase: $2.99 for one more, or $4.99 for two. Available to all licensed users.</p>
             </div>
             <div class="panel-card">
-                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--powder-deep); margin-bottom: 8px;">Start free</div>
-                <p style="font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin: 0 0 18px;">You don't have to decide now. Download the free version (no credit card required), build a couple of real sets, and buy your full license from inside the app when you're ready to go to eleven.</p>
+                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--powder-deep); margin-bottom: 8px;">Road Warrior</div>
+                <div class="buy-price">
+                    <span class="amount"><span class="currency">$</span>32.99</span>
+                    <span class="once" style="color: var(--powder-deep);">One-time<br>lifetime license</span>
+                </div>
+                <p class="buy-prod">For the player who fronts more than one band.</p>
                 <ul class="buy-list">
-                    <li>Up to 15 songs</li>
-                    <li>One artist profile</li>
-                    <li>Full setlist building and all 17 themes</li>
-                    <li>Print and PDF export with a small free-version footer</li>
-                    <li>Never expires — use it forever, free</li>
+                    <li><strong>Everything in Pro</strong></li>
+                    <li>Unlimited artist profiles</li>
+                    <li>A separate library, theme, and Bandsintown key per act</li>
+                    <li>Watermark-free printing and PDF export</li>
+                    <li>Photo setlist import, 20 per month</li>
+                    <li>Every V1 update included</li>
                 </ul>
-                <a class="price-cta cta-disabled" aria-disabled="true" data-dmg>Download Free</a>
-                <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Downloading reopens at public release.</p>
-                <p class="download-note">No account, no card. Buy later when you're ready.</p>
+                <a class="price-cta cta-disabled" aria-disabled="true" href="#TODO-roadwarrior-checkout">Buy Road Warrior</a>
+                <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Buying reopens at public release.</p>
+                <p class="download-note">Already on Pro? Upgrade to Road Warrior from inside the app and pay only the difference.</p>
             </div>
+        </div>
+
+        <div class="panel-card" style="margin-top: 32px;">
+            <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--powder-deep); margin-bottom: 8px;">Try it free for 30 days</div>
+            <p style="font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin: 0 0 18px;">Download Setcraft and run the full app at Pro level for a month. No credit card. One artist profile, unlimited songs, watermark-free exports, and five photo imports. Build real sets, take it to a real gig, and decide once you know.</p>
+            <p style="font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin: 0 0 18px;">After 30 days, if you haven't bought a license, Setcraft drops to <strong>Free</strong>. Everything you already built stays. Your full library, every show, every setlist, all of it readable, printable, and exportable. You never lose your data.</p>
+            <div class="free-includes">
+                <div class="fi-col">
+                    <h5>Free keeps</h5>
+                    <ul>
+                        <li>One artist profile and everything in it</li>
+                        <li>Full setlist building and all 17 themes</li>
+                        <li>Print and PDF export of every set you own</li>
+                        <li>Your whole song library, yours to keep</li>
+                    </ul>
+                </div>
+                <div class="fi-col">
+                    <h5>Free limits</h5>
+                    <ul>
+                        <li>Exports carry a small free-version footer</li>
+                        <li>Photo import and Bandsintown sync switch off</li>
+                        <li>No adding new songs once your library hits 15</li>
+                        <li>Buy a license any time to lift all of it</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="price-cta cta-disabled" aria-disabled="true" data-dmg href="#TODO-trial-download">Start the free trial</a>
+            <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Downloading reopens at public release.</p>
+            <p class="download-note">No account, no card. Buy later from inside the app when you're ready.</p>
         </div>
     </section>
 
@@ -433,12 +468,28 @@ Connect your account once with your artist name and API key, and Setcraft pulls 
                 <p>An Apple Silicon Mac, meaning an M1, M2, M3, M4 or later, on macOS 12 Monterey or newer. It won't run on older Intel Macs, and there's no Windows or web version for end users.</p>
             </div>
             <div class="faq-item">
-                <h4>What does the free tier include?</h4>
-                <p>Up to 15 songs, one artist profile, every theme, full setlist building, and all the PDF and print exports. Free exports carry a small "Created with Setcraft (free version)" footer. Setlist photo import and Bandsintown show import require a paid license and an internet connection. Once you unlock the full version, you can create unlimited shows, songs, and setlists for one artist profile.</p>
+                <h4>What does the free trial include?</h4>
+                <p>The full app at Pro level for 30 days, no credit card. One artist profile, unlimited songs, watermark-free printing and PDF export, and five photo imports a month. Build real sets, take it to a real gig, and decide when you know.</p>
             </div>
             <div class="faq-item">
-                <h4>What does photo import need?</h4>
-                <p>A paid license and an internet connection. The photo gets read on our server, so it's the one online feature. You get twenty imports a month.</p>
+                <h4>What happens on day 30?</h4>
+                <p>If you haven't bought a license, Setcraft drops to Free. Everything you already built stays put. Your full library, every show, and every setlist remain readable, printable, and exportable. You never lose your data. Buy a license any time to switch the paid features back on.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What does Free keep, and what does it limit?</h4>
+                <p>Free keeps one artist profile and everything in it, all 17 themes, full setlist building, and print and PDF export of every set you own. Free limits: exports carry a small "Created with Setcraft (free version)" footer, photo import and Bandsintown sync switch off, and you can't add new songs once your library is at or over 15. The songs already in your library stay fully usable.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Pro or Road Warrior?</h4>
+                <p>Pro is $19.99 and covers one artist profile with unlimited songs, watermark-free exports, photo import, and Bandsintown sync. Road Warrior is $32.99 and adds unlimited artist profiles, each with its own library, theme, and Bandsintown key. Front one act, buy Pro. Front several, buy Road Warrior.</p>
+            </div>
+            <div class="faq-item">
+                <h4>I'm on Pro and want Road Warrior. Do I pay full price again?</h4>
+                <p>No. Upgrade from inside the app and pay only the difference, around $13. Your library and setlists carry straight over.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Which features need a paid license?</h4>
+                <p>Photo setlist import and Bandsintown show sync run on the trial and on any paid tier, and switch off on Free. Photo import gives you five a month on the trial and twenty a month once you buy. Future imports we add, like library and Spotify import, follow the same rule.</p>
             </div>
             <div class="faq-item">
                 <h4>Where does my data live?</h4>
@@ -446,7 +497,7 @@ Connect your account once with your artist name and API key, and Setcraft pulls 
             </div>
             <div class="faq-item">
                 <h4>How does the license work?</h4>
-                <p>One payment of $19.99 for a lifetime license (one artist profile). We email you a license key after checkout; you enter it in the app to activate all the paid features. No subscription, ever.</p>
+                <p>One payment for a lifetime license: $19.99 for Pro or $32.99 for Road Warrior. We email you a license key after checkout; you enter it in the app to activate the paid features. No subscription, ever.</p>
             </div>
             <div class="faq-item">
                 <h4>How do I get updates?</h4>
