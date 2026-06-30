@@ -38,7 +38,8 @@
             <h2>1. Who we are</h2>
             <p>Setcraft is made by <strong>Setcraft LLC</strong>, a Pennsylvania limited liability company, registered at 5588 East Texas Rd, East Texas, PA 18046.</p>
             <p>For privacy questions, contact us at <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>.</p>
-            <p>Setcraft is a native macOS app (Apple Silicon, macOS 12 and later). It is signed, notarized, and sold directly from getsetcraft.com, not through the Mac App Store. We also run a small hosted backend (for photo import and licensing) and a marketing website.</p>
+            <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
+            <p>Setcraft is a native macOS app (Apple Silicon, macOS 12 and later). It is signed, notarized, and sold directly from getsetcraft.com, not through the Mac App Store. We also run a small hosted backend (for photo import, licensing, and free-trial metering) and a marketing website.</p>
 
             <h2>2. Setcraft is local-first</h2>
             <p>Your song library, lyrics, chord charts, shows, setlists, and notes are stored in a database on your own Mac, in <code>~/Library/Application Support/Setcraft/</code>.</p>
@@ -50,7 +51,8 @@
             <p>This is the one feature that sends your content off your Mac, and it only runs when you choose to use it.</p>
             <p>When you import a photo of a paper or handwritten setlist, the image is sent to <strong>Setcraft's server</strong> (hosted on <strong>Render</strong>), which forwards it to <strong>Anthropic's API</strong> to read the text in the image. Only the extracted text comes back to the app, where it is matched against your local library.</p>
             <ul>
-                <li><strong>What is sent:</strong> the photo itself, along with your license key, which our server uses to confirm you have a paid license and to count your monthly uploads. Your song library, lyrics, and charts are not part of the request and never leave your Mac.</li>
+                <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
+                <li><strong>What is sent:</strong> the photo itself, along with either your license key or, during the free trial when no license key exists yet, your random install identifier (described in 3b). Our server uses it to confirm you are entitled to the feature and to count your monthly imports. Your song library, lyrics, and charts are not part of the request and never leave your Mac.</li>
                 <li><strong>Sub-processors:</strong> Render (hosting) and Anthropic (reading the image).</li>
                 <li><strong>How we handle the photo:</strong> the photo is held only for the time it takes to process your request. It is not stored, not added to any database, and not logged. During processing it may be briefly written to a temporary file and is deleted automatically when the request completes. The only lasting record we keep is a monthly upload count tied to a one-way hash of your license key. That record contains no image, no email, and no readable license key.</li>
                 <li><strong>What Anthropic does with it:</strong> Anthropic does not use data sent to its commercial API to train its models. By default, Anthropic automatically deletes API inputs and outputs within 30 days, with limited exceptions (for example, content flagged for policy violations, or where a legal hold applies).</li>
@@ -82,6 +84,15 @@
             <h3>3e. Analytics and tracking</h3>
             <p>Setcraft has <strong>no advertising trackers, no third-party analytics SDKs, no telemetry, and no crash reporting</strong> in the app. We do not build a profile of you or your usage. If this ever changes, we will update this section before adding any such tool.</p>
 
+            <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
+            <h3>3f. Free trial and the install identifier</h3>
+            <p>So the free 30-day trial can run without an account, the app generates a <strong>random install identifier</strong> the first time it runs. This is a random token stored locally on your Mac. It is not linked to your name, email, or any other personal information.</p>
+            <p>During the trial, when there is no license key yet, the app sends this install identifier to <strong>Setcraft's server</strong> (hosted on <strong>Render</strong>) to record and anchor your trial start date and to count your trial photo imports. Once you activate a paid license, your license key is used for that metering instead, and the install identifier is no longer sent.</p>
+            <ul>
+                <li><strong>What our server stores:</strong> the install identifier, the date it was first seen, and a monthly photo-import count. No image, no email, and no personal data. The install identifier is operational metadata, not your content; your songs, lyrics, charts, and setlists stay on your Mac.</li>
+                <li><strong>Legal basis (GDPR):</strong> performance of the contract, meaning running the trial you asked for, and our legitimate interest in preventing abuse of the free trial.</li>
+            </ul>
+
             <h2>4. Third parties and sub-processors</h2>
             <table>
                 <thead>
@@ -89,7 +100,8 @@
                 </thead>
                 <tbody>
                     <tr><td>Anthropic</td><td>Reads the setlist photo for photo import</td><td>the setlist photo</td></tr>
-                    <tr><td>Render</td><td>Hosts the photo-import proxy and licensing backend</td><td>the photo (in transit), your license key (hashed for metering), request metadata</td></tr>
+                    <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
+                    <tr><td>Render</td><td>Hosts the photo-import proxy, licensing backend, and trial metering</td><td>the photo (in transit), your license key (hashed for metering), the install identifier and trial start date (during the free trial), request metadata</td></tr>
                     <tr><td>Lemon Squeezy</td><td>Merchant of record, issues license keys</td><td>email, payment data, license and device info</td></tr>
                     <tr><td>Bandsintown</td><td>Optional show sync, using your own key</td><td>your API key, show queries</td></tr>
                     <tr><td>Cloudflare</td><td>Hosts the website and update feed</td><td>update-check metadata (IP, version)</td></tr>
@@ -112,6 +124,8 @@
                 <li><strong>Local content:</strong> kept on your Mac and controlled by you. We do not hold it.</li>
                 <li><strong>Photo-import images:</strong> not stored. The photo exists on our server only for the duration of the request and is then gone. Anthropic deletes API data within 30 days by default.</li>
                 <li><strong>Monthly upload count:</strong> we keep a per-license monthly upload counter, tied to a one-way hash of your license key, to enforce fair use of photo import. It contains no image, email, or readable key.</li>
+                <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
+                <li><strong>Trial records:</strong> during the free trial we keep your random install identifier, the date it was first seen, and a monthly photo-import count, so the trial can run without an account and within fair-use limits. These contain no image, email, or personal data.</li>
                 <li><strong>Purchase and license records</strong> (via Lemon Squeezy and our backend): kept for as long as tax and accounting law requires, which can be up to about seven years.</li>
             </ul>
 
