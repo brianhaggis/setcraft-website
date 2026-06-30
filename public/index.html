@@ -6,6 +6,16 @@
     <title>Setcraft · Get Ready. Get Setcraft.</title>
     <meta name="description" content="Setcraft keeps your songs on your Mac, builds tonight's set with a few drags, and prints a sheet the whole band can read from the stage. One-time license from $19.99. Free 30-day trial. No subscription.">
     <meta name="robots" content="noindex, nofollow"> <!-- TEMP: pre-launch, remove to allow indexing -->
+    <!-- Open Graph / Twitter Card (link previews). TODO before launch: swap the image for a branded 1200x630 card. -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getsetcraft.com/">
+    <meta property="og:title" content="Setcraft · The setlist app for working musicians">
+    <meta property="og:description" content="Keep your whole repertoire on your Mac, build tonight's set with a few drags, and print a sheet the band can read from the stage. One-time license from $19.99, free 30-day trial.">
+    <meta property="og:image" content="https://getsetcraft.com/media/setlist-photo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Setcraft · The setlist app for working musicians">
+    <meta name="twitter:description" content="Build tonight's set with a few drags and print it big enough to read from the back of the stage. One-time license from $19.99, free 30-day trial.">
+    <meta name="twitter:image" content="https://getsetcraft.com/media/setlist-photo.jpg">
     <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
     <link rel="stylesheet" href="style.css?v=27">
     <script src="theme-switcher.js"></script>
@@ -41,10 +51,10 @@
             <p class="hero-tag" id="hero-tag">Your whole repertoire lives in a detailed catalog on your Mac. Drag tonight's set into shape, print it big enough to read from the back of the stage, and walk onstage confidently.</p>
 
             <div class="hero-actions">
-                <a class="btn-lg btn-download cta-disabled" aria-disabled="true" id="hero-cta"><span class="btn-main">Download Free</span><span class="btn-desc">Yours to keep. The paid version unlocks the full feature set.</span></a>
-                <a class="btn-lg btn-buy cta-disabled" aria-disabled="true" href="https://setcraft.lemonsqueezy.com/checkout/buy/c13595df-908b-4547-9b9e-7a0616418a74"><span class="btn-main">Buy Pro · $19.99</span><span class="btn-desc">Unlocks every feature, for good</span></a>
+                <a class="btn-lg btn-download cta-disabled" aria-disabled="true" id="hero-cta"><span class="btn-main">Download Free</span><span class="btn-desc">The full app free for 30 days. No card, and your data is always yours.</span></a>
+                <a class="btn-lg btn-buy" href="#download"><span class="btn-main">See the tiers</span><span class="btn-desc">From $19.99, one-time. No subscription, ever.</span></a>
             </div>
-            <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Downloading and buying reopen at public release. <a href="mailto:hello@getsetcraft.com?subject=Setcraft%20beta%20access">Request an invite</a>.</p>
+            <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Downloading reopens at public release. <a href="mailto:hello@getsetcraft.com?subject=Setcraft%20beta%20access">Request an invite</a>.</p>
             <p class="req-line"><strong>Apple Silicon Mac</strong>, M1 or later, on macOS 12 Monterey or newer. No Intel Macs, no Windows.</p>
         </div>
 
@@ -304,6 +314,46 @@ I've used it at dozens of my own shows, and it's been magical. Stress, forgotten
         </div>
     </section>
 
+    <!-- ============================================================ MORE CAPABILITIES -->
+    <section class="container section" data-screen-label="More in the box">
+        <div style="text-align: center; max-width: 64ch; margin: 0 auto;">
+            <div class="eyebrow">More in the box</div>
+            <h2 class="h2">Everything else <span class="accent">the road asks for.</span></h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon-wrap">&#8734;</div>
+                <h3>Every act, one app</h3>
+                <p>Run more than one band from a single install. Each artist profile keeps its own songs, shows, theme, and Bandsintown key, so your folk trio and your covers gig never bleed together. Unlimited profiles come with Road Warrior.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap">&#8645;</div>
+                <h3>Bandsintown sync</h3>
+                <p>Connect your account once and Setcraft pulls in your upcoming dates, so you build tonight's set against the real show instead of retyping the calendar.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap">&#11015;</div>
+                <h3>Take it anywhere</h3>
+                <p>Export a portable backup and carry your whole catalog, charts and all, to a new Mac. Restoring is always free, and quiet on-device snapshots keep a safety net under everything.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap">&#8599;</div>
+                <h3>AirDrop to the crew</h3>
+                <p>Send any setlist, lyric book, chart, or cue sheet straight to a bandmate's Mac or iPhone from the share button. No email thread, no cables.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap">&#9680;</div>
+                <h3>Seventeen themes</h3>
+                <p>Dress the whole app to match the act, from clean and legible to loud and neon. Each artist profile remembers its own look.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap">&#8635;</div>
+                <h3>Quiet updates</h3>
+                <p>New versions arrive in the background, strictly opt-in, straight from us. No App Store, no re-downloading, no nagging.</p>
+            </div>
+        </div>
+    </section>
+
     <div class="container"><div class="tri-stripe"><span></span><span></span><span></span></div></div>
 
     <!-- ============================================================ THEMES (live toggle) -->
@@ -389,6 +439,7 @@ Connect your account once with your artist name and API key, and Setcraft pulls 
         <p class="lede" style="max-width: 640px;">Pick the one that fits how you work. Both are lifetime licenses with every V1 update included. No subscription, ever.</p>
         <div class="buy-wrap">
             <div class="panel-card accent">
+                <span class="tier-flag pro">One act</span>
                 <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stripe-red); margin-bottom: 8px;">Setcraft Pro</div>
                 <div class="buy-price">
                     <span class="amount"><span class="currency">$</span>19.99</span>
@@ -408,25 +459,22 @@ Connect your account once with your artist name and API key, and Setcraft pulls 
                 <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Buying reopens at public release.</p>
                 <p class="download-note">Checkout runs through Lemon Squeezy, our merchant of record. They take payment and email your license key; you enter it in the app to unlock the paid features.</p>
             </div>
-            <div class="panel-card">
-                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--powder-deep); margin-bottom: 8px;">Road Warrior</div>
+            <div class="panel-card premium">
+                <span class="tier-flag rw">Two or more acts</span>
+                <div class="price-tier" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stripe-gold); margin-bottom: 8px;">Road Warrior</div>
                 <div class="buy-price">
                     <span class="amount"><span class="currency">$</span>34.99</span>
-                    <span class="once" style="color: var(--powder-deep);">One-time<br>lifetime license</span>
+                    <span class="once" style="color: var(--stripe-gold);">One-time<br>lifetime license</span>
                 </div>
                 <p class="buy-prod">For the player who fronts more than one band.</p>
-                <ul class="buy-list">
-                    <li><strong>Everything in Pro</strong></li>
-                    <li>Unlimited artist profiles</li>
-                    <li>A separate library, theme, and Bandsintown key per act</li>
-                    <li>Watermark-free printing and PDF export</li>
-                    <li>Photo setlist import, 20 per month</li>
-                    <li>Back up and move your library to a new machine</li>
-                    <li>Every V1 update included</li>
+                <p class="rw-everything">Everything in Pro, plus</p>
+                <div class="rw-key"><span class="rw-key-mark">&#8734;</span><span>Unlimited artist profiles</span></div>
+                <ul class="buy-list rw-deltas">
+                    <li>A separate library, theme, and Bandsintown key for every act you run</li>
                 </ul>
-                <a class="price-cta cta-disabled" aria-disabled="true" href="https://setcraft.lemonsqueezy.com/checkout/buy/8d9beb9a-c935-42b6-b58c-20d8ccf899f8">Buy Road Warrior</a>
+                <a class="price-cta rw-cta cta-disabled" aria-disabled="true" href="https://setcraft.lemonsqueezy.com/checkout/buy/8d9beb9a-c935-42b6-b58c-20d8ccf899f8">Buy Road Warrior</a>
                 <p class="beta-flag-line"><span class="beta-flag">Closed beta</span> Buying reopens at public release.</p>
-                <p class="download-note">Already on Pro? Upgrade to Road Warrior from inside the app and pay only the difference.</p>
+                <p class="download-note">Already on Pro? Upgrade to Road Warrior from inside the app and pay only the difference, about $15.</p>
             </div>
         </div>
 

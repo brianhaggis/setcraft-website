@@ -542,36 +542,6 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     margin-top: 48px;
     align-items: stretch;
 }
-.price-card {
-    background: var(--paper);
-    border: 1px solid var(--hairline);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-}
-.price-card.featured {
-    border: 2px solid var(--powder);
-    box-shadow: var(--shadow-lift);
-}
-.price-card.featured::before {
-    content: 'Most popular';
-    position: absolute;
-    top: 16px; right: -32px;
-    background: var(--stripe-red);
-    color: #fff;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 5px 36px;
-    transform: rotate(35deg);
-}
-
 .price-tier {
     font-family: var(--font-display);
     font-weight: 700;
@@ -581,50 +551,6 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     color: var(--stripe-red);
     margin-bottom: 12px;
 }
-.price-amount {
-    font-family: var(--font-display);
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 1;
-    color: var(--powder-deep);
-    margin-bottom: 6px;
-}
-.price-amount .currency { font-size: 32px; vertical-align: top; margin-right: 2px; font-weight: 700; }
-.price-amount .cents { font-size: 32px; vertical-align: top; font-weight: 700; }
-.price-period {
-    color: var(--ink-soft);
-    font-size: 14px;
-    margin-bottom: 24px;
-    font-family: var(--font-display);
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-.price-feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 28px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.price-feature-list li {
-    font-size: 15px;
-    color: var(--ink);
-    padding-left: 28px;
-    position: relative;
-}
-.price-feature-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0; top: -1px;
-    color: var(--powder);
-    font-weight: 900;
-    font-size: 18px;
-}
-.price-feature-list li.limit { color: var(--ink-soft); }
-.price-feature-list li.limit::before { content: '·'; color: var(--ink-soft); top: -8px; font-size: 24px; }
-
 .price-cta {
     margin-top: auto;
     font-family: var(--font-display);
@@ -1633,6 +1559,21 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 .buy-list li::before { content: '✓'; position: absolute; left: 0; top: -1px; color: var(--powder); font-weight: 900; font-size: 17px; }
 .download-note { font-size: 13px; color: var(--ink-soft); margin: 14px 0 0; line-height: 1.5; }
 
+/* Tier positioning flags + Road Warrior premium accent (Pro vs RW differentiation) */
+.tier-flag { align-self: flex-start; font-family: var(--font-display); font-weight: 700; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 14px; }
+.tier-flag.pro { background: var(--stripe-red); color: #fff; }
+.tier-flag.rw { background: var(--stripe-gold); color: #2c1a0e; }
+.panel-card.premium { border: 2px solid var(--stripe-gold); box-shadow: var(--shadow-lift); }
+.panel-card.premium .buy-price .amount { color: var(--stripe-gold); }
+.panel-card .price-cta { margin-top: auto; }  /* align both cards' buttons to the bottom */
+.rw-everything { font-family: var(--font-display); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-soft); margin: 4px 0 12px; }
+.rw-key { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; font-family: var(--font-display); font-weight: 800; font-size: 23px; line-height: 1.1; color: var(--stripe-gold); }
+.rw-key-mark { font-size: 32px; line-height: 1; font-weight: 400; }
+.rw-deltas { margin-top: 0; }
+.rw-deltas li::before { color: var(--stripe-gold); }
+.price-cta.rw-cta { background: var(--stripe-gold); color: #2c1a0e; }
+.price-cta.rw-cta:hover { background: #ad8209; color: #2c1a0e; }
+
 /* free-includes scannable block near download */
 .free-includes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; margin: 8px 0 24px; }
 .free-includes .fi-col h5 {
@@ -1707,7 +1648,6 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 .maker-note .eyebrow { margin-bottom: 10px; }
 .maker-note h2 { font-size: clamp(30px, 3.6vw, 46px); margin-bottom: 18px; }
 .maker-note p { font-size: 19px; line-height: 1.62; color: var(--ink-soft); margin: 0; text-wrap: pretty; }
-.addon-note { border-top: 1px solid var(--hairline); margin-top: 14px; padding-top: 12px; }
 @media (max-width: 640px) {
     .maker-note { padding: 28px 24px; }
 }
