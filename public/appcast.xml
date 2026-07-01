@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.5</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 01 Jul 2026 15:08:07 -0400</pubDate>
+            <sparkle:version>1.4.5</sparkle:version>
+            <sparkle:shortVersionString>1.4.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The **Add / Edit Song dialog** is wider, with the note fields beside the rest so the whole form fits without scrolling. If you close it with unsaved edits, it asks whether to save, discard, or keep editing.
+
+- On the song library, **clicking anywhere on a row selects it** (except its buttons), and the selection bar stays put at the top and follows you as you scroll, so it never jumps the page.
+
+- On printed setlists, metaset subsongs now print at the same size as the between-song notes.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.5/Setcraft.dmg" length="57180171" type="application/octet-stream" sparkle:edSignature="9No7mkYHMiFyOlPe6GuMOoErL2c0TsJKMUHTPaW1AC7QpcOVi+NmarG1I5cEB+inB2yq3qz5Er9h4V/4Mnv1Bw=="/>
+        </item>
+        <item>
             <title>1.4.4</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 01 Jul 2026 13:33:04 -0400</pubDate>
