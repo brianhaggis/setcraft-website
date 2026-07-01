@@ -3,6 +3,30 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.7</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 01 Jul 2026 19:19:54 -0400</pubDate>
+            <sparkle:version>1.4.7</sparkle:version>
+            <sparkle:shortVersionString>1.4.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Add Multiple.** A new button on the Songs page opens a grid where you can type in a batch of songs at once, or paste them straight from a spreadsheet. The grid grows as you go and imports the whole batch in one step.
+
+- **Short names now read in ALL CAPS** everywhere they appear on screen, the way a stage label should.
+
+- **New theme: Typo.** A black-and-white typewriter look, set entirely in monospace and lowercase on warm paper, with a wordmark that types itself in.
+
+- **Wake Up** gets a CRT-terminal makeover: the wordmark and headings glitch, over faint scanlines.
+
+- The Songs selection bar no longer hides behind the trial banner when you scroll.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.7/Setcraft.dmg" length="57190406" type="application/octet-stream" sparkle:edSignature="FH8BXX3szvs6cVE6/CsdUH0eF3TKf1wOuohI/PEwEWHAyN6F2I9d0hG5VWPEtl78HqnAcmcfc+m52EzDdcR1DA=="/>
+        </item>
+        <item>
             <title>1.4.6</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 01 Jul 2026 16:42:37 -0400</pubDate>
