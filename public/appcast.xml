@@ -3,6 +3,28 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.4</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 01 Jul 2026 13:33:04 -0400</pubDate>
+            <sparkle:version>1.4.4</sparkle:version>
+            <sparkle:shortVersionString>1.4.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Backstage is redesigned** around a floating left sidebar and a wide canvas, so most settings fit without scrolling. Print options move to their own **Print/Export** tab with a live sample preview.
+
+- **Print options are now toggle switches**, with new controls to hide the band name, venue, or date on a sheet. The venue shortens to fit and expands to its full name when there's room.
+
+- **Sharpie mode** defaults to a scrawled marker font (with a cleaner option), in natural title case with the key in parentheses.
+
+- The **song library sorts with a Finder-style arrow** showing the active column and direction, and a new **Licenses menu** lets you view or deactivate this computer from the menu bar.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.4/Setcraft.dmg" length="57180892" type="application/octet-stream" sparkle:edSignature="gaR2pXtqN7uLicsGeP7390IjrwPhDoJk9SFTAF4LF8VYNyzhslsUtqr/9uPreXffwZJzwttcERWjgs5vHbyrDQ=="/>
+        </item>
+        <item>
             <title>1.4.3</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 01 Jul 2026 01:30:13 -0400</pubDate>
