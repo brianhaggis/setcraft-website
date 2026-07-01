@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.1</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Tue, 30 Jun 2026 21:36:56 -0400</pubDate>
+            <sparkle:version>1.4.1</sparkle:version>
+            <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The "See the tiers" button on the trial welcome screen now opens the license page as intended.
+
+- Pro and Road Warrior appear on the Account tab as side-by-side cards, each with a short description of what it includes, so the difference reads at a glance.
+
+- Clearer trial banner wording. During the trial you already have every feature, so the banner now points to keeping the full app after the trial rather than unlocking it.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.1/Setcraft.dmg" length="57040399" type="application/octet-stream" sparkle:edSignature="wtaGTemmdeBU8E0tp3kAuOdX/Z/D1d1UzepLeeIhb/MckDdZARu5+VcFIybTOJsWQzB/YwRF0NeebzeJ9wc6Aw=="/>
+        </item>
+        <item>
             <title>1.4.0</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Tue, 30 Jun 2026 19:42:25 -0400</pubDate>
