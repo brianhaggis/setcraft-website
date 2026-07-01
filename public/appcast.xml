@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.3</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 01 Jul 2026 01:30:13 -0400</pubDate>
+            <sparkle:version>1.4.3</sparkle:version>
+            <sparkle:shortVersionString>1.4.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The print dialog gains two options: **Hide song numbers** for a clean, unnumbered sheet, and **Sharpie mode**, which prints the setlist in a bold handwritten marker font. Both show live in the preview.
+
+- Action buttons now carry their meaning in their color, consistent across every theme: green to save or create, blue to print or export, red to delete, orange to cancel.
+
+- The print preview now shows the trial watermark exactly as it will print, with a note that a Pro or Road Warrior license removes it.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.3/Setcraft.dmg" length="57043245" type="application/octet-stream" sparkle:edSignature="iGYFNL2UoemzWqqeJIy5jAJy/GQERcddVFQj+fKL2TPJ7e4d6eTv6hkiuf2QQVvO9MTwJ0gb9hp6h7Bkd0HqBg=="/>
+        </item>
+        <item>
             <title>1.4.2</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 01 Jul 2026 00:15:00 -0400</pubDate>
