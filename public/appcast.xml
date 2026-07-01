@@ -3,6 +3,28 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.2</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 01 Jul 2026 00:15:00 -0400</pubDate>
+            <sparkle:version>1.4.2</sparkle:version>
+            <sparkle:shortVersionString>1.4.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- The free trial now marks printed and exported sheets with a light diagonal stamp, the same as the free version. Every feature stays open during the trial; a clean, gig-ready sheet is what a Pro or Road Warrior license unlocks.
+
+- Photo import shows the correct trial allotment: five scans a month, not twenty, and the counter now tracks as you use them.
+
+- The trial banner stays pinned below the top bar as you scroll, and its button reads "Upgrade to keep using all Pro features."
+
+- On the builder, the Print, cue sheet, and delete actions are right-aligned in their row.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.2/Setcraft.dmg" length="57041764" type="application/octet-stream" sparkle:edSignature="1BFRe35xEDLiYkrrj6D1fnPBVslnM3uwvbwLYkvj1I0KLYoaRsCAeAS1rUV5ggp+XGgFplJtWMHkqryA71aBCQ=="/>
+        </item>
+        <item>
             <title>1.4.1</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Tue, 30 Jun 2026 21:36:56 -0400</pubDate>
