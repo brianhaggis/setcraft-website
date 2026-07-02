@@ -304,7 +304,8 @@ def build_sparkle_page(entries):
 
 
 def build_beta_page(entries):
-    """The beta-tester download page: a prominent Download button (always the
+    """The beta-tester download page (served at the unlisted /thisgoestoeleven —
+    a deliberately non-obvious slug): a prominent Download button (always the
     latest signed DMG, via the /download redirect) plus the full changelog. It is
     UNLISTED — noindex and absent from the nav/footer — so testers reach it only
     through the link you share. Regenerated every release, like the others."""
@@ -361,11 +362,11 @@ def main():
     days = group_by_day(entries)
     (PUBLIC / "version-history.html").write_text(build_site_page(entries))
     (PUBLIC / "release-notes.html").write_text(build_sparkle_page(entries))
-    (PUBLIC / "beta.html").write_text(build_beta_page(entries))
+    (PUBLIC / "thisgoestoeleven.html").write_text(build_beta_page(entries))
     print(f"Parsed {len(entries)} versions into {len(days)} release days from {src}")
     print(f"Wrote {PUBLIC / 'version-history.html'} (all {len(days)} days)")
     print(f"Wrote {PUBLIC / 'release-notes.html'} (latest {min(SPARKLE_DAY_LIMIT, len(days))} days)")
-    print(f"Wrote {PUBLIC / 'beta.html'} (download page + all {len(days)} days)")
+    print(f"Wrote {PUBLIC / 'thisgoestoeleven.html'} (beta download page + all {len(days)} days)")
 
 
 if __name__ == "__main__":
