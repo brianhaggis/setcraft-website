@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.9</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 01 Jul 2026 22:22:52 -0400</pubDate>
+            <sparkle:version>1.4.9</sparkle:version>
+            <sparkle:shortVersionString>1.4.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Typo** theme polish: the self-typing wordmark no longer nudges the nav links on each page load, and the current page's nav link now highlights clearly.
+
+- **Wake Up** theme: the CRT scanlines are softer and gently flicker.
+
+- First-launch welcome dialogs no longer overlap: the beta and trial explainers now appear one at a time instead of stacking.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.9/Setcraft.dmg" length="57188130" type="application/octet-stream" sparkle:edSignature="vxmz48uEYGev0fyiVF84+dO+Lazos/PqOUF63jPVq+I7wTCAriOTYTVOk6M0I40odSQykKvg7tndRsB3jyVJDA=="/>
+        </item>
+        <item>
             <title>1.4.8</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 01 Jul 2026 19:43:59 -0400</pubDate>
