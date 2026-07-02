@@ -311,6 +311,16 @@ def build_beta_page(entries):
     through the link you share. Regenerated every release, like the others."""
     buckets = group_by_day(entries)
     latest = entries[0]["version"] if entries else ""
+    # Brand-only nav (no Features/Themes/"Download Free" links — they confuse on a
+    # page whose whole job is the beta download).
+    beta_nav = """    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                <span class="brand-text">Setcraft</span>
+            </a>
+        </div>
+    </nav>"""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -324,22 +334,25 @@ def build_beta_page(entries):
     <script src="theme-switcher.js"></script>
 </head>
 <body>
-{NAV}
+{beta_nav}
 
     <section class="container section">
-        <div class="eyebrow">Beta</div>
-        <h1 class="h2">DOWNLOAD THE <span class="accent">BETA.</span></h1>
-        <p class="lede" style="max-width: 640px;">Thanks for helping test Setcraft. Grab the latest signed build below. After that it keeps itself up to date.</p>
-        <p class="updated">Current beta build · {html.escape(latest)}</p>
-        <p style="margin: 26px 0 10px;">
-            <a class="price-cta featured-cta" href="/download">Download for macOS</a>
-        </p>
-        <p class="download-note" style="max-width: 640px;">Requires macOS 12 or later on Apple Silicon (M1 or newer). On first launch, if macOS blocks it, right-click <strong>Setcraft</strong> and choose <strong>Open</strong> once — it is signed and notarized, so that is a one-time step. New builds install through the app itself (<strong>Help &rsaquo; Check for Updates</strong>), so you only download here the first time.</p>
-        <p class="download-note" style="max-width: 640px;">Your license key arrives by email; enter it in the app under <strong>Backstage &rsaquo; Account &amp; License</strong>.</p>
+        <div style="max-width: 640px; margin: 0 auto;">
+            <div class="eyebrow">Beta</div>
+            <h1 class="h2">DOWNLOAD THE <span class="accent">BETA.</span></h1>
+            <p class="lede">Thanks for helping test Setcraft. Grab the latest signed build below.</p>
+            <p class="updated">Current beta build · {html.escape(latest)}</p>
+            <p style="margin: 26px 0 12px;">
+                <a class="price-cta featured-cta" href="/download" style="display: inline-block; width: auto;">Download for macOS</a>
+            </p>
+            <p class="download-note">Requires macOS 12 or later on Apple Silicon (M1 or newer). On first launch, if macOS blocks it, right-click <strong>Setcraft</strong> and choose <strong>Open</strong> once — it is signed and notarized, so that is a one-time step.</p>
+            <p class="download-note">Updates come through the app, not this page, so you only download here once. They are opt-in: switch on automatic updates from the <strong>Help</strong> menu to get new builds as they ship, or grab them any time with <strong>Help &rsaquo; Check for Updates</strong>.</p>
+            <p class="download-note">Your license key arrives by email; enter it in the app under <strong>Backstage &rsaquo; Account &amp; License</strong>.</p>
+        </div>
     </section>
 
     <section class="container section" style="padding-top: 0;">
-        <div class="legal">
+        <div class="legal" style="max-width: 640px;">
             <h2>What&rsquo;s new</h2>
 
 {render_entries(buckets)}
