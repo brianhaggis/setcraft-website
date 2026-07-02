@@ -303,6 +303,54 @@ def build_sparkle_page(entries):
 """
 
 
+def build_beta_page(entries):
+    """The beta-tester download page: a prominent Download button (always the
+    latest signed DMG, via the /download redirect) plus the full changelog. It is
+    UNLISTED — noindex and absent from the nav/footer — so testers reach it only
+    through the link you share. Regenerated every release, like the others."""
+    buckets = group_by_day(entries)
+    latest = entries[0]["version"] if entries else ""
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setcraft Beta — Download</title>
+    <meta name="description" content="Download the latest Setcraft beta build.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
+    <link rel="stylesheet" href="style.css?v=28">
+    <script src="theme-switcher.js"></script>
+</head>
+<body>
+{NAV}
+
+    <section class="container section">
+        <div class="eyebrow">Beta</div>
+        <h1 class="h2">DOWNLOAD THE <span class="accent">BETA.</span></h1>
+        <p class="lede" style="max-width: 640px;">Thanks for helping test Setcraft. Grab the latest signed build below. After that it keeps itself up to date.</p>
+        <p class="updated">Current beta build · {html.escape(latest)}</p>
+        <p style="margin: 26px 0 10px;">
+            <a class="price-cta featured-cta" href="/download">Download for macOS</a>
+        </p>
+        <p class="download-note" style="max-width: 640px;">Requires macOS 12 or later on Apple Silicon (M1 or newer). On first launch, if macOS blocks it, right-click <strong>Setcraft</strong> and choose <strong>Open</strong> once — it is signed and notarized, so that is a one-time step. New builds install through the app itself (<strong>Help &rsaquo; Check for Updates</strong>), so you only download here the first time.</p>
+        <p class="download-note" style="max-width: 640px;">Your license key arrives by email; enter it in the app under <strong>Backstage &rsaquo; Account &amp; License</strong>.</p>
+    </section>
+
+    <section class="container section" style="padding-top: 0;">
+        <div class="legal">
+            <h2>What&rsquo;s new</h2>
+
+{render_entries(buckets)}
+        </div>
+    </section>
+
+{FOOTER}
+</body>
+</html>
+"""
+
+
 def main():
     src = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_CHANGELOG
     if not src.exists():
@@ -313,9 +361,11 @@ def main():
     days = group_by_day(entries)
     (PUBLIC / "version-history.html").write_text(build_site_page(entries))
     (PUBLIC / "release-notes.html").write_text(build_sparkle_page(entries))
+    (PUBLIC / "beta.html").write_text(build_beta_page(entries))
     print(f"Parsed {len(entries)} versions into {len(days)} release days from {src}")
     print(f"Wrote {PUBLIC / 'version-history.html'} (all {len(days)} days)")
     print(f"Wrote {PUBLIC / 'release-notes.html'} (latest {min(SPARKLE_DAY_LIMIT, len(days))} days)")
+    print(f"Wrote {PUBLIC / 'beta.html'} (download page + all {len(days)} days)")
 
 
 if __name__ == "__main__":
