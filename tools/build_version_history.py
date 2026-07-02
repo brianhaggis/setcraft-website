@@ -321,6 +321,36 @@ def build_beta_page(entries):
             </a>
         </div>
     </nav>"""
+    # Trimmed footer: no "Product" column (its Features / Download links point back
+    # at the marketing/pricing page, the same confusion as the nav CTA). Keep the
+    # brand, legal links, and contact.
+    beta_footer = """    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                        <span class="brand-text">Setcraft</span>
+                    </a>
+                    <p class="footer-tag">The setlist app for working musicians. Built for the stage.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="licenses.html">Open-Source Licenses</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Talk to us</h5>
+                    <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Setcraft LLC. Setcraft is a trademark of Setcraft LLC.</span>
+                <span>getsetcraft.com</span>
+            </div>
+        </div>
+    </footer>"""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -359,7 +389,7 @@ def build_beta_page(entries):
         </div>
     </section>
 
-{FOOTER}
+{beta_footer}
 </body>
 </html>
 """
