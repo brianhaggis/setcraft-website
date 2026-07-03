@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.10</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 02 Jul 2026 21:00:24 -0400</pubDate>
+            <sparkle:version>1.4.10</sparkle:version>
+            <sparkle:shortVersionString>1.4.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Email your setlists, books, and charts.** Every place with an AirDrop button now has an email button beside it, which opens a new message in your Mac's mail app with the PDF already attached. Covers setlists, the lyric and chart books, single-song lyrics and charts, the tech cue sheet, and the PRO report.
+
+- **Song Library** export buttons are grouped and labeled: a "Lyric Book" box with Download / AirDrop / Email, and a matching "Chart Book" box, so it is clear which book each button acts on.
+
+- **What's New** menu item added under Help (above Check for Updates), which opens the release notes for the running version.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.10/Setcraft.dmg" length="57196589" type="application/octet-stream" sparkle:edSignature="RIGSqz6+S7mzyPnXQ9DEnZRbV/970eKtxVLLJjWPYOmo3Pb7OWxDfPVnRZ8AZ8+6n6qRvKflQq1iYHp5LYvxAw=="/>
+        </item>
+        <item>
             <title>1.4.9</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Wed, 01 Jul 2026 22:22:52 -0400</pubDate>
