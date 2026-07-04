@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.12</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Fri, 03 Jul 2026 20:11:28 -0400</pubDate>
+            <sparkle:version>1.4.12</sparkle:version>
+            <sparkle:shortVersionString>1.4.12</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Typo** is now one of the main themes instead of a hidden one. It sits near the top of the theme list, and its wordmark carries a small sun/moon switch that flips the whole look between light and dark.
+
+- **Report a bug** without leaving Setcraft. A tab on the right edge opens a short form where you describe the problem and attach a screenshot, and it sends straight to support. Needs an internet connection.
+
+- The **Mystery themes** shelf in Backstage now shows how to unlock each secret look, so there is a hint to chase instead of a blank slot.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.12/Setcraft.dmg" length="57271254" type="application/octet-stream" sparkle:edSignature="VBlo6SyUwN5SiStRBL9yPNDhpvLVyHmff+HAfkaXFylukuero+cf6chXLIOVUcCVsWr8xLWIQOK6Q0jknwauAg=="/>
+        </item>
+        <item>
             <title>1.4.11</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Fri, 03 Jul 2026 13:24:20 -0400</pubDate>
