@@ -3,6 +3,26 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.13</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Sat, 04 Jul 2026 20:31:35 -0400</pubDate>
+            <sparkle:version>1.4.13</sparkle:version>
+            <sparkle:shortVersionString>1.4.13</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Woodstock**, a new theme. A sixties flower-child field: warm tan with mod daisies that drift and bounce very slowly behind your work, over a pastel lava-lamp wash. A little lamp button by the wordmark turns the lava on or off, and Shrikhand lettering carries the headings. It settles to a still field if you have Reduce Motion on.
+
+- **The Shire**, a new theme. A warm hobbit-hole at dusk, with golden fireflies drifting through and a gold wordmark that catches a flash of light as you pass over it. This one takes the place of the old Big Hair look.
+
+- **Synthwave** trades its busy neon grid for a cleaner, deep twilight purple.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.13/Setcraft.dmg" length="57729768" type="application/octet-stream" sparkle:edSignature="q/B8kIvaxtrfF7n96bubhiMLYP+zBxWAPm39+Fw47gPqTcor7GV5zkkVUejWFM3cCxiUeSsIpDP2wjKufU/kCg=="/>
+        </item>
+        <item>
             <title>1.4.12</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Fri, 03 Jul 2026 20:11:28 -0400</pubDate>
