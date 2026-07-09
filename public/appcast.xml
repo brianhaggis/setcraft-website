@@ -3,6 +3,38 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.16</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 08 Jul 2026 23:46:22 -0400</pubDate>
+            <sparkle:version>1.4.16</sparkle:version>
+            <sparkle:shortVersionString>1.4.16</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Photo import now works during the free trial.** Trial installs get their five scans a month without a license key, the way the trial always described it.
+
+- **Setlist saves are all-or-nothing.** A save interrupted partway through (a crash, a bad row) could previously lose the version you had saved before. Now the previous version survives anything short of a completed save, and a failed first save no longer leaves an empty setlist behind.
+
+- **Restored backups keep your saved default notes**, including when you restore on a new Mac.
+
+- **Undo in the builder is trustworthy again.** Importing another setlist can be undone, a drag between sets undoes in one step instead of two, undo no longer carries over when you switch to a different setlist, and the Save button's unsaved-changes state stays accurate through long editing runs.
+
+- **The demo band is now fully read-only.** A few edit paths (bulk actions, chart uploads, the Bandsintown settings) could still change it.
+
+- The builder tutorial's encore step now switches to the correct set.
+
+- **Help Center updates:** a new "Reporting a bug" article that explains what a report sends and does not send, coverage for Add Multiple, Sharpie mode, and the AirDrop and Email export buttons, plus corrections to the show fields and the update-check description (update checks are opt-in and always were).
+
+- Upgrade-key activation verifies keys more strictly and refuses safely when verification is not possible.
+
+- Behind the scenes: hardening on the photo and trial services, and a large cleanup of leftover code from earlier versions.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.16/Setcraft.dmg" length="57731752" type="application/octet-stream" sparkle:edSignature="qsyF3k6cVdCIA7kczvMR4Gmk88wfncIw9QAcG/0D0/crYfD2YcPsq5fpOdcpzkcqo7zx7hxNn+WNoYPlZR6dDQ=="/>
+        </item>
+        <item>
             <title>1.4.15</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Mon, 06 Jul 2026 17:35:07 -0400</pubDate>
