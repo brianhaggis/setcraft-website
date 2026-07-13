@@ -1,15 +1,15 @@
 /* Setcraft marketing site — live theme toggle.
-   The page's resting skin is Yacht Rock. The toggle offers four of the app's
-   loud themes; the choice persists in localStorage and is applied to <html>
+   The page's resting skin is Yacht Rock. The toggle offers five of the app's
+   themes; the choice persists in localStorage and is applied to <html>
    synchronously on load to avoid a flash of the default theme.
 
    This is a self-contained marketing gag, not the app's real theme engine.
-   The brand mark (raspberry -> coral -> amber) stays constant across all four
+   The brand mark (raspberry -> coral -> amber) stays constant across the
    themes, so it is never recoloured here. */
 (function () {
     var STORAGE_KEY = 'sc-site-theme';
     var DEFAULT = 'yacht';
-    var THEMES = ['yacht', '808', 'synthwave', 'metal'];
+    var THEMES = ['yacht', '808', 'synthwave', 'metal', 'typo'];
 
     function applyTheme(theme) {
         if (THEMES.indexOf(theme) === -1) theme = DEFAULT;
