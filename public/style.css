@@ -1388,7 +1388,7 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 /* ============================================================
    Stage-print setlist mock — mirrors templates/print_setlist.html
    (artist name big, venue·city·date line, sets in side-by-side
-   columns, "N. SONG NAME (KEY)", ENCORE divider, free-version footer)
+   columns, "N. SONG NAME (KEY)", ENCORE divider)
    ============================================================ */
 .print-sheet {
     background: #fff;
@@ -1434,7 +1434,6 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 }
 .print-sheet ol.encore { counter-reset: none; }
 .print-sheet ol.encore li::before { content: ""; min-width: 0; }
-.print-sheet .ps-foot { margin-top: auto; padding-top: 10px; text-align: center; font-family: var(--font-body); font-size: 10px; letter-spacing: 0.04em; color: #bbb; }
 
 /* ============================================================
    Live theme toggle — the gag
