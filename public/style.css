@@ -807,7 +807,7 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     --stripe-red: #ff2d78; --stripe-brown: #500090; --stripe-gold: #00f5c4;
     --mark-stem: #ff2d78; --mark-bar1: #ff2d78; --mark-bar2: #00f5c4; --mark-bar3: #b080d0;
     --font-display: 'Orbitron', sans-serif;
-    --site-bg: radial-gradient(ellipse at 50% 0%, #220048 0%, #08001a 60%);
+    --site-bg: linear-gradient(180deg, #16032e 0%, #0a0018 55%, #05000f 100%);
     --site-nav-bg: #0f0025;
     --site-nav-shadow: 0 1px 0 rgba(255,45,120,0.4), 0 0 30px rgba(80,0,144,0.4);
     --site-text-on-nav: #f0e0ff; --site-brand-color: #ff2d78;
@@ -965,6 +965,7 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     --mark-stem: #ff6b35; --mark-bar1: #ff6b35; --mark-bar2: #e83030; --mark-bar3: #ff6b35;
     --font-display: 'Share Tech Mono', monospace;
     --site-bg: #1c1c1e;
+    --site-art: url('assets/img/808-bg.webp');
     --site-nav-bg: #242426;
     --site-nav-shadow: 0 2px 0 #ff6b35, 0 4px 0 #e83030;
     --site-text-on-nav: #d8d4cc; --site-brand-color: #ff6b35;
@@ -1027,7 +1028,7 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     --stripe-red: #cc1111; --stripe-brown: #6b8f00; --stripe-gold: #888888;
     --mark-stem: #cc1111; --mark-bar1: #cc1111; --mark-bar2: #6b8f00; --mark-bar3: #888888;
     --font-display: 'Metal Mania', serif;
-    --site-bg: radial-gradient(ellipse at 50% 0%, #1c1c1c 0%, #050505 75%);
+    --site-bg: #0d0d0d;
     --site-nav-bg: #0d0d0d;
     --site-nav-shadow: 0 2px 0 #cc1111, 0 4px 18px rgba(204,17,17,0.25);
     --site-text-on-nav: #d0d0d0; --site-brand-color: #6b8f00;
@@ -1813,4 +1814,36 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     border-radius: 4px;
     margin-right: 6px;
     vertical-align: middle;
+}
+
+/* ---------- SHIPPED-THEME BACKGROUND ART ----------
+   808 and Metal ship real background art in the app; the previews carry the
+   same files (copied from the app bundle) so the toggle shows the true theme.
+   A fixed ::before layer mirrors the app and sidesteps iOS's fixed-background
+   scaling. */
+[data-site-theme="808"] body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: var(--site-art) center / cover no-repeat;
+    filter: brightness(0.55);
+}
+@media (prefers-reduced-motion: no-preference) {
+    [data-site-theme="808"] body::before { animation: site-pulse-808 5.5s ease-in-out infinite; }
+}
+@keyframes site-pulse-808 {
+    0%, 100% { filter: brightness(0.5); }
+    50%      { filter: brightness(0.85); }
+}
+[data-site-theme="metal"] body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.55), rgba(13, 13, 13, 0.55)),
+        url('assets/img/metal-bg.webp') center / cover no-repeat;
 }
