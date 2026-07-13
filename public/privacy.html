@@ -91,7 +91,7 @@
             <p>The app sends this identifier to <strong>Setcraft's server</strong> (hosted on <strong>Render</strong>) in three situations. First, a throttled background check, at most a few times a day while the app is running, records and returns your trial start date. Anchoring the start date on the server is what keeps the trial honest: reinstalling the app or rolling the system clock back does not restart it. The app keeps making this check while it is unlicensed, during and after the trial. Once you activate a paid license and your start date is on record, it stops. Second, during the trial, photo import sends the identifier in place of a license key to authorize and count your imports, as described in 3a. Third, if you submit a bug report, the identifier rides along so we can rate-limit reports, as described in 3g.</p>
             <ul>
                 <li><strong>What our server stores:</strong> the install identifier, the date it was first seen, a monthly trial photo-import count, and a per-day bug-report count. No image, no email, and no personal data. The install identifier is operational metadata, not your content; your songs, lyrics, charts, and setlists stay on your Mac.</li>
-                <li><strong>How long we keep it:</strong> [CONFIRM: retention window for trial records and usage counters].</li>
+                <li><strong>How long we keep it:</strong> the trial record is what stops a wiped and reinstalled app from starting a fresh trial, so we keep it for as long as we offer the trial. The usage counters are small tallies of dates and counts. We do not purge them on a schedule; only the current month or day is ever consulted.</li>
                 <li><strong>Legal basis (GDPR):</strong> performance of the contract, meaning running the trial you asked for, and our legitimate interest in preventing abuse of the free trial.</li>
             </ul>
 
@@ -102,7 +102,7 @@
             <p>The report travels through <strong>Setcraft's server</strong> (hosted on <strong>Render</strong>) and arrives as an email in our support mailbox, hosted by <strong>Zoho Mail</strong>. Our server does not keep a copy of the report or the attachment. The only lasting record it holds is a per-day count of reports per install, to prevent abuse.</p>
             <ul>
                 <li><strong>Sub-processors:</strong> Render (relay) and Zoho (mailbox).</li>
-                <li><strong>Retention:</strong> the report lives in our support mailbox like any other support email. [CONFIRM: mailbox retention period.]</li>
+                <li><strong>Retention:</strong> the report lives in our support mailbox like any other support email. We keep it while it is useful for fixing the problem it describes; there is no automatic deletion.</li>
                 <li><strong>Legal basis (GDPR):</strong> consent, meaning the report you chose to send.</li>
             </ul>
 
@@ -139,8 +139,8 @@
                 <li><strong>Photo-import images:</strong> not stored. The photo exists on our server only for the duration of the request and is then gone. Anthropic deletes API data within 30 days by default.</li>
                 <li><strong>Monthly upload count:</strong> we keep a per-license monthly upload counter, tied to a one-way hash of your license key, to enforce fair use of photo import. It contains no image, email, or readable key.</li>
                 <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
-                <li><strong>Trial records:</strong> we keep your random install identifier, the date it was first seen, a monthly trial photo-import count, and a per-day bug-report count, so the trial can run without an account and within fair-use limits. These contain no image, email, or personal data. [CONFIRM: how long trial records and counters are kept.]</li>
-                <li><strong>Bug reports:</strong> kept as email in our support mailbox, not in a database. [CONFIRM: mailbox retention period.]</li>
+                <li><strong>Trial records:</strong> we keep your random install identifier, the date it was first seen, a monthly trial photo-import count, and a per-day bug-report count, so the trial can run without an account and within fair-use limits. These contain no image, email, or personal data. The trial record is kept for as long as we offer the trial, since it is what prevents trial resets. The counters are not purged on a schedule.</li>
+                <li><strong>Bug reports:</strong> kept as email in our support mailbox, not in a database, until we delete them. There is no automatic deletion.</li>
                 <li><strong>Purchase and license records</strong> (via Lemon Squeezy and our backend): kept for as long as tax and accounting law requires, which can be up to about seven years.</li>
             </ul>
 
