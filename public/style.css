@@ -773,7 +773,7 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     /* Feature rows: let the visual column shrink and cap media/mocks to it. */
     .feature-row > * { min-width: 0; }
     .feature-visual img, .feature-visual video,
-    .builder-mini, .print-sheet { max-width: 100%; }
+    .builder-mini, .print-stack { max-width: 100%; }
     /* The Themes section uses an inline two-column grid; collapse it here. */
     #themes > div { grid-template-columns: 1fr !important; gap: 32px !important; }
     .nav-inner { padding: 14px 20px; }
@@ -1387,54 +1387,21 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 }
 
 /* ============================================================
-   Stage-print setlist mock — mirrors templates/print_setlist.html
-   (artist name big, venue·city·date line, sets in side-by-side
-   columns, "N. SONG NAME (KEY)", ENCORE divider)
+   Real exported setlist pages (demo band, straight out of the app's
+   PDF export). Page 1 sits in front; page 2, with the two-column
+   split and encore, peeks out behind it.
    ============================================================ */
-.print-sheet {
+.print-stack { position: relative; max-width: 440px; margin: 0 auto; }
+.print-stack img {
+    display: block;
+    height: auto;
     background: #fff;
-    color: #111;
-    border-radius: 6px;
-    border: 1px solid var(--hairline);
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
     box-shadow: var(--shadow-lift);
-    padding: 26px 26px 14px;
-    aspect-ratio: 8.5 / 11;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
 }
-.print-sheet .ps-head { text-align: center; border-bottom: 2px solid #111; padding-bottom: 8px; margin-bottom: 12px; }
-.print-sheet .ps-band { font-weight: 700; font-size: 25px; line-height: 1.05; color: #111; }
-.print-sheet .ps-loc { font-weight: 700; font-size: 16px; color: #222; margin-top: 2px; }
-.print-sheet .ps-cols { display: flex; gap: 22px; flex: 1; min-height: 0; }
-.print-sheet .ps-col { flex: 1; min-width: 0; }
-.print-sheet .ps-set {
-    font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
-    font-size: 12px; color: #111;
-    border-bottom: 1.5px solid #111; padding-bottom: 4px; margin-bottom: 8px;
-}
-.print-sheet ol { list-style: none; counter-reset: ps; margin: 0; padding: 0; }
-.print-sheet ol li {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: clamp(15px, 1.9vw, 22px);
-    line-height: 1.18;
-    color: #111;
-    display: flex;
-    align-items: baseline;
-    gap: 7px;
-    white-space: nowrap;
-}
-.print-sheet ol li::before { counter-increment: ps; content: counter(ps) "."; font-size: 0.62em; color: #777; font-weight: 700; min-width: 1.5em; flex-shrink: 0; }
-.print-sheet ol li > span:first-of-type { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-.print-sheet ol li .key { font-size: 0.62em; color: #555; font-weight: 700; flex-shrink: 0; }
-.print-sheet .ps-encore {
-    font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em;
-    font-size: 11px; text-align: center; color: #111;
-    border-top: 2px solid #111; margin: 8px 0 6px; padding-top: 5px;
-}
-.print-sheet ol.encore { counter-reset: none; }
-.print-sheet ol.encore li::before { content: ""; min-width: 0; }
+.print-stack .pp-back { position: absolute; top: 0; right: 0; width: 88%; transform: rotate(2deg); }
+.print-stack .pp-front { position: relative; z-index: 1; width: 88%; margin-top: 34px; transform: rotate(-1.4deg); }
 
 /* ============================================================
    Live theme toggle — the gag
