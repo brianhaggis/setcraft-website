@@ -773,7 +773,7 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     /* Feature rows: let the visual column shrink and cap media/mocks to it. */
     .feature-row > * { min-width: 0; }
     .feature-visual img, .feature-visual video,
-    .builder-mini, .print-stack { max-width: 100%; }
+    .builder-mini, .print-shot { max-width: 100%; }
     /* The Themes section uses an inline two-column grid; collapse it here. */
     #themes > div { grid-template-columns: 1fr !important; gap: 32px !important; }
     .nav-inner { padding: 14px 20px; }
@@ -1387,21 +1387,19 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 }
 
 /* ============================================================
-   Real exported setlist pages (demo band, straight out of the app's
-   PDF export). Page 1 sits in front; page 2, with the two-column
-   split and encore, peeks out behind it.
+   Real exported setlist sheet (demo band, straight out of the app's
+   PDF export): a full two-set show with notes and an encore.
    ============================================================ */
-.print-stack { position: relative; max-width: 440px; margin: 0 auto; }
-.print-stack img {
+.print-shot { max-width: 480px; margin: 0 auto; }
+.print-shot img {
     display: block;
+    width: 100%;
     height: auto;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.14);
     border-radius: 4px;
     box-shadow: var(--shadow-lift);
 }
-.print-stack .pp-back { position: absolute; top: 0; right: 0; width: 88%; transform: rotate(2deg); }
-.print-stack .pp-front { position: relative; z-index: 1; width: 88%; margin-top: 34px; transform: rotate(-1.4deg); }
 
 /* ============================================================
    Live theme toggle — the gag
