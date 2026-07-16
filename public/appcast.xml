@@ -3,6 +3,32 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.4.18</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Thu, 16 Jul 2026 00:05:09 -0400</pubDate>
+            <sparkle:version>1.4.18</sparkle:version>
+            <sparkle:shortVersionString>1.4.18</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **The builder's City highlight now casts a real net.** Shows within 50 miles count as the same market, so a night in Ypsilanti lights up your Ann Arbor history. City lookups run against an offline city map bundled with the app; nothing leaves your Mac. Same-named cities in different states no longer collide, and a same-named venue in another city no longer matches.
+
+- **The history bar now tells you when you were last there.** "Last at The Ark · 120 days ago" in Venue mode; in City mode it says "Last in" or "Last near" and names the neighboring town when that's where the history came from.
+
+- **Highlighted library songs now carry a "played here" tag** (or "played nearby" in City mode), so the highlight explains itself.
+
+- **The freshness meter reads correctly in City mode.** It now compares tonight against the same songs the highlight marks, instead of hiding when the rest of town had no history.
+
+- **Printed setlists name the setlist's band.** Printing another of your bands' setlists stamped the active profile's name across the top; the sheet now belongs to the band that played it.
+
+- Nav switch show/hide preferences now survive relaunches.
+
+Requires macOS 12 or later on Apple Silicon.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.4.18/Setcraft.dmg" length="60567095" type="application/octet-stream" sparkle:edSignature="qHmOJvhrXW5WeNVNIMXoTxE/9qhJ1TRYvLUlzj9TADhHpA5lTbaaGDQgBW69M4XJuzCfLJBYXNcCRBOMdVsPCw=="/>
+        </item>
+        <item>
             <title>1.4.17</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Sat, 12 Jul 2026 14:10:00 -0400</pubDate>
