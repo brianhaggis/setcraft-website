@@ -6,9 +6,18 @@
 # fire. Canonicalize those with a Cloudflare Redirect Rule at the zone level
 # (dashboard > the zone > Rules > Redirect Rules). Path redirects below work.
 
-# Single source of truth for the app download. The "Download Free" buttons all
-# point at /download; this forwards to the signed DMG hosted as a GitHub Release
-# asset on the public setcraft-website repo. The /latest/ path is stable: ship a
-# new release with an asset named Setcraft.dmg and this URL follows it
-# automatically, no edit here needed.
-/download  https://github.com/brianhaggis/setcraft-website/releases/latest/download/Setcraft.dmg  302
+# The app download. As of 1.5.0 there are TWO builds, Apple Silicon and Intel, so
+# /download can no longer be a straight redirect to one file: it now serves the
+# chooser page, which pre-selects the right one and explains how to check.
+#
+# The /latest/ paths below are stable. Ship a release with assets named
+# Setcraft-AppleSilicon.dmg and Setcraft-Intel.dmg and these follow automatically,
+# no edit here needed. (The version lives in the git tag, not the filename, which
+# is what keeps that true.)
+/download                 /download.html  302
+/download/apple-silicon   https://github.com/brianhaggis/setcraft-website/releases/latest/download/Setcraft-AppleSilicon.dmg  302
+/download/intel           https://github.com/brianhaggis/setcraft-website/releases/latest/download/Setcraft-Intel.dmg  302
+
+# Pre-1.5.0 installs and any link in the wild that still expects one file. Send it
+# to the chooser rather than 404ing or guessing an architecture wrong.
+/download/Setcraft.dmg    /download.html  302

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Setcraft</title>
+    <meta name="description" content="Download Setcraft for your Mac. Two builds: Apple Silicon and Intel.">
+    <meta name="robots" content="noindex, nofollow"> <!-- TEMP: pre-launch, remove to allow indexing -->
+    <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
+    <link rel="stylesheet" href="style.css?v=32">
+    <script src="theme-switcher.js?v=30"></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                <span class="brand-text">Setcraft</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#themes" class="nav-link">Themes</a>
+                <a href="index.html#download" class="nav-cta">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container section">
+        <div class="legal">
+            <a href="index.html" class="back">← Back to Setcraft</a>
+            <h1>Download Setcraft</h1>
+            <p class="updated">Free to try for 30 days. macOS 12 Monterey or newer.</p>
+
+            <p>Macs have used two kinds of processor over the years, and an app has to be built for the one you have. Pick the download that matches your Mac.</p>
+
+            <div id="dl-pick" class="dl-grid">
+                <a class="dl-card" id="dl-apple" href="https://github.com/brianhaggis/setcraft-website/releases/latest/download/Setcraft-AppleSilicon.dmg">
+                    <span class="dl-badge" id="dl-apple-badge" hidden>Recommended for your Mac</span>
+                    <h2>Apple Silicon</h2>
+                    <p class="dl-sub">Macs with an Apple M1, M2, M3 or M4 chip. Every Mac sold since late 2020.</p>
+                    <span class="dl-btn">Download for Apple Silicon</span>
+                </a>
+                <a class="dl-card" id="dl-intel" href="https://github.com/brianhaggis/setcraft-website/releases/latest/download/Setcraft-Intel.dmg">
+                    <span class="dl-badge" id="dl-intel-badge" hidden>Recommended for your Mac</span>
+                    <h2>Intel</h2>
+                    <p class="dl-sub">Macs with an Intel processor, sold up to around 2020.</p>
+                    <span class="dl-btn">Download for Intel</span>
+                </a>
+            </div>
+
+            <p id="dl-detected" class="dl-detected" hidden></p>
+
+            <h2>Which one do I have?</h2>
+            <p>Open the <strong>Apple menu</strong> in the top left corner of your screen and choose <strong>About This Mac</strong>. Look for the line naming the chip or processor.</p>
+            <ul>
+                <li>If it says <strong>Apple M1</strong>, <strong>M2</strong>, <strong>M3</strong> or <strong>M4</strong>, take the Apple Silicon download.</li>
+                <li>If it says <strong>Intel</strong>, take the Intel download.</li>
+            </ul>
+            <p>If you take the wrong one, nothing breaks. The app will simply refuse to open, and macOS may not explain why. Download the other one and it will work.</p>
+
+            <h2>Installing</h2>
+            <p>Open the disk image you downloaded and drag <strong>Setcraft</strong> onto the Applications folder. Drag it to Applications rather than running it from the disk image, so updates and backups have somewhere stable to live.</p>
+            <p>On first launch, if macOS blocks it, right-click <strong>Setcraft</strong> and choose <strong>Open</strong> once. It is signed and notarized, so that is a one-time step.</p>
+
+            <h2>Moving to a new Mac</h2>
+            <p>Download the version that matches the new Mac, then bring your library across with Backup and Restore. Your license moves too: if it says it is already in use, choose <strong>Deactivate all other computers</strong> on the Account &amp; License tab, then activate on the new machine.</p>
+            <p>This comes up most when replacing an older Intel Mac. The new one takes the Apple Silicon download even though the old one took Intel. Same app, same license, same setlists.</p>
+
+            <p class="dl-foot">Setcraft updates itself in place and always fetches the build that matches your Mac, so you only choose once per computer. <a href="release-notes.html">See what's new</a> or read the <a href="version-history.html">full version history</a>.</p>
+        </div>
+    </section>
+
+    <script>
+    /* Pre-select the right download, without ever hiding the other one.
+     *
+     * Safari's user agent is useless for this: it is frozen to a fake
+     * "Intel Mac OS X" string on Apple Silicon too, so sniffing it would
+     * confidently send every Mac to the wrong build. The WebGL renderer
+     * string does distinguish them ("Apple M1/M2/..." vs an Intel or AMD
+     * GPU name), so that is what this reads.
+     *
+     * This only adds a "Recommended" badge and a line of text. Both buttons
+     * stay fully clickable no matter what it decides, because a wrong guess
+     * must never be able to trap someone on the download that cannot run.
+     */
+    (function () {
+        function detect() {
+            try {
+                var c = document.createElement('canvas');
+                var gl = c.getContext('webgl') || c.getContext('experimental-webgl');
+                if (!gl) return null;
+                var ext = gl.getExtension('WEBGL_debug_renderer_info');
+                var r = ext ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER);
+                if (!r) return null;
+                r = String(r);
+                if (/apple\s*m\d/i.test(r) || /apple\s*gpu/i.test(r)) return 'apple';
+                if (/intel|radeon|amd|nvidia|geforce/i.test(r)) return 'intel';
+                return null;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        // Not a Mac at all? Say so plainly rather than recommending anything.
+        var isMac = /Mac/i.test(navigator.platform || '') || /Mac OS X/i.test(navigator.userAgent || '');
+        var note = document.getElementById('dl-detected');
+        if (!isMac) {
+            note.textContent = 'Setcraft is a Mac app. These downloads need a Mac running macOS 12 or newer.';
+            note.hidden = false;
+            return;
+        }
+
+        var which = detect();
+        if (!which) {
+            note.textContent = 'We could not tell which Mac you have. Check the Apple menu → About This Mac, then pick below.';
+            note.hidden = false;
+            return;
+        }
+        var card = document.getElementById(which === 'apple' ? 'dl-apple' : 'dl-intel');
+        var badge = document.getElementById(which === 'apple' ? 'dl-apple-badge' : 'dl-intel-badge');
+        card.classList.add('dl-card-rec');
+        badge.hidden = false;
+        note.textContent = which === 'apple'
+            ? 'This Mac looks like Apple Silicon, so the first download is the one you want.'
+            : 'This Mac looks like an Intel Mac, so the Intel download is the one you want.';
+        note.hidden = false;
+    })();
+    </script>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 164 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="8" height="116" rx="3" fill="var(--mark-stem)" opacity="0.85"></rect><rect x="16" y="4" width="148" height="28" rx="4" fill="var(--mark-bar1)"></rect><rect x="16" y="44" width="56" height="28" rx="4" fill="var(--mark-bar2)"></rect><rect x="16" y="84" width="96" height="28" rx="4" fill="var(--mark-bar3)"></rect></svg>
+                        <span class="brand-text">Setcraft</span>
+                    </a>
+                    <p class="footer-tag">The setlist app for working musicians. Built for the stage.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#download">Download</a>
+                    <a href="version-history.html">Version History</a>
+                    <a href="help.html">Help</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="licenses.html">Open-Source Licenses</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Talk to us</h5>
+                    <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Setcraft LLC. Setcraft is a trademark of Setcraft LLC.</span>
+                <span>getsetcraft.com</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
