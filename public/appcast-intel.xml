@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Setcraft</title>
+        <item>
+            <title>1.5.0</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Mon, 27 Jul 2026 10:57:29 -0400</pubDate>
+            <sparkle:version>1.5.0</sparkle:version>
+            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Setcraft now runs on Intel Macs.** There are two downloads: one for Apple
+  Silicon (M1 and later) and one for Intel. The download page picks the right one
+  for you, and the file names say which is which. If you move to a new Mac, get
+  the download that matches it; your library and license carry over the same way
+  they always have.
+- **Fixed: the app would not open on macOS 12, 13 or 14.** Setcraft has always
+  said it needs macOS 12 or newer, and that was wrong. Every version up to 1.4.18
+  actually needed macOS 15. On an older system it would install, look fine, and
+  then fail to open, with no useful explanation. 1.5.0 genuinely runs on macOS 12
+  and up, which is what the app claimed all along. If a bandmate ever told you it
+  just would not start, this is why, and this is the fix.
+- **Printed setlists are unchanged.** Every part of the printing engine was
+  replaced underneath. Setlists, cue sheets and PRO reports were compared page by
+  page before and after, on real shows, and they come out identical, down to the
+  pixel. Intel and Apple Silicon print identically too.
+- Fixed a font-handling fault that could have caused the app to close
+  unexpectedly on an Intel Mac while making a PDF.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.5.0/Setcraft-Intel.dmg"
+                       sparkle:edSignature="nH76L/m83Y3IObXC+LPrcrx9oPifGS9wWBABOylyVEtglw5m/lDtV4rCpiB3nYsnQtFzTQneTETbcJ/mcxYvBA=="
+                       length="66796999"
+                       type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>

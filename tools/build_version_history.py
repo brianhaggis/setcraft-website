@@ -375,7 +375,7 @@ def build_beta_page(entries):
             <p style="margin: 26px 0 12px;">
                 <a class="price-cta featured-cta" href="/download" style="display: inline-block; width: auto;">Download for macOS</a>
             </p>
-            <p class="download-note">Requires macOS 12 or later on Apple Silicon (M1 or newer). On first launch, if macOS blocks it, right-click <strong>Setcraft</strong> and choose <strong>Open</strong> once — it is signed and notarized, so that is a one-time step.</p>
+            <p class="download-note">Requires macOS 12 or later, on Apple Silicon or Intel. The <a href="download.html">download page</a> picks the right build for your Mac. On first launch, if macOS blocks it, right-click <strong>Setcraft</strong> and choose <strong>Open</strong> once — it is signed and notarized, so that is a one-time step.</p>
             <p class="download-note">Updates come through the app, not this page, so you only download here once. They are opt-in: switch on automatic updates from the <strong>Help</strong> menu to get new builds as they ship, or grab them any time with <strong>Help &rsaquo; Check for Updates</strong>.</p>
             <p class="download-note">Your license key arrives by email; enter it in the app under <strong>Backstage &rsaquo; Account &amp; License</strong>.</p>
         </div>

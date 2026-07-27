@@ -29,10 +29,20 @@
         <div class="legal">
             <a href="index.html" class="back">← Back to Setcraft</a>
             <h1>Version History</h1>
-            <p class="updated">Current release · 1.4.18</p>
+            <p class="updated">Current release · 1.5.0</p>
 
             <div class="cl-entry">
-                <h2 class="cl-version">July 13, 2026 <span class="cl-current">Current</span></h2>
+                <h2 class="cl-version">July 25, 2026 <span class="cl-current">Current</span></h2>
+                <p class="cl-date">Version 1.5.0</p>
+                <ul>
+                <li><strong>Setcraft now runs on Intel Macs.</strong> There are two downloads: one for Apple Silicon (M1 and later) and one for Intel. The download page picks the right one for you, and the file names say which is which. If you move to a new Mac, get the download that matches it; your library and license carry over the same way they always have.</li>
+                <li><strong>Fixed: the app would not open on macOS 12, 13 or 14.</strong> Setcraft has always said it needs macOS 12 or newer, and that was wrong. Every version up to 1.4.18 actually needed macOS 15. On an older system it would install, look fine, and then fail to open, with no useful explanation. 1.5.0 genuinely runs on macOS 12 and up, which is what the app claimed all along. If a bandmate ever told you it just would not start, this is why, and this is the fix.</li>
+                <li><strong>Printed setlists are unchanged.</strong> Every part of the printing engine was replaced underneath. Setlists, cue sheets and PRO reports were compared page by page before and after, on real shows, and they come out identical, down to the pixel. Intel and Apple Silicon print identically too.</li>
+                <li>Fixed a font-handling fault that could have caused the app to close unexpectedly on an Intel Mac while making a PDF.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">July 13, 2026</h2>
                 <p class="cl-date">Version 1.4.18</p>
                 <ul>
                 <li><strong>The builder&#x27;s City highlight now casts a real net.</strong> Shows within 50 miles count as the same market, so a night in Ypsilanti lights up your Ann Arbor history. City lookups run against an offline city map bundled with the app; nothing leaves your Mac. Same-named cities in different states no longer collide, and a same-named venue in another city no longer matches.</li>

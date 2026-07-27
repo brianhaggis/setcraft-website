@@ -32,7 +32,17 @@
 <body>
   <h1>What's New in Setcraft</h1>
     <section>
-      <h2>July 13, 2026 <span class="cur">Current</span></h2>
+      <h2>July 25, 2026 <span class="cur">Current</span></h2>
+      <div class="d">Version 1.5.0</div>
+      <ul>
+      <li><strong>Setcraft now runs on Intel Macs.</strong> There are two downloads: one for Apple Silicon (M1 and later) and one for Intel. The download page picks the right one for you, and the file names say which is which. If you move to a new Mac, get the download that matches it; your library and license carry over the same way they always have.</li>
+      <li><strong>Fixed: the app would not open on macOS 12, 13 or 14.</strong> Setcraft has always said it needs macOS 12 or newer, and that was wrong. Every version up to 1.4.18 actually needed macOS 15. On an older system it would install, look fine, and then fail to open, with no useful explanation. 1.5.0 genuinely runs on macOS 12 and up, which is what the app claimed all along. If a bandmate ever told you it just would not start, this is why, and this is the fix.</li>
+      <li><strong>Printed setlists are unchanged.</strong> Every part of the printing engine was replaced underneath. Setlists, cue sheets and PRO reports were compared page by page before and after, on real shows, and they come out identical, down to the pixel. Intel and Apple Silicon print identically too.</li>
+      <li>Fixed a font-handling fault that could have caused the app to close unexpectedly on an Intel Mac while making a PDF.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>July 13, 2026</h2>
       <div class="d">Version 1.4.18</div>
       <ul>
       <li><strong>The builder&#x27;s City highlight now casts a real net.</strong> Shows within 50 miles count as the same market, so a night in Ypsilanti lights up your Ann Arbor history. City lookups run against an offline city map bundled with the app; nothing leaves your Mac. Same-named cities in different states no longer collide, and a same-named venue in another city no longer matches.</li>
@@ -66,19 +76,6 @@
       <li><strong>Help Center updates:</strong> a new &quot;Reporting a bug&quot; article that explains what a report sends and does not send, coverage for Add Multiple, Sharpie mode, and the AirDrop and Email export buttons, plus corrections to the show fields and the update-check description (update checks are opt-in and always were).</li>
       <li>Upgrade-key activation verifies keys more strictly and refuses safely when verification is not possible.</li>
       <li>Behind the scenes: hardening on the photo and trial services, and a large cleanup of leftover code from earlier versions.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>July 6, 2026</h2>
-      <div class="d">Versions 1.4.14–1.4.15</div>
-      <ul>
-      <li>The navigation bar no longer loads a little taller and then snaps back on each page. The unlockable spotlight and phantom-power switches settle into place before the bar paints, so the nav links stay put as a page loads.</li>
-      <li>Themed fonts return to the loading behavior from before 1.4.14. The first-paint font change in 1.4.14 could make the nav shift on some machines; this trades that back for a steady nav.</li>
-      <li><strong>Photo import reads handwriting far more accurately.</strong> A setlist snapped from a page now comes through close to what you actually wrote, short forms and trad tune names included, instead of loose approximations. The importer reads the photo at full resolution and flags anything it genuinely cannot make out rather than inventing a title in its place.</li>
-      <li><strong>Woodstock</strong> now starts with the lava lamp off. The lamp button by the wordmark turns it on when you want the wash.</li>
-      <li><strong>Typo</strong>&#x27;s light and dark switch flips on a click anywhere across it, not only on the knob.</li>
-      <li>The Song Library <strong>Actions column</strong> no longer spills past the edge in a narrow window.</li>
-      <li>Themed fonts settle on first paint, without the brief fallback flash some themes showed as a page loaded.</li>
       </ul>
     </section>
     <p class="more">See the full history at <a href="https://getsetcraft.com/version-history.html">getsetcraft.com/version-history</a>.</p>
