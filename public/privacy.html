@@ -38,7 +38,6 @@
             <h2>1. Who we are</h2>
             <p>Setcraft is made by <strong>Setcraft LLC</strong>, a Pennsylvania limited liability company, registered at 5588 East Texas Rd, East Texas, PA 18046.</p>
             <p>For privacy questions, contact us at <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>.</p>
-            <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
             <p>Setcraft is a native macOS app (Apple Silicon and Intel, macOS 12 and later). It is signed, notarized, and sold directly from getsetcraft.com, not through the Mac App Store. We also run a small hosted backend (for photo import, licensing, and free-trial metering) and a marketing website.</p>
 
             <h2>2. Setcraft is local-first</h2>
@@ -51,7 +50,6 @@
             <p>This is one of the two features that send your content off your Mac, and it only runs when you choose to use it.</p>
             <p>When you import a photo of a paper or handwritten setlist, the image is sent to <strong>Setcraft's server</strong> (hosted on <strong>Render</strong>), which forwards it to an <strong>Anthropic vision model</strong> to read the text in the image. Only the extracted text comes back to the app, where it is matched against your local library.</p>
             <ul>
-                <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
                 <li><strong>What is sent:</strong> the photo itself, along with either your license key or, during the free trial when no license key exists yet, your random install identifier (described in 3f). Our server uses it to confirm you are entitled to the feature and to count your monthly imports. Your song library, lyrics, and charts are not part of the request and never leave your Mac.</li>
                 <li><strong>Sub-processors:</strong> Render (hosting) and Anthropic (reading the image).</li>
                 <li><strong>How we handle the photo:</strong> the photo is held only for the time it takes to process your request. It is not stored, not added to any database, and not logged. During processing it may be briefly written to a temporary file and is deleted automatically when the request completes. The only lasting record we keep is a monthly upload count tied to a one-way hash of your license key. That record contains no image, no email, and no readable license key.</li>
@@ -85,7 +83,6 @@
             <h3>3e. Analytics and tracking</h3>
             <p>Setcraft has <strong>no advertising trackers, no third-party analytics SDKs, no telemetry, and no crash reporting</strong> in the app. We do not build a profile of you or your usage. If this ever changes, we will update this section before adding any such tool.</p>
 
-            <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
             <h3>3f. Free trial and the install identifier</h3>
             <p>So the free 30-day trial can run without an account, the app generates a <strong>random install identifier</strong> the first time it runs. This is a random token stored locally on your Mac. It is not derived from your hardware, and it is not linked to your name, email, or any other personal information.</p>
             <p>The app sends this identifier to <strong>Setcraft's server</strong> (hosted on <strong>Render</strong>) in three situations. First, a throttled background check, at most a few times a day while the app is running, records and returns your trial start date. Anchoring the start date on the server is what keeps the trial honest: reinstalling the app or rolling the system clock back does not restart it. The app keeps making this check while it is unlicensed, during and after the trial. Once you activate a paid license and your start date is on record, it stops. Second, during the trial, photo import sends the identifier in place of a license key to authorize and count your imports, as described in 3a. Third, if you submit a bug report, the identifier rides along so we can rate-limit reports, as described in 3g.</p>
@@ -95,7 +92,6 @@
                 <li><strong>Legal basis (GDPR):</strong> performance of the contract, meaning running the trial you asked for, and our legitimate interest in preventing abuse of the free trial.</li>
             </ul>
 
-            <!-- PENDING LAWYER REVIEW (bug reporter, added 1.4.12) -->
             <h3>3g. In-app bug reports</h3>
             <p>The app has a bug reporter you can open from any page. Nothing is sent unless you submit a report.</p>
             <p>A report contains what you type, an optional reply-to email address if you want an answer, and an optional attachment such as a screenshot. Check a screenshot before you attach it; it shows whatever was on screen. The report also carries context that helps us reproduce the problem: the page you were on, the app version and theme, your macOS version and chip, your license tier, and your install identifier (described in 3f), which we use to rate-limit reports.</p>
@@ -113,7 +109,6 @@
                 </thead>
                 <tbody>
                     <tr><td>Anthropic</td><td>Reads the setlist photo for photo import</td><td>the setlist photo</td></tr>
-                    <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
                     <tr><td>Render</td><td>Hosts the photo-import proxy, the licensing and trial backend, and the bug-report relay</td><td>the photo and bug reports (in transit only), your license key (hashed for metering), the install identifier and trial start date, usage counters, request metadata</td></tr>
                     <tr><td>Zoho</td><td>Hosts our support mailbox; bug reports arrive there as email</td><td>your message, optional reply-to email, optional attachment, page and app context, the install identifier</td></tr>
                     <tr><td>Lemon Squeezy</td><td>Merchant of record, issues license keys</td><td>email, payment data, license and device info</td></tr>
@@ -138,7 +133,6 @@
                 <li><strong>Local content:</strong> kept on your Mac and controlled by you. We do not hold it.</li>
                 <li><strong>Photo-import images:</strong> not stored. The photo exists on our server only for the duration of the request and is then gone. Anthropic deletes API data within 30 days by default.</li>
                 <li><strong>Monthly upload count:</strong> we keep a per-license monthly upload counter, tied to a one-way hash of your license key, to enforce fair use of photo import. It contains no image, email, or readable key.</li>
-                <!-- PENDING LAWYER REVIEW (Phase 2 monetization) -->
                 <li><strong>Trial records:</strong> we keep your random install identifier, the date it was first seen, a monthly trial photo-import count, and a per-day bug-report count, so the trial can run without an account and within fair-use limits. These contain no image, email, or personal data. The trial record is kept for as long as we offer the trial, since it is what prevents trial resets. The counters are not purged on a schedule.</li>
                 <li><strong>Bug reports:</strong> kept as email in our support mailbox, not in a database, until we delete them. There is no automatic deletion.</li>
                 <li><strong>Purchase and license records</strong> (via Lemon Squeezy and our backend): kept for as long as tax and accounting law requires, which can be up to about seven years.</li>
