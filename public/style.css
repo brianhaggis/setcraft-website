@@ -590,9 +590,32 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--powder-deep);
-    margin: 0 0 8px 0;
+    margin: 0;
 }
-.faq-item p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+/* Collapsible items: <details>/<summary>, closed by default so the section
+   scans as a list of questions instead of a wall of text. */
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: '+';
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1;
+    color: var(--powder-deep);
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover h4 { color: var(--stripe-red); }
+.faq-item p { margin: 10px 0 0; color: var(--ink-soft); font-size: 15px; }
 
 /* ============================================================
    Roadmap timeline
@@ -1172,6 +1195,14 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     letter-spacing: 0.08em;
 }
 .mac-window .app-mock { margin: 0; border: none; border-radius: 0; box-shadow: none; }
+/* Zoom the hero mock out: at desktop widths its column is ~half the container,
+   too narrow for the mock's natural layout, so song titles ellipsized. zoom
+   lays the content out at proportionally more width inside the same frame --
+   the same panels you'd see in the real app window, just smaller. Only while
+   the hero is two-column; stacked (<=960px) the mock has the full width. */
+@media (min-width: 961px) {
+    .hero-visual .app-mock { zoom: 0.72; }
+}
 
 /* ============================================================
    Walkthrough video — large poster slot
