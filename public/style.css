@@ -186,17 +186,21 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 .hero {
     padding: 24px 0 80px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    /* Text column smaller than the visual: the mock is the star. Top-aligned
+       so the mock window's top lines up with the hero copy. */
+    grid-template-columns: 5fr 7fr;
+    gap: 48px;
+    align-items: start;
 }
+/* Scaled down from the global clamp(56px, 8vw, 112px) to buy the mock room. */
+.hero .h1 { font-size: clamp(44px, 5.5vw, 78px); }
 .hero .h1 strong { color: var(--stripe-red); font-weight: 900; }
 /* Accent fragment inside section headings — same red as the hero, adapts per theme. */
 .h2 .accent, .h3 .accent, h2 .accent, h3 .accent { color: var(--stripe-red); }
 
 .hero-tag {
-    margin: 28px 0 36px;
-    font-size: 22px;
+    margin: 20px 0 28px;
+    font-size: 19px;
     color: var(--ink-soft);
     max-width: 36ch;
     line-height: 1.5;
@@ -580,8 +584,9 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px 48px;
+    gap: 14px 24px;
     margin-top: 32px;
+    align-items: start;
 }
 .faq-item h4 {
     font-family: var(--font-display);
@@ -592,30 +597,71 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     color: var(--powder-deep);
     margin: 0;
 }
-/* Collapsible items: <details>/<summary>, closed by default so the section
-   scans as a list of questions instead of a wall of text. */
+/* Collapsible items: <details>/<summary> cards, closed by default so the
+   section scans as a list of questions instead of a wall of text. */
+.faq-item {
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 16px 20px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.faq-item:hover { border-color: var(--powder); }
+.faq-item[open] {
+    border-color: var(--powder);
+    box-shadow: var(--shadow-lift);
+}
 .faq-item summary {
     list-style: none;
     cursor: pointer;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 14px;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
+/* The disclosure control: a circled plus, drawn with two gradient bars so it
+   inherits currentColor. Open: it fills stripe-red and the plus spins 135°
+   into a white x. */
 .faq-item summary::after {
-    content: '+';
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 1;
-    color: var(--powder-deep);
+    content: '';
     flex-shrink: 0;
-    transition: transform 0.15s ease;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.5px solid var(--powder-deep);
+    color: var(--powder-deep);
+    background-image:
+        linear-gradient(currentColor, currentColor),
+        linear-gradient(currentColor, currentColor);
+    background-size: 12px 2px, 2px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.25s ease, background-color 0.2s ease,
+                border-color 0.2s ease;
 }
-.faq-item[open] summary::after { transform: rotate(45deg); }
-.faq-item summary:hover h4 { color: var(--stripe-red); }
-.faq-item p { margin: 10px 0 0; color: var(--ink-soft); font-size: 15px; }
+.faq-item summary:hover::after {
+    border-color: var(--stripe-red);
+    color: var(--stripe-red);
+}
+.faq-item[open] summary::after {
+    transform: rotate(135deg);
+    background-color: var(--stripe-red);
+    border-color: var(--stripe-red);
+    color: #fff;
+}
+.faq-item summary:hover h4,
+.faq-item[open] summary h4 { color: var(--stripe-red); }
+.faq-item p { margin: 12px 0 0; color: var(--ink-soft); font-size: 15px; }
+.faq-item[open] p { animation: faq-reveal 0.28s ease; }
+@keyframes faq-reveal {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .faq-item summary::after { transition: none; }
+    .faq-item[open] p { animation: none; }
+}
 
 /* ============================================================
    Roadmap timeline

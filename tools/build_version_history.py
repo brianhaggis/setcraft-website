@@ -215,7 +215,7 @@ def build_site_page(entries):
     <meta name="description" content="What's changed in each release of Setcraft, the setlist app for working musicians.">
     <meta name="robots" content="noindex, nofollow"> <!-- TEMP: pre-launch, remove to allow indexing -->
     <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
-    <link rel="stylesheet" href="style.css?v=28">
+    <link rel="stylesheet" href="style.css?v=33">
     <script src="theme-switcher.js"></script>
 </head>
 <body>
@@ -360,7 +360,7 @@ def build_beta_page(entries):
     <meta name="description" content="Download the latest Setcraft beta build.">
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
-    <link rel="stylesheet" href="style.css?v=28">
+    <link rel="stylesheet" href="style.css?v=33">
     <script src="theme-switcher.js"></script>
 </head>
 <body>
