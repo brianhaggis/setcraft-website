@@ -19,9 +19,19 @@ Families:
 The OFL 1.1 text is at https://openfontlicense.org and the Apache 2.0 text at
 https://www.apache.org/licenses/LICENSE-2.0. Each family's specific copyright and
 Reserved Font Names are in its entry in the Google Fonts repository
-(https://github.com/google/fonts). Before commercial release, drop each family's
-upstream `OFL.txt`/`LICENSE` into this directory and have counsel confirm the
-NOTICES (see PHASE_2_PLAN.md).
+(https://github.com/google/fonts).
+
+This directory ships five families, and each one's upstream license file sits
+alongside the fonts (added 2026-08-01, fetched verbatim from google/fonts):
+
+- `OFL-Barlow-Condensed.txt`
+- `OFL-Metal-Mania.txt`
+- `OFL-Orbitron.txt`
+- `OFL-Share-Tech-Mono.txt`
+- `LICENSE-Permanent-Marker.txt` (Apache 2.0)
+
+The longer family list above applies to the app bundle, whose notices live in
+the app repo (`THIRD-PARTY-NOTICES.md`).
 
 **Not bundled, never to be bundled:** macOS system fonts (SF Pro, Helvetica Neue),
 Microsoft fonts (Arial, Times New Roman, Calibri), Adobe fonts — those are
