@@ -40,7 +40,10 @@ export async function onRequestPost({ request, env }) {
             signal: AbortSignal.timeout(5000),
             redirect: 'follow',
         });
-        return resp({ ok: true, stored: r.ok });
+        // Apps Script returns its error page with a 200, so a status check
+        // alone lies; only the script's own JSON counts as stored.
+        const body = await r.text();
+        return resp({ ok: true, stored: r.ok && body.includes('"ok":true') });
     } catch (e) {
         return resp({ ok: true, stored: false });
     }
