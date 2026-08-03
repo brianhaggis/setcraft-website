@@ -26,7 +26,7 @@ export async function onRequestPost({ request, env }) {
     if (!EMAIL_RE.test(email)) return resp({ ok: false, error: 'invalid email' }, 400);
 
     // Webhook not configured yet: accept and move on (fail open).
-    if (!env.SHEET_WEBHOOK_URL) return resp({ ok: true, stored: false });
+    if (!env.SHEET_WEBHOOK_URL) return resp({ ok: true, stored: false, reason: 'no-env' });
 
     try {
         const r = await fetch(env.SHEET_WEBHOOK_URL, {
@@ -38,10 +38,11 @@ export async function onRequestPost({ request, env }) {
                 ua: request.headers.get('user-agent') || '',
             }),
             signal: AbortSignal.timeout(5000),
+            redirect: 'follow',
         });
-        return resp({ ok: true, stored: r.ok });
+        return resp({ ok: true, stored: r.ok, reason: r.ok ? undefined : 'status-' + r.status });
     } catch (e) {
-        return resp({ ok: true, stored: false });
+        return resp({ ok: true, stored: false, reason: 'threw: ' + (e && e.message) });
     }
 }
 
