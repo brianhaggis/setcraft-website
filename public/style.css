@@ -2346,6 +2346,13 @@ section[hidden] { display: none !important; }
     gap: 20px;
     margin: 28px 0 8px;
 }
+/* The email gate hides the grid until an address is given; display:grid
+   above would otherwise outrank the [hidden] attribute's default. */
+.dl-grid[hidden] { display: none !important; }
+/* The gate form sits above long-form text; give it breathing room. */
+.legal .beta-form { margin: 28px 0; max-width: none; }
+.legal .beta-form p { font-size: 15px; }
+.beta-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .dl-card {
     position: relative;
     display: block;

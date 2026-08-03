@@ -6,7 +6,7 @@
     <title>Download Setcraft</title>
     <meta name="description" content="Download Setcraft for your Mac. Two builds: Apple Silicon and Intel.">
     <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
-    <link rel="stylesheet" href="style.css?v=33">
+    <link rel="stylesheet" href="style.css?v=40">
     <script src="theme-switcher.js?v=30"></script>
 </head>
 <body>
@@ -32,7 +32,24 @@
 
             <p>Macs have used two kinds of processor over the years, and an app has to be built for the one you have. Pick the download that matches your Mac.</p>
 
-            <div id="dl-pick" class="dl-grid">
+            <form id="dl-gate" class="beta-form" novalidate>
+                <h4>Where should we send your download links?</h4>
+                <p>Enter your email and the downloads unlock right here. We'll email you the links too, and give you a heads-up when something big ships. Unsubscribe any time.</p>
+                <div class="beta-row">
+                    <input type="email" id="dl-email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+                    <button type="submit" id="dl-gate-btn">Unlock downloads</button>
+                </div>
+                <!-- Honeypot: invisible to people, irresistible to bots. -->
+                <input type="text" name="website" id="dl-hp" class="beta-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <p class="beta-meta">Used for Setcraft only. See the <a href="privacy.html">Privacy Policy</a>.</p>
+            </form>
+            <!-- Visitors with JavaScript off skip the gate entirely: never
+                 block a download on plumbing they can't run. -->
+            <noscript>
+                <style>#dl-pick { display: grid !important; } #dl-gate { display: none; }</style>
+            </noscript>
+
+            <div id="dl-pick" class="dl-grid" hidden>
                 <a class="dl-card" id="dl-apple" href="https://github.com/brianhaggis/setcraft-website/releases/latest/download/Setcraft-AppleSilicon.dmg">
                     <span class="dl-badge" id="dl-apple-badge" hidden>Recommended for your Mac</span>
                     <h2>Apple Silicon</h2>
@@ -110,6 +127,7 @@
         }
 
         var which = detect();
+        window.__scArch = which || '';
         if (!which) {
             note.textContent = 'We could not tell which Mac you have. Check the Apple menu → About This Mac, then pick below.';
             note.hidden = false;
@@ -123,6 +141,56 @@
             ? 'This Mac looks like Apple Silicon, so the first download is the one you want.'
             : 'This Mac looks like an Intel Mac, so the Intel download is the one you want.';
         note.hidden = false;
+    })();
+
+    /* Email gate for the trial downloads. Hard gate, but FAIL OPEN: any
+     * backend problem still reveals the buttons, because capture plumbing
+     * must never cost a download. Returning visitors who already gave an
+     * email skip the gate via localStorage. */
+    (function () {
+        var gate = document.getElementById('dl-gate');
+        var grid = document.getElementById('dl-pick');
+        var btn = document.getElementById('dl-gate-btn');
+        var input = document.getElementById('dl-email');
+
+        function reveal() {
+            grid.hidden = false;
+            gate.hidden = true;
+            try { localStorage.setItem('sc-dl-unlocked', '1'); } catch (e) {}
+        }
+
+        var seen = false;
+        try { seen = localStorage.getItem('sc-dl-unlocked') === '1'; } catch (e) {}
+        if (seen) { reveal(); return; }
+
+        gate.addEventListener('submit', function (ev) {
+            ev.preventDefault();
+            var email = (input.value || '').trim();
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+                input.focus();
+                input.setCustomValidity('Enter your email address to unlock the downloads.');
+                input.reportValidity();
+                input.setCustomValidity('');
+                return;
+            }
+            btn.disabled = true;
+            btn.textContent = 'One sec...';
+            var payload = {
+                email: email,
+                arch: window.__scArch || '',
+                website: document.getElementById('dl-hp').value || ''
+            };
+            var done = false;
+            function finish() { if (!done) { done = true; reveal(); } }
+            // Whatever the backend says (or doesn't), the visitor gets the
+            // downloads. The 4s timer covers a hung request.
+            setTimeout(finish, 4000);
+            fetch('/api/trial-signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(finish, finish);
+        });
     })();
     </script>
     <footer class="site-footer">
