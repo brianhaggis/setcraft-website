@@ -1744,6 +1744,9 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 .maker-photo img {
     width: 100%;
     height: auto;
+    /* Cap tall (portrait) photos and center-crop instead of towering over the card. */
+    max-height: 460px;
+    object-fit: cover;
     border-radius: var(--radius);
     border: 1px solid var(--hairline);
     box-shadow: var(--shadow);
