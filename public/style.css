@@ -1690,6 +1690,26 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 .maker-note .eyebrow { margin-bottom: 10px; }
 .maker-note h2 { font-size: clamp(30px, 3.6vw, 46px); margin-bottom: 18px; }
 .maker-note p { font-size: 19px; line-height: 1.62; color: var(--ink-soft); margin: 0; text-wrap: pretty; }
+.maker-note p + p { margin-top: 16px; }
+/* Stage-photo slot inside the maker note. Hidden by the img's onerror
+   handler until the photo file exists. */
+.maker-photo { margin: 0 0 24px; }
+.maker-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--hairline);
+    box-shadow: var(--shadow);
+}
+.maker-note .maker-sign {
+    margin-top: 24px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--powder-deep);
+}
 @media (max-width: 640px) {
     .maker-note { padding: 28px 24px; }
 }
