@@ -28,7 +28,7 @@
         <div class="legal">
             <a href="index.html" class="back">← Back to Setcraft</a>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: July 27, 2026</p>
+            <p class="updated">Last updated: August 3, 2026</p>
 
             <p class="lede">Setcraft is a setlist app for musicians. This policy explains what data the app touches, where it goes, and who else is involved. We have tried to keep it short and honest.</p>
 
@@ -101,6 +101,9 @@
                 <li><strong>Legal basis (GDPR):</strong> consent, meaning the report you chose to send.</li>
             </ul>
 
+            <h3>3h. Website download signup</h3>
+            <p>When you download the free trial from our website, we ask for your email address. We use it to send you the download links, information about your trial, and occasional updates about Setcraft. Every email includes an unsubscribe link, and unsubscribing has no effect on the app or your trial. We store these addresses in Google Sheets (Google LLC) and do not sell or share them.</p>
+
             <h2>4. Third parties and sub-processors</h2>
             <table>
                 <thead>
@@ -112,7 +115,8 @@
                     <tr><td>Zoho</td><td>Hosts our support mailbox; bug reports arrive there as email</td><td>your message, optional reply-to email, optional attachment, page and app context, the install identifier</td></tr>
                     <tr><td>Lemon Squeezy</td><td>Merchant of record, issues license keys</td><td>email, payment data, license and device info</td></tr>
                     <tr><td>Bandsintown</td><td>Optional show sync, using your own key</td><td>your API key, show queries</td></tr>
-                    <tr><td>Cloudflare</td><td>Hosts the website and update feed</td><td>update-check metadata (IP, version)</td></tr>
+                    <tr><td>Cloudflare</td><td>Hosts the website and update feed</td><td>update-check metadata (IP, version), the download-signup email in transit</td></tr>
+                    <tr><td>Google</td><td>Stores the download-signup email list (Google Sheets)</td><td>email address, signup date</td></tr>
                     <tr><td>GitHub</td><td>Hosts release downloads</td><td>download request metadata</td></tr>
                 </tbody>
             </table>
@@ -134,6 +138,7 @@
                 <li><strong>Monthly upload count:</strong> we keep a per-license monthly upload counter, tied to a one-way hash of your license key, to enforce fair use of photo import. It contains no image, email, or readable key.</li>
                 <li><strong>Trial records:</strong> we keep your random install identifier, the date it was first seen, a monthly trial photo-import count, and a per-day bug-report count, so the trial can run without an account and within fair-use limits. These contain no image, email, or personal data. The trial record is kept for as long as we offer the trial, since it is what prevents trial resets. The counters are not purged on a schedule.</li>
                 <li><strong>Bug reports:</strong> kept as email in our support mailbox, not in a database, until we delete them. There is no automatic deletion.</li>
+                <li><strong>Download-signup emails:</strong> kept until you unsubscribe or ask us to remove you at <a href="mailto:hello@getsetcraft.com">hello@getsetcraft.com</a>.</li>
                 <li><strong>Purchase and license records</strong> (via Lemon Squeezy and our backend): kept for as long as tax and accounting law requires, which can be up to about seven years.</li>
             </ul>
 
