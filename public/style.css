@@ -1715,6 +1715,50 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 }
 
 /* ============================================================
+   Testimonials — three quote cards. The whole section ships with the
+   `hidden` attribute on it in index.html until real quotes exist; the
+   guard rule below makes sure `hidden` always wins.
+   ============================================================ */
+section[hidden] { display: none !important; }
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+.quote-card {
+    margin: 0;
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.quote-text { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink); }
+.quote-who { display: flex; align-items: center; gap: 12px; margin: auto 0 0; }
+.quote-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--hairline);
+    flex-shrink: 0;
+}
+.quote-name {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 15px;
+    color: var(--powder-deep);
+}
+.quote-band { display: block; font-size: 13px; color: var(--ink-soft); }
+
+/* ============================================================
    Legal / doc pages (privacy, terms)
    ============================================================ */
 .legal { max-width: 760px; margin: 0 auto; padding: 8px 0 24px; }
@@ -1749,6 +1793,7 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     .feature-row.flip .feature-copy { order: 0; }
     .feature-row.flip .feature-visual { order: 0; }
     .buy-wrap { grid-template-columns: 1fr; }
+    .quote-grid { grid-template-columns: 1fr; }
     .theme-swatches { grid-template-columns: 1fr 1fr; }
     .free-includes { grid-template-columns: 1fr; }
     .reader-teaser { flex-direction: column; align-items: flex-start; }
