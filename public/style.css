@@ -404,6 +404,45 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
 .why-card p { color: var(--ink-soft); font-size: 15px; margin: 0; }
 
 /* ============================================================
+   What it is — centered heading, left-aligned prose, and the
+   who-it's-for callout card
+   ============================================================ */
+.whatis { max-width: 64ch; margin: 0 auto; text-align: center; }
+.whatis-lede {
+    font-size: 20px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+}
+.audience-note {
+    margin-top: 28px;
+    text-align: left;
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-left: 4px solid var(--stripe-red);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    box-shadow: var(--shadow);
+}
+.audience-label {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stripe-red);
+    margin-bottom: 6px;
+}
+.audience-note p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+}
+
+/* ============================================================
    Tri-stripe divider — repeatable section break
    ============================================================ */
 .tri-stripe {
