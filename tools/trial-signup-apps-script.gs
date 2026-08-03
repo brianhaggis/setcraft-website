@@ -44,8 +44,7 @@ var WELCOME_BODY =
   'Questions? Just reply to this email.\n' +
   '\n' +
   'Brian\n' +
-  'Setcraft LLC · 5588 East Texas Rd, East Texas, PA 18046\n' +
-  'getsetcraft.com';
+  'Setcraft · getsetcraft.com';
 
 function getSpreadsheet_() {
   if (SHEET_ID.indexOf('PASTE') !== 0) return SpreadsheetApp.openById(SHEET_ID);
