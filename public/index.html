@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Build tonight's set with a few drags and print it big enough to read from the back of the stage. One-time license from $19.99, free 30-day trial.">
     <meta name="twitter:image" content="https://getsetcraft.com/media/setlist-photo.jpg">
     <link rel="icon" id="favicon" type="image/svg+xml" href="assets/icons/icon-yacht.svg">
-    <link rel="stylesheet" href="style.css?v=40">
+    <link rel="stylesheet" href="style.css?v=41">
     <script src="theme-switcher.js?v=30"></script>
 </head>
 <body>
@@ -144,20 +144,17 @@
         </div>
     </section>
 
-    <!-- ============================================================ VIDEO
-         Hidden until the walkthrough video exists. The play button had no
-         handler, so the section read as broken. Restore the markup below and
-         wire the button when the video is ready. -->
-    <section class="container section" id="video" data-screen-label="Walkthrough video" style="padding-top: 8px;" hidden>
+    <!-- ============================================================ VIDEO -->
+    <section class="container section" id="video" data-screen-label="Teaser video" style="padding-top: 8px;">
         <div style="text-align: center; margin-bottom: 28px;">
-            <div class="eyebrow">Watch the walkthrough</div>
+            <div class="eyebrow">Ninety seconds</div>
             <h2 class="h2">What is Setcraft?</h2>
         </div>
-        <div class="video-hero" role="img" aria-label="Setcraft walkthrough video. Poster frame; press play to watch.">
-            <button class="play" aria-label="Play walkthrough">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="6,3 22,12 6,21" fill="#b31b2e"></polygon></svg>
-            </button>
-            <div class="video-caption"><span>Walkthrough · 2 min</span><span>Captions available</span></div>
+        <div class="video-hero">
+            <video controls playsinline preload="metadata" poster="media/teaser-poster.jpg"
+                   aria-label="Setcraft teaser video, ninety seconds">
+                <source src="media/teaser.mp4" type="video/mp4">
+            </video>
         </div>
     </section>
 
