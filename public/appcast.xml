@@ -3,6 +3,43 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.5.2</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Tue, 04 Aug 2026 11:18:05 -0400</pubDate>
+            <sparkle:version>1.5.2</sparkle:version>
+            <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Bandsintown can now check for new shows on its own.** A per-artist
+  checkbox in Backstage → Integrations, "Check for new shows when Setcraft
+  opens," imports any new Bandsintown dates every time the app launches. A
+  small message reports how many arrived; when there is nothing new, nothing
+  appears. If a check fails, the outcome shows only in Backstage next to the
+  Bandsintown fields, along with the last-checked time. Off by default, and
+  part of the paid version and trial like manual sync.
+- **PRO reports now carry the watermark on unpaid installs**, matching every
+  other printed sheet (the free tier and the trial; paid output stays clean).
+- **Deleting a setlist now also removes its show's tech cue sheet**, so stale
+  FOH and lighting notes can no longer resurface on the next setlist built
+  for that show.
+- **Replacing a chart can no longer destroy the old one.** The new file is
+  written completely before the old file is removed, so a failed upload
+  (full disk, permissions) leaves the existing chart in place.
+- **Restores refuse to run without their safety net.** Both the portable
+  backup restore and the snapshot rollback now stop, with your data
+  untouched, if the automatic pre-restore snapshot cannot be saved.
+- **Rolling back to an old snapshot no longer empties newer parts of the
+  database.** Tables added by an app update after the snapshot was taken are
+  left as they are instead of being wiped.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.5.2/Setcraft-AppleSilicon.dmg"
+                       sparkle:edSignature="9xFSmMctSSiVP7BGhmJhoywIUbA6CPxULXDctoq9EHGyd9TUkr4KdtlAL6sVtNKXWYeJ/Bd9Si8hakhDNnMZBg=="
+                       length="63216296"
+                       type="application/octet-stream" />
+        </item>
+        <item>
             <title>1.5.1</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Sun, 02 Aug 2026 15:11:30 -0400</pubDate>

@@ -25,7 +25,7 @@
             <div class="eyebrow">Beta</div>
             <h1 class="h2">DOWNLOAD THE <span class="accent">BETA.</span></h1>
             <p class="lede">Thanks for helping test Setcraft. Grab the latest signed build below.</p>
-            <p class="updated">Current beta build · 1.5.1</p>
+            <p class="updated">Current beta build · 1.5.2</p>
             <p style="margin: 26px 0 12px;">
                 <a class="price-cta featured-cta" href="/download" style="display: inline-block; width: auto;">Download for macOS</a>
             </p>
@@ -40,7 +40,19 @@
             <h2>What&rsquo;s new</h2>
 
             <div class="cl-entry">
-                <h2 class="cl-version">August 1, 2026 <span class="cl-current">Current</span></h2>
+                <h2 class="cl-version">August 4, 2026 <span class="cl-current">Current</span></h2>
+                <p class="cl-date">Version 1.5.2</p>
+                <ul>
+                <li><strong>Bandsintown can now check for new shows on its own.</strong> A per-artist checkbox in Backstage → Integrations, &quot;Check for new shows when Setcraft opens,&quot; imports any new Bandsintown dates every time the app launches. A small message reports how many arrived; when there is nothing new, nothing appears. If a check fails, the outcome shows only in Backstage next to the Bandsintown fields, along with the last-checked time. Off by default, and part of the paid version and trial like manual sync.</li>
+                <li><strong>PRO reports now carry the watermark on unpaid installs</strong>, matching every other printed sheet (the free tier and the trial; paid output stays clean).</li>
+                <li><strong>Deleting a setlist now also removes its show&#x27;s tech cue sheet</strong>, so stale FOH and lighting notes can no longer resurface on the next setlist built for that show.</li>
+                <li><strong>Replacing a chart can no longer destroy the old one.</strong> The new file is written completely before the old file is removed, so a failed upload (full disk, permissions) leaves the existing chart in place.</li>
+                <li><strong>Restores refuse to run without their safety net.</strong> Both the portable backup restore and the snapshot rollback now stop, with your data untouched, if the automatic pre-restore snapshot cannot be saved.</li>
+                <li><strong>Rolling back to an old snapshot no longer empties newer parts of the database.</strong> Tables added by an app update after the snapshot was taken are left as they are instead of being wiped.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">August 1, 2026</h2>
                 <p class="cl-date">Version 1.5.1</p>
                 <ul>
                 <li><strong>Databases now repair themselves on launch.</strong> Two long-standing migration bugs are fixed: an install whose preferences table held duplicate rows now merges them cleanly (the old repair failed silently every time), and an interrupted photo-counter rebuild no longer leaves the database wedged in a state it could never recover from. Both repairs were verified against deliberately broken databases.</li>
