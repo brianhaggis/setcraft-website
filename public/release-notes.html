@@ -32,7 +32,21 @@
 <body>
   <h1>What's New in Setcraft</h1>
     <section>
-      <h2>August 4, 2026 <span class="cur">Current</span></h2>
+      <h2>August 18, 2026 <span class="cur">Current</span></h2>
+      <div class="d">Version 1.6.0</div>
+      <ul>
+      <li><strong>A song can appear more than once in a setlist.</strong> An encore reprise plays a song a second time, and Setcraft used to silently refuse the second copy. Each copy is now its own slot: removing one removes only that copy, dragging one between sets moves only that copy, and the tech cue sheet keeps separate FOH and lighting notes for each. The builder library still hides songs already in the setlist by default; a new checkbox under the filters shows them instead, marked with an &quot;In set&quot; tag and a copy count.</li>
+      <li><strong>Songs can have lengths, and sets show running times.</strong> A gig is booked as time on stage, and whether the set fits its slot is easier to fix at home than at the venue. There is a Length field in the song editor (4:30, or plain minutes) and a Length column in Add Multiple. Each set header and the setlist header show a running total. The total adds up the real lengths plus 5:00 for each song that has none, so it reads &quot;48:30&quot; when every song has a length and &quot;52:30 (estimated)&quot; when any song is counting at the default; hovering it lists the songs without lengths. A max-length slider in the library filters hides songs longer than the handle, and unset songs show an italic ~5:00 tag.</li>
+      <li><strong>Bandsintown can import your past shows.</strong> Setcraft can answer what you played the last time you were at a venue, but only as far back as its records go. Both sync paths gain an &quot;Also import past shows (your full show history)&quot; checkbox. Shows you entered by hand are matched by date and venue and linked instead of duplicated, and duplicate checking is now scoped per artist. Past shows without setlists appear in the builder&#x27;s past dropdown as &quot;(no setlist yet)&quot; so what you played can be entered after the fact. The shows page shows long histories 50 at a time with a Show more button; search still covers every show. This also fixes a bug where &quot;Build Setlist&quot; on a past show card led to a locked builder with no explanation.</li>
+      <li><strong>Songs can carry a recording</strong> (paid and trial). A recording answers two questions the song&#x27;s fields cannot: how long the song actually runs, and how it sounds next to another one. An Audio button on each library row attaches an MP3, M4A, FLAC, WAV, or AIFF up to 100 MB. Attaching fills in the song&#x27;s length from the file (a one-time dialog asks which to keep if they disagree). Audio stays on this Mac: portable backups do not include it, and the backup screen says so.</li>
+      <li><strong>Transition previews</strong> (paid and trial). How a set flows depends on how one song hands off to the next, and until now the only way to check a transition was rehearsal. A Preview Transitions button in the builder opens a per-set view. A play control between two songs with audio plays the last ten seconds of one into the first ten of the next. Songs without audio can be attached from the same view.</li>
+      <li><strong>Between-song notes can carry a time.</strong> Stage talk takes time the same way songs do. A note like band intros or a retune can be given a length, and that time counts toward the set total. Notes without a time count as zero and never make a total estimated. Saved default notes remember their time.</li>
+      <li><strong>Adding notes moved into the setlist.</strong> A note belongs at one exact spot in the set, and the old panel asked you to write it first and drag it into place after. The panel is gone. Hover between two songs and click the + to add a note at that spot, drop in a saved default, or give it a time. Click any placed note to edit it. The song library now has the whole left column.</li>
+      <li>Fixed: editing a song from the library no longer risks blanking fields the edit form doesn&#x27;t manage (lyrics and the chart file were being cleared on every save); editing an archived song no longer silently restores it; the length slider&#x27;s right end always reads &quot;Any&quot; (songs longer than the last slider stop were invisible in the builder library).</li>
+      </ul>
+    </section>
+    <section>
+      <h2>August 4, 2026</h2>
       <div class="d">Version 1.5.2</div>
       <ul>
       <li><strong>Bandsintown can now check for new shows on its own.</strong> A per-artist checkbox in Backstage → Integrations, &quot;Check for new shows when Setcraft opens,&quot; imports any new Bandsintown dates every time the app launches. A small message reports how many arrived; when there is nothing new, nothing appears. If a check fails, the outcome shows only in Backstage next to the Bandsintown fields, along with the last-checked time. Off by default, and part of the paid version and trial like manual sync.</li>
@@ -61,18 +75,6 @@
       <li><strong>Fixed: the app would not open on macOS 12, 13 or 14.</strong> Setcraft has always said it needs macOS 12 or newer, and that was wrong. Every version up to 1.4.18 actually needed macOS 15. On an older system it would install, look fine, and then fail to open, with no useful explanation. 1.5.0 genuinely runs on macOS 12 and up, which is what the app claimed all along. If a bandmate ever told you it just would not start, this is why, and this is the fix.</li>
       <li><strong>Printed setlists are unchanged.</strong> Every part of the printing engine was replaced underneath. Setlists, cue sheets and PRO reports were compared page by page before and after, on real shows, and they come out identical, down to the pixel. Intel and Apple Silicon print identically too.</li>
       <li>Fixed a font-handling fault that could have caused the app to close unexpectedly on an Intel Mac while making a PDF.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>July 13, 2026</h2>
-      <div class="d">Version 1.4.18</div>
-      <ul>
-      <li><strong>The builder&#x27;s City highlight now casts a real net.</strong> Shows within 50 miles count as the same market, so a night in Ypsilanti lights up your Ann Arbor history. City lookups run against an offline city map bundled with the app; nothing leaves your Mac. Same-named cities in different states no longer collide, and a same-named venue in another city no longer matches.</li>
-      <li><strong>The history bar now tells you when you were last there.</strong> &quot;Last at The Ark · 120 days ago&quot; in Venue mode; in City mode it says &quot;Last in&quot; or &quot;Last near&quot; and names the neighboring town when that&#x27;s where the history came from.</li>
-      <li><strong>Highlighted library songs now carry a &quot;played here&quot; tag</strong> (or &quot;played nearby&quot; in City mode), so the highlight explains itself.</li>
-      <li><strong>The freshness meter reads correctly in City mode.</strong> It now compares tonight against the same songs the highlight marks, instead of hiding when the rest of town had no history.</li>
-      <li><strong>Printed setlists name the setlist&#x27;s band.</strong> Printing another of your bands&#x27; setlists stamped the active profile&#x27;s name across the top; the sheet now belongs to the band that played it.</li>
-      <li>Nav switch show/hide preferences now survive relaunches.</li>
       </ul>
     </section>
     <p class="more">See the full history at <a href="https://getsetcraft.com/version-history.html">getsetcraft.com/version-history</a>.</p>

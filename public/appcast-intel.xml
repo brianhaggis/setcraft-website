@@ -3,6 +3,77 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.6.0</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Tue, 18 Aug 2026 14:26:28 -0400</pubDate>
+            <sparkle:version>1.6.0</sparkle:version>
+            <sparkle:shortVersionString>1.6.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **A song can appear more than once in a setlist.** An encore reprise plays
+  a song a second time, and Setcraft used to silently refuse the second
+  copy. Each copy is now its own slot: removing one removes only that copy,
+  dragging one between sets moves only that copy, and the tech cue sheet
+  keeps separate FOH and lighting notes for each. The builder library still
+  hides songs already in the setlist by default; a new checkbox under the
+  filters shows them instead, marked with an "In set" tag and a copy count.
+- **Songs can have lengths, and sets show running times.** A gig is booked
+  as time on stage, and whether the set fits its slot is easier to fix at
+  home than at the venue. There is a Length field in the song editor (4:30,
+  or plain minutes) and a Length column in Add Multiple. Each set header and the setlist header show a running total. The
+  total adds up the real lengths plus 5:00 for each song that has none, so
+  it reads "48:30" when every song has a length and "52:30 (estimated)" when
+  any song is counting at the default; hovering it lists the songs without
+  lengths. A max-length slider in the library filters
+  hides songs longer than the handle, and unset songs show an italic ~5:00
+  tag.
+- **Bandsintown can import your past shows.** Setcraft can answer what you
+  played the last time you were at a venue, but only as far back as its
+  records go. Both sync paths gain an "Also import past shows (your full
+  show history)" checkbox. Shows you entered by
+  hand are matched by date and venue and linked instead of duplicated, and
+  duplicate checking is now scoped per artist. Past shows without setlists
+  appear in the builder's past dropdown as "(no setlist yet)" so what you
+  played can be entered after the fact. The shows page shows long histories
+  50 at a time with a Show more button; search still covers every show. This
+  also fixes a bug where "Build Setlist" on a past show card led to a locked
+  builder with no explanation.
+- **Songs can carry a recording** (paid and trial). A recording answers two
+  questions the song's fields cannot: how long the song actually runs, and
+  how it sounds next to another one. An Audio button on each library row
+  attaches an MP3, M4A, FLAC, WAV, or AIFF up to 100 MB.
+  Attaching fills in the song's length from the file (a one-time dialog asks
+  which to keep if they disagree). Audio stays on this Mac: portable backups
+  do not include it, and the backup screen says so.
+- **Transition previews** (paid and trial). How a set flows depends on how
+  one song hands off to the next, and until now the only way to check a
+  transition was rehearsal. A Preview Transitions button in the builder
+  opens a per-set view. A play control between two songs with
+  audio plays the last ten seconds of one into the first ten of the next.
+  Songs without audio can be attached from the same view.
+- **Between-song notes can carry a time.** Stage talk takes time the same
+  way songs do. A note like band intros or a retune can be given a length,
+  and that time counts toward the set total.
+  Notes without a time count as zero and never make a total estimated. Saved
+  default notes remember their time.
+- **Adding notes moved into the setlist.** A note belongs at one exact spot
+  in the set, and the old panel asked you to write it first and drag it into
+  place after. The panel is gone. Hover between two songs and click the + to
+  add a note at that spot, drop in a saved default, or give it a time. Click any placed note to edit it.
+  The song library now has the whole left column.
+- Fixed: editing a song from the library no longer risks blanking fields the
+  edit form doesn't manage (lyrics and the chart file were being cleared on
+  every save); editing an archived song no longer silently restores it; the
+  length slider's right end always reads "Any" (songs longer than the last
+  slider stop were invisible in the builder library).
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.6.0/Setcraft-Intel.dmg"
+                       sparkle:edSignature="GoY+pfVYSIBikapSNcnhq67n2X05bB/5bIaXJacWNpPdrwuecoWa8e9TERt8V0XAJgL5z2GzXXpD0Vu/kzFiDg=="
+                       length="66837646"
+                       type="application/octet-stream" />
+        </item>
+        <item>
             <title>1.5.2</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Tue, 04 Aug 2026 11:18:05 -0400</pubDate>
