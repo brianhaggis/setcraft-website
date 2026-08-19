@@ -29,10 +29,20 @@
         <div class="legal">
             <a href="index.html" class="back">← Back to Setcraft</a>
             <h1>Version History</h1>
-            <p class="updated">Current release · 1.6.0</p>
+            <p class="updated">Current release · 1.6.1</p>
 
             <div class="cl-entry">
-                <h2 class="cl-version">August 18, 2026 <span class="cl-current">Current</span></h2>
+                <h2 class="cl-version">August 19, 2026 <span class="cl-current">Current</span></h2>
+                <p class="cl-date">Version 1.6.1</p>
+                <ul>
+                <li><strong>Set and show times show the exact total</strong>, with an asterisk when some songs are counting at the 5:00 default instead of the word &quot;(estimated)&quot;. The arithmetic was always exact; it was being rounded to whole minutes on the way to the screen, throwing away seconds the set really has. Hovering the total still lists the songs that need lengths.</li>
+                <li><strong>The &quot;played here&quot; tag is gone from library cards.</strong> The tint already says a song was played at this venue, and the words were long enough to squeeze song titles into an ellipsis on cards carrying a key, capo, tuning and length. Nothing else about venue memory changed.</li>
+                <li><strong>The setlist&#x27;s &quot;Copy to upcoming show...&quot; button is now &quot;Copy to...&quot;</strong>, so the row of buttons above your setlist stops wrapping onto a second line. Its tooltip still spells out what it does.</li>
+                <li><strong>Report a bug moved off the screen edge.</strong> The tab that sat pinned to the right of every screen is now part of beta builds only. Every copy still has Help &gt; Report a Bug, which opens the same form.</li>
+                </ul>
+            </div>
+            <div class="cl-entry">
+                <h2 class="cl-version">August 18, 2026</h2>
                 <p class="cl-date">Version 1.6.0</p>
                 <ul>
                 <li><strong>A song can appear more than once in a setlist.</strong> An encore reprise plays a song a second time, and Setcraft used to silently refuse the second copy. Each copy is now its own slot: removing one removes only that copy, dragging one between sets moves only that copy, and the tech cue sheet keeps separate FOH and lighting notes for each. The builder library still hides songs already in the setlist by default; a new checkbox under the filters shows them instead, marked with an &quot;In set&quot; tag and a copy count.</li>

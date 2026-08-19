@@ -3,6 +3,36 @@
     <channel>
         <title>Setcraft</title>
         <item>
+            <title>1.6.1</title>
+            <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
+            <pubDate>Wed, 19 Aug 2026 12:38:10 -0400</pubDate>
+            <sparkle:version>1.6.1</sparkle:version>
+            <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[## Changes
+
+- **Set and show times show the exact total**, with an asterisk when some
+  songs are counting at the 5:00 default instead of the word "(estimated)".
+  The arithmetic was always exact; it was being rounded to whole minutes on
+  the way to the screen, throwing away seconds the set really has. Hovering
+  the total still lists the songs that need lengths.
+- **The "played here" tag is gone from library cards.** The tint already says
+  a song was played at this venue, and the words were long enough to squeeze
+  song titles into an ellipsis on cards carrying a key, capo, tuning and
+  length. Nothing else about venue memory changed.
+- **The setlist's "Copy to upcoming show..." button is now "Copy to..."**, so
+  the row of buttons above your setlist stops wrapping onto a second line.
+  Its tooltip still spells out what it does.
+- **Report a bug moved off the screen edge.** The tab that sat pinned to the
+  right of every screen is now part of beta builds only. Every copy still has
+  Help > Report a Bug, which opens the same form.
+]]></description>
+            <enclosure url="https://github.com/brianhaggis/setcraft-website/releases/download/v1.6.1/Setcraft-Intel.dmg"
+                       sparkle:edSignature="Z2iaVIb4Qd+Gpi3XVKhMwKlE3rlkToPmy8lWfSyKbxeureiaBgrErtHJ04k4XyC+DxdAeqsKa3yfLzZsiCURBQ=="
+                       length="66834545"
+                       type="application/octet-stream" />
+        </item>
+        <item>
             <title>1.6.0</title>
             <sparkle:releaseNotesLink>https://getsetcraft.com/release-notes</sparkle:releaseNotesLink>
             <pubDate>Tue, 18 Aug 2026 14:26:28 -0400</pubDate>

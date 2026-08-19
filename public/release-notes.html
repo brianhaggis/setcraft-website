@@ -32,7 +32,17 @@
 <body>
   <h1>What's New in Setcraft</h1>
     <section>
-      <h2>August 18, 2026 <span class="cur">Current</span></h2>
+      <h2>August 19, 2026 <span class="cur">Current</span></h2>
+      <div class="d">Version 1.6.1</div>
+      <ul>
+      <li><strong>Set and show times show the exact total</strong>, with an asterisk when some songs are counting at the 5:00 default instead of the word &quot;(estimated)&quot;. The arithmetic was always exact; it was being rounded to whole minutes on the way to the screen, throwing away seconds the set really has. Hovering the total still lists the songs that need lengths.</li>
+      <li><strong>The &quot;played here&quot; tag is gone from library cards.</strong> The tint already says a song was played at this venue, and the words were long enough to squeeze song titles into an ellipsis on cards carrying a key, capo, tuning and length. Nothing else about venue memory changed.</li>
+      <li><strong>The setlist&#x27;s &quot;Copy to upcoming show...&quot; button is now &quot;Copy to...&quot;</strong>, so the row of buttons above your setlist stops wrapping onto a second line. Its tooltip still spells out what it does.</li>
+      <li><strong>Report a bug moved off the screen edge.</strong> The tab that sat pinned to the right of every screen is now part of beta builds only. Every copy still has Help &gt; Report a Bug, which opens the same form.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>August 18, 2026</h2>
       <div class="d">Version 1.6.0</div>
       <ul>
       <li><strong>A song can appear more than once in a setlist.</strong> An encore reprise plays a song a second time, and Setcraft used to silently refuse the second copy. Each copy is now its own slot: removing one removes only that copy, dragging one between sets moves only that copy, and the tech cue sheet keeps separate FOH and lighting notes for each. The builder library still hides songs already in the setlist by default; a new checkbox under the filters shows them instead, marked with an &quot;In set&quot; tag and a copy count.</li>
@@ -65,16 +75,6 @@
       <li><strong>Setlist photos taken sideways now import right side up.</strong> Phone cameras store portrait shots as rotated data plus an orientation tag. The analyzer now honors the tag, so a two-column setlist photographed in portrait keeps its sets in the right order instead of swapping them.</li>
       <li><strong>Onboarding polish.</strong> The setup wizard&#x27;s theme previews now show each theme&#x27;s real artwork instead of a flat color. Welcome dialogs wait until a tutorial tour finishes instead of covering it. The tour dims the page less. The sample band&#x27;s songs no longer trigger achievement celebrations on a brand-new install.</li>
       <li>The free version and trial watermark is now described accurately in the app as a watermark overlay across each page.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>July 25, 2026</h2>
-      <div class="d">Version 1.5.0</div>
-      <ul>
-      <li><strong>Setcraft now runs on Intel Macs.</strong> There are two downloads: one for Apple Silicon (M1 and later) and one for Intel. The download page picks the right one for you, and the file names say which is which. If you move to a new Mac, get the download that matches it; your library and license carry over the same way they always have.</li>
-      <li><strong>Fixed: the app would not open on macOS 12, 13 or 14.</strong> Setcraft has always said it needs macOS 12 or newer, and that was wrong. Every version up to 1.4.18 actually needed macOS 15. On an older system it would install, look fine, and then fail to open, with no useful explanation. 1.5.0 genuinely runs on macOS 12 and up, which is what the app claimed all along. If a bandmate ever told you it just would not start, this is why, and this is the fix.</li>
-      <li><strong>Printed setlists are unchanged.</strong> Every part of the printing engine was replaced underneath. Setlists, cue sheets and PRO reports were compared page by page before and after, on real shows, and they come out identical, down to the pixel. Intel and Apple Silicon print identically too.</li>
-      <li>Fixed a font-handling fault that could have caused the app to close unexpectedly on an Intel Mac while making a PDF.</li>
       </ul>
     </section>
     <p class="more">See the full history at <a href="https://getsetcraft.com/version-history.html">getsetcraft.com/version-history</a>.</p>
