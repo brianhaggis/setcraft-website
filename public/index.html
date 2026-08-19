@@ -57,9 +57,10 @@
                     <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
                     <span class="mac-name">Setcraft</span>
                 </div>
-                <div class="app-mock fsv" role="img" aria-label="The Setcraft builder in Full Show View: song library with search and filters on the left, two sets and an encore side by side, notes between songs, and the save, print, and cue sheet buttons">
+                <div class="app-mock fsv" role="img" aria-label="The Setcraft builder in Full Show View: song library with search, filters and a length slider on the left, two sets and an encore side by side with running set times, notes between songs, and the save, print, cue sheet and transition preview buttons">
                     <div class="fsv-topbar">
                         <span class="fsv-h2">Setlist</span>
+                        <span class="fsv-showlen">Show length: 1:47:30</span>
                         <span class="fsv-chip fsv-undo" title="Undo">&#8617;</span>
                         <span class="fsv-chip">Import from...</span>
                         <span class="fsv-chip fsv-active">Full Show View</span>
@@ -72,9 +73,10 @@
                             <div class="fsv-filters">
                                 <span>Energy &#9662;</span><span>Tuning &#9662;</span><span>Key &#9662;</span><span>Style &#9662;</span>
                             </div>
+                            <div class="fsv-lenfilter"><span class="fsv-lenlabel">Length</span><span class="fsv-slider"><span class="fsv-slider-thumb"></span></span><span class="fsv-lenval">&le; 4:30</span></div>
                             <div class="fsv-song overlap">
                                 <div class="fsv-info"><div class="fsv-title">Antenna</div>
-                                <div class="fsv-meta"><span class="energy e4">4</span><span class="tag">E</span><span class="tag played">played here</span></div></div>
+                                <div class="fsv-meta"><span class="energy e4">4</span><span class="tag">E</span></div></div>
                                 <span class="fsv-add">+</span>
                             </div>
                             <div class="fsv-song">
@@ -89,7 +91,7 @@
                             </div>
                             <div class="fsv-song overlap">
                                 <div class="fsv-info"><div class="fsv-title">Paper Compass</div>
-                                <div class="fsv-meta"><span class="energy e2">2</span><span class="tag">D</span><span class="tag played">played here</span></div></div>
+                                <div class="fsv-meta"><span class="energy e2">2</span><span class="tag">D</span></div></div>
                                 <span class="fsv-add">+</span>
                             </div>
                             <div class="fsv-song">
@@ -107,11 +109,10 @@
                                 <div class="fsv-meta"><span class="energy e4">4</span><span class="tag">C</span></div></div>
                                 <span class="fsv-add">+</span>
                             </div>
-                            <div class="fsv-reminders">Between-Song Reminders &#9662;</div>
                         </div>
                         <div class="fsv-sets">
                             <div class="fsv-set">
-                                <div class="fsv-set-header">Set 1 <span class="fsv-count">(7 songs)</span></div>
+                                <div class="fsv-set-header">Set 1 <span class="fsv-count">(7 songs)</span> <span class="fsv-settime">&middot; 52:10</span></div>
                                 <div class="fsv-song"><span class="pos">1</span><div class="fsv-info"><div class="fsv-title">Salt Lick</div><div class="fsv-meta"><span class="energy e5">5</span><span class="tag">E</span></div></div><span class="fsv-rm">&times;</span></div>
                                 <div class="fsv-song"><span class="pos">2</span><div class="fsv-info"><div class="fsv-title">Copper Wire Heart</div><div class="fsv-meta"><span class="energy e4">4</span><span class="tag">E</span></div></div><span class="fsv-rm">&times;</span></div>
                                 <div class="fsv-note">Tune to drop D &middot; Danny grabs water</div>
@@ -122,7 +123,7 @@
                                 <div class="fsv-song"><span class="pos">7</span><div class="fsv-info"><div class="fsv-title">Match Head</div><div class="fsv-meta"><span class="energy e5">5</span><span class="tag">B&#9837;</span></div></div><span class="fsv-rm">&times;</span></div>
                             </div>
                             <div class="fsv-set">
-                                <div class="fsv-set-header">Set 2 <span class="fsv-count">(6 songs)</span></div>
+                                <div class="fsv-set-header">Set 2 <span class="fsv-count">(6 songs)</span> <span class="fsv-settime">&middot; 55:20</span></div>
                                 <div class="fsv-song"><span class="pos">1</span><div class="fsv-info"><div class="fsv-title">Northern Pike</div><div class="fsv-meta"><span class="energy e4">4</span><span class="tag">A</span></div></div><span class="fsv-rm">&times;</span></div>
                                 <div class="fsv-song"><span class="pos">2</span><div class="fsv-info"><div class="fsv-title">Gravel Road</div><div class="fsv-meta"><span class="energy e3">3</span><span class="tag">D</span><span class="tag">Capo 2</span></div></div><span class="fsv-rm">&times;</span></div>
                                 <div class="fsv-note">Talk up the new record</div>
@@ -138,6 +139,7 @@
                     <div class="fsv-bottombar">
                         <span class="fsv-chip fsv-print">Print / PDF</span>
                         <span class="fsv-chip">Tech Cue Sheet</span>
+                        <span class="fsv-chip">Preview Transitions</span>
                     </div>
                 </div>
             </div>
@@ -249,7 +251,7 @@
                 <div class="eyebrow">Setlist builder</div>
                 <h3>Drag tonight&rsquo;s set into shape.</h3>
                 <p>Building a set is as easy as dragging songs out of your library and pushing them around until the order feels right. Add a second, third, or fourth set with a single click. Make a mess of it and click undo to walk back fifty steps.</p>
-                <p>Between songs, leave yourself a note: drop to D for this one, talk up the new record, bring the guest out. Notes you use every set can be saved as defaults to drag into the set where you need them.</p>
+                <p>Between songs, leave yourself a note: drop to D for this one, talk up the new record, bring the guest out. Hover between two songs, click the +, and the note lands at that exact spot. Notes you use every set can be saved as defaults and dropped in with one click, and a note that eats stage time can carry a length that counts toward the set.</p>
             </div>
             <div class="feature-visual">
                 <video class="media-clip" autoplay muted loop playsinline aria-label="Screen recording of the Setcraft setlist builder: dragging songs, reordering, and dropping a note">
@@ -286,12 +288,12 @@
                         <span style="font-size: 12px; color: var(--ink-soft);">Last at The Ark · 120 days ago</span>
                     </div>
                     <div class="lib-head">Song Library</div>
-                    <div class="mock-song overlap"><span class="energy e5">5</span><span class="title">Salt Lick</span><span class="tag">E</span><span class="played-flag">played here</span></div>
+                    <div class="mock-song overlap"><span class="energy e5">5</span><span class="title">Salt Lick</span><span class="tag">E</span><span class="add">+</span></div>
                     <div class="mock-song"><span class="energy e3">3</span><span class="title">Almanac</span><span class="tag">C</span><span class="add">+</span></div>
-                    <div class="mock-song overlap"><span class="energy e4">4</span><span class="title">Copper Wire Heart</span><span class="tag">E</span><span class="played-flag">played here</span></div>
-                    <div class="mock-song overlap"><span class="energy e2">2</span><span class="title">Paper Compass</span><span class="tag">D</span><span class="played-flag">played here</span></div>
+                    <div class="mock-song overlap"><span class="energy e4">4</span><span class="title">Copper Wire Heart</span><span class="tag">E</span><span class="add">+</span></div>
+                    <div class="mock-song overlap"><span class="energy e2">2</span><span class="title">Paper Compass</span><span class="tag">D</span><span class="add">+</span></div>
                     <div class="mock-song"><span class="energy e3">3</span><span class="title">Heirloom Tomato</span><span class="tag">A</span><span class="tag">Capo 3</span><span class="add">+</span></div>
-                    <div class="mock-song overlap"><span class="energy e4">4</span><span class="title">Kerosene Summer</span><span class="tag">Bm</span><span class="played-flag">played here</span></div>
+                    <div class="mock-song overlap"><span class="energy e4">4</span><span class="title">Kerosene Summer</span><span class="tag">Bm</span><span class="add">+</span></div>
                 </div>
             </div>
         </div>
@@ -339,12 +341,12 @@
             <div class="why-card">
                 <div class="icon-wrap">&#8645;</div>
                 <h3>Bandsintown sync</h3>
-                <p>Connect your Bandsintown Artist account once, and Setcraft imports your upcoming shows for you. Each artist profile syncs independently. Of course, you can always create a show manually in seconds!</p>
+                <p>Connect your Bandsintown Artist account once, and Setcraft imports your shows for you: upcoming dates, and your past show history too, so your venue records start full instead of empty. Shows you already entered by hand are matched by date and venue rather than duplicated. Each artist profile syncs independently, and you can always create a show manually in seconds.</p>
             </div>
             <div class="why-card">
                 <div class="icon-wrap">&#11015;</div>
                 <h3>Move to a new computer</h3>
-                <p>Export one backup file with your whole library and charts, then import it on another Mac. Restoring a backup is always free.</p>
+                <p>Export one backup file with your whole library and charts, then import it on another Mac. Restoring a backup is always free. Audio files you attach to songs stay on the Mac they were added to, so re-attach those after a move.</p>
             </div>
             <div class="why-card">
                 <div class="icon-wrap">&#8599;</div>
@@ -399,7 +401,7 @@
                     <span class="badge online">Needs internet</span>
                 </div>
                 <p>Import Shows from Bandsintown (paid feature).
-Connect your account once with your artist name and API key, and Setcraft pulls in the upcoming dates you haven't entered yet. If you've got multiple artist profiles, you can enter their Bandsintown keys and sync all your calendars at once.</p>
+Connect your account once with your artist name and API key, and Setcraft pulls in the upcoming dates you haven't entered yet. Tick one box and it brings in your past shows as well, so years of gig history land in an afternoon and you can back-enter what you played. If you've got multiple artist profiles, you can enter their Bandsintown keys and sync all your calendars at once.</p>
             </div>
             <div class="feature-visual">
                 <video class="media-clip" autoplay muted loop playsinline aria-label="Screen recording of adding shows in Setcraft: fuzzy venue matching and importing dates from Bandsintown">

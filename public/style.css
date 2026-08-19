@@ -678,18 +678,54 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     white-space: nowrap;
     text-align: center;
 }
-.fsv-reminders {
-    margin-top: 10px;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 10px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+/* Length filter in the mock library column (1.6). */
+.fsv-lenfilter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    font-size: 9px;
     color: var(--ink-soft);
-    background: var(--paper);
-    border: 1px solid var(--hairline);
-    border-radius: 5px;
-    padding: 6px 9px;
+}
+.fsv-lenlabel { white-space: nowrap; }
+.fsv-slider {
+    position: relative;
+    flex: 1;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--hairline);
+}
+.fsv-slider-thumb {
+    position: absolute;
+    left: 62%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border-radius: 50%;
+    background: var(--stripe-red);
+}
+.fsv-lenval { white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* Running times: the show total in the header, per-set totals in set headers. */
+.fsv-showlen {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--ink-soft);
+    letter-spacing: 0;
+    text-transform: none;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+.fsv-set-header .fsv-settime {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--ink-soft);
+    text-transform: none;
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
 }
 .fsv-sets { display: flex; gap: 10px; align-items: stretch; }
 .fsv-set {
