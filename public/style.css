@@ -876,16 +876,10 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
     background: var(--paper);
     border-top: 1px solid var(--hairline);
 }
-/* Small screens: stack the library above the sets, sets above each other,
-   and turn the vertical add-set rail into a horizontal strip. */
-@media (max-width: 700px) {
-    .fsv-layout { grid-template-columns: 1fr; }
-    .fsv-library { border-right: none; border-bottom: 3px solid var(--powder); }
-    .fsv-sets { flex-direction: column; }
-    .fsv-addset { flex-basis: auto; flex-direction: row; padding: 8px; }
-    .fsv-addset-label { writing-mode: horizontal-tb; }
-    .fsv-topbar { flex-wrap: wrap; }
-}
+/* Small screens deliberately do NOT restack this mock. It used to collapse to
+   library-above-set-1-above-set-2, a shape the real app never shows, so the
+   picture stopped representing the product. The window keeps its layout and
+   is scaled down instead; see the zoom rules further down. */
 
 /* ============================================================
    Pricing — page
@@ -1599,6 +1593,67 @@ h1, h2, h3 { margin: 0; color: var(--powder-deep); font-family: var(--font-displ
    the hero is two-column; stacked (<=960px) the mock has the full width. */
 @media (min-width: 961px) {
     .hero-visual .app-mock { zoom: 0.78; }
+}
+
+/* The expand control: hidden on desktop, where the mock is already readable.
+   Declared BEFORE the media queries that show it, since they share the same
+   specificity and source order decides. */
+.mock-expand {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    margin: 10px auto 0;
+    padding: 8px 14px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm, 6px);
+    cursor: pointer;
+}
+.mock-expand-wrap { text-align: center; }
+.mock-expand:hover { border-color: var(--stripe-red); color: var(--stripe-red); }
+.mock-hint {
+    display: none;
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-align: center;
+}
+
+/* Mobile: shrink the mock, never reflow it.
+   Below 960px the mock used to be handed the full width and allowed to
+   squeeze, which collapsed the library and the two sets into a vertical
+   stack. The real app never looks like that -- it is a Mac window with the
+   library beside the sets -- so the picture stopped representing the
+   product. Here the window keeps its desktop layout at a fixed width and
+   `zoom` scales the whole thing down (zoom affects layout, so the frame
+   really does occupy less room, unlike transform). Detail is unreadable at
+   phone size, which is the honest trade: the shape is the point, and the
+   control below expands it for a proper look. */
+@media (max-width: 960px) {
+    .hero-visual { overflow-x: hidden; }
+    .hero-visual .mac-window { width: 900px; max-width: none; zoom: 0.74; }
+    .mock-expand { display: inline-flex; }
+    /* Expanded: bigger, and swipeable since it now exceeds the viewport. */
+    .hero-visual.mock-expanded { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .hero-visual.mock-expanded .mac-window { zoom: 1; }
+}
+@media (max-width: 700px) {
+    .hero-visual .mac-window { zoom: 0.5; }
+    .hero-visual.mock-expanded .mac-window { zoom: 0.85; }
+}
+@media (max-width: 480px) {
+    .hero-visual .mac-window { zoom: 0.37; }
+    .hero-visual.mock-expanded .mac-window { zoom: 0.8; }
+}
+
+@media (max-width: 960px) {
+    .mock-expand-wrap .mock-hint.on { display: block; }
 }
 
 /* ============================================================

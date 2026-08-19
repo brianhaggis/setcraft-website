@@ -219,7 +219,7 @@
             <p class="req-line">Any Mac on <strong>macOS 12 Monterey or newer</strong>, Apple Silicon or Intel. No Windows.</p>
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-visual" id="heroVisual">
             <div class="mac-window">
                 <div class="mac-titlebar">
                     <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
@@ -311,8 +311,31 @@
                     </div>
                 </div>
             </div>
+            <div class="mock-expand-wrap">
+                <button type="button" class="mock-expand" id="mockExpand" aria-expanded="false" aria-controls="heroVisual">Tap to enlarge</button>
+                <p class="mock-hint" id="mockHint">Swipe the window to look around.</p>
+            </div>
         </div>
     </section>
+
+    <script>
+    // Mobile only: the hero mock renders at the app's real proportions and is
+    // scaled down by CSS, so this toggles between "fits the screen" and
+    // "big enough to read, swipe to look around".
+    (function () {
+        var btn = document.getElementById('mockExpand');
+        var vis = document.getElementById('heroVisual');
+        var hint = document.getElementById('mockHint');
+        if (!btn || !vis) return;
+        btn.addEventListener('click', function () {
+            var open = vis.classList.toggle('mock-expanded');
+            btn.textContent = open ? 'Tap to shrink' : 'Tap to enlarge';
+            btn.setAttribute('aria-expanded', String(open));
+            hint.classList.toggle('on', open);
+            if (open) vis.scrollLeft = 0;
+        });
+    })();
+    </script>
 
     <!-- ============================================================ VIDEO -->
     <section class="container section" id="video" data-screen-label="Teaser video" style="padding-top: 8px;">
