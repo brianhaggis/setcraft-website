@@ -25,6 +25,11 @@
         requestAnimationFrame(function () {
             requestAnimationFrame(function () { root.classList.remove('sc-theming'); });
         });
+        // Swap the hero screenshot to the same theme. These are real captures
+        // of the app, so the toggle shows the actual product in each skin
+        // rather than a CSS impression of it.
+        var shot = document.getElementById('appShot');
+        if (shot) shot.setAttribute('src', 'media/app-' + theme + '.webp');
         // Swap the favicon to the active theme's icon, mirroring the app.
         var fav = document.getElementById('favicon');
         if (fav) fav.setAttribute('href', 'assets/icons/icon-' + theme + '.svg');

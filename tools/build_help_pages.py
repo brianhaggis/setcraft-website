@@ -94,8 +94,8 @@ def shell(title, description, canonical, body):
     <meta property="og:image" content="{SITE}/media/og-card.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" id="favicon" type="image/svg+xml" href="/assets/icons/icon-yacht.svg">
-    <link rel="stylesheet" href="/style.css?v=43">
-    <script src="/theme-switcher.js?v=43"></script>
+    <link rel="stylesheet" href="/style.css?v=44">
+    <script src="/theme-switcher.js?v=44"></script>
 </head>
 <body>
 {NAV}
