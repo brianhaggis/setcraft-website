@@ -28,8 +28,16 @@
         // Swap the hero screenshot to the same theme. These are real captures
         // of the app, so the toggle shows the actual product in each skin
         // rather than a CSS impression of it.
+        // Filenames carry a content hash (see public/_headers: /media/* is
+        // served immutable, so a regenerated image must arrive at a NEW url
+        // or nobody ever sees it). The map lives on the element.
         var shot = document.getElementById('appShot');
-        if (shot) shot.setAttribute('src', 'media/app-' + theme + '.webp');
+        if (shot && shot.dataset.shots) {
+            try {
+                var map = JSON.parse(shot.dataset.shots);
+                if (map[theme]) shot.setAttribute('src', 'media/' + map[theme]);
+            } catch (e) {}
+        }
         // Swap the favicon to the active theme's icon, mirroring the app.
         var fav = document.getElementById('favicon');
         if (fav) fav.setAttribute('href', 'assets/icons/icon-' + theme + '.svg');

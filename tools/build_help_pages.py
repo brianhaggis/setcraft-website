@@ -91,7 +91,7 @@ def shell(title, description, canonical, body):
     <meta property="og:type" content="article">
     <meta property="og:title" content="{html.escape(title)}">
     <meta property="og:description" content="{html.escape(description)}">
-    <meta property="og:image" content="{SITE}/media/og-card.jpg">
+    <meta property="og:image" content="{SITE}/media/og-card.6662a6a8.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" id="favicon" type="image/svg+xml" href="/assets/icons/icon-yacht.svg">
     <link rel="stylesheet" href="/style.css?v=44">

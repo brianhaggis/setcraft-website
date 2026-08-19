@@ -12,6 +12,7 @@ converted in memory for PIL.
 
     python3 tools/build_og_card.py
 """
+import hashlib
 import os
 import pathlib
 import re
@@ -79,9 +80,15 @@ def main():
     d.text((84, H - 72), left, font=disp(40), fill=c["--paper"])
     d.text((W - 84 - d.textlength(right, font=disp(40)), H - 72), right, font=disp(40), fill=c["--paper"])
 
-    out = PUBLIC / "media" / "og-card.jpg"
-    img.save(out, "JPEG", quality=88, optimize=True, progressive=True)
+    # /media/* is served immutable, so the filename carries a content hash:
+    # replacing a file in place would never reach a browser or the edge.
+    tmp = PUBLIC / "media" / ".og-card.tmp.jpg"
+    img.save(tmp, "JPEG", quality=88, optimize=True, progressive=True)
+    digest = hashlib.md5(tmp.read_bytes()).hexdigest()[:8]
+    out = PUBLIC / "media" / f"og-card.{digest}.jpg"
+    tmp.replace(out)
     print(f"Wrote {out} ({W}x{H}, {os.path.getsize(out) // 1024} KB)")
+    print("Update the og:image / twitter:image references to this filename.")
 
 
 if __name__ == "__main__":
